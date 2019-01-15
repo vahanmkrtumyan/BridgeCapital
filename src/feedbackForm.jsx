@@ -1,29 +1,26 @@
 import React, { Component } from "react";
-import { Button, Form, FormGroup, Label, Input, FormText } from "reactstrap";
-import { axios } from 'axios';
+import { Button, Form, FormGroup, Label, Input } from "reactstrap";
+import { axios } from "axios";
 
 class FeedbackForm extends Component {
-  state = { name: "", email: "", message: "" };
-
+  state = { name: "", email: "", message: "", mailSent: false, error: null };
 
   handleChange = e => {
-    this.setState({[e.target.name]: e.target.value})
-    console.log(this.state.name)
+    this.setState({ [e.target.name]: e.target.value });
+    console.log(this.state.name);
   };
 
-  handleSubmit = async (e) =>  {
-    e.preventDefault()
+  handleSubmit = async e => {
+    e.preventDefault();
 
-    const {name, email, message} = this.state;
+    const { name, email, message, mailSent, error } = this.state;
 
-    const form = await axios.post('/api/form', {
+    const form = await axios.post("/api/form", {
       name: name,
       email: email,
       message: message
-    })
-  }
-
-  
+    });
+  };
 
   render() {
     return (
@@ -48,5 +45,3 @@ class FeedbackForm extends Component {
 }
 
 export default FeedbackForm;
-
-
