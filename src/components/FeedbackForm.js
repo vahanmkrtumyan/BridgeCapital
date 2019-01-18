@@ -1,8 +1,6 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import * as emailjs from "emailjs-com";
-import "materialize-css";
-import "materialize-css/dist/css/materialize.min.css";
 
 class FeedbackForm extends Component {
   state = {

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import FeedbackForm from './components/FeedbackForm';
+import './assets/scss/main.scss';
+// import FeedbackForm from './components/FeedbackForm';
 import PropTypes from 'prop-types';
 
 class App extends Component {
@@ -9,10 +8,10 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
+          <h1 className="App-title">Welcome to Reactսսս</h1>
+            <h2 className="text">Բարև ձեզ</h2>
         </header>
-        <FeedbackForm env={this.props.env} />
+        {/*<FeedbackForm env={this.props.env} />*/}
       </div>
     );
   }
