@@ -1,0 +1,47 @@
+.banner {
+    position: relative;
+    height: 650px;
+    @include bg-img('hero.png', no-repeat, cover, $color-bg, center);
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: -1;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(to bottom, rgba(16,23,30,1) 8%,rgba(16,23,30,1) 15%,rgba(16,23,30,0) 27%,rgba(16,23,30,0) 100%),
+        -webkit-linear-gradient(-45deg, rgba(16,23,30,1) 1%,rgba(16,23,30,1) 18%,rgba(16,23,30,1) 32%,rgba(16,23,30,1) 49%,rgba(16,23,30,0) 70%,rgba(16,23,30,0) 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    }
+
+    &:after{
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 100%;
+        @include bg-img('banner-pattern.png', no-repeat, contain, null , bottom left);
+    }
+
+    .banner-inner {
+        position: relative;
+        z-index: 1;
+        color: $color-secondary;
+        width: 65%;
+        padding-top: 150px;
+    }
+
+    h1 {
+        font-size: 65px;
+        padding-bottom: 50px;
+        span {
+            color: $color-primary;
+        }
+    }
+    p {
+        font-size: 30px;
+    }
+}

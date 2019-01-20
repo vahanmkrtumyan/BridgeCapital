@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import './assets/scss/main.scss';
 // import FeedbackForm from './components/FeedbackForm';
 import PropTypes from 'prop-types';
-import HeaderComponent from './components/HeaderComponent.jsx';
+import Homepage from './components/Homepage';
 
 class App extends Component {
   render() {
     return (
       <React.Fragment>
-          <HeaderComponent />
+          <Homepage />
         {/*<FeedbackForm env={this.props.env} />*/}
       </React.Fragment>
     );

@@ -18,13 +18,23 @@ header {
 
 .header-nav {
     display: flex;
-    align-items: flex-end;
+    justify-content: flex-end;
 
     li {
         margin: 0 10px;
 
         a {
             display: inline-block;
+
+            &:hover {
+                color: $color-primary;
+            }
+        }
+
+        &.active {
+            a {
+                color: $color-primary;
+            }
         }
     }
 }

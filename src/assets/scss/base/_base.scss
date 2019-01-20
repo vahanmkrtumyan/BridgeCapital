@@ -18,6 +18,10 @@ body {
     box-sizing: inherit;
 }
 
+a {
+    transition: color $trns-duration;
+}
+
 .container {
     max-width: ($cont-width + $cont-padding);
     width: 100%;
