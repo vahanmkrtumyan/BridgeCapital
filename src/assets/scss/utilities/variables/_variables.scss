@@ -3,19 +3,19 @@ $fonts-folder: "../fonts";
 $images-folder: '../img/';
 
 //fonts
-$font-primary: "Open Sans", serif;
+$font-primary: "ArialArmST", serif;
 $font-secondary: "Times New Roman", serif;
 $font-icons: "Icomoon Project Name";
 
 //color usage
-$color-primary: #f99f07;
-$color-secondary: #1e3143;
-$color-tertiary: #818ea7;
-$color-highlight: #39a4cd;
+$color-primary: #0062ff;
+$color-secondary: #fff;
+$color-bg: #10171e;
+$color-grey: #dddedf;
 $color-warning: #e44c23;
 
 //Descriptive Base Colors
-$color-text: #000;
+$color-text: #2b2e31;
 
 //Text
 $base-font-size: 16px;
@@ -33,7 +33,7 @@ $trns-duration-lg: 1s;
 $trns-delay: 50ms;
 
 //container
-$cont-width: 1280px;
+$cont-width: 1170px;
 $cont-padding: 30px;
 
 //Resolutions

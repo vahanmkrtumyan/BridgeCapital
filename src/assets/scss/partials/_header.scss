@@ -1,9 +1,7 @@
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    padding: 10px 0;
+    background-color: $color-bg;
+    padding: 20px 0;
+    color: $color-secondary;
 }
 
 .logo {
@@ -18,18 +16,15 @@ header {
     }
 }
 
-nav {
-    
-    .menu {
-        display: flex;
+.header-nav {
+    display: flex;
+    align-items: flex-end;
 
-        li {
-            margin: 0 10px;
+    li {
+        margin: 0 10px;
 
-            a {
-                display: inline-block;
-                color: #3e424b;
-            }
+        a {
+            display: inline-block;
         }
     }
 }
