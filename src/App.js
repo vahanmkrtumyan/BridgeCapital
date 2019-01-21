@@ -3,6 +3,7 @@ import './assets/scss/main.scss';
 // import FeedbackForm from './components/FeedbackForm';
 import PropTypes from 'prop-types';
 import Homepage from './components/Homepage';
+import CurrencyInput from './CurrencyInput';
 
 class App extends Component {
   render() {
@@ -10,6 +11,7 @@ class App extends Component {
       <React.Fragment>
           <Homepage />
         {/*<FeedbackForm env={this.props.env} />*/}
+        <CurrencyInput/>
       </React.Fragment>
     );
   }
