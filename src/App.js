@@ -11,7 +11,7 @@ class App extends Component {
       <React.Fragment>
           <Homepage />
         {/*<FeedbackForm env={this.props.env} />*/}
-        <CurrencyInput/>
+        {/*<CurrencyInput/>*/}
       </React.Fragment>
     );
   }

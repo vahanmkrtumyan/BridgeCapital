@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { database } from './components/firebase';
+import SignIn from './components/signIn';
 
 class CurrencyInput extends Component {
   state = {
@@ -43,6 +44,8 @@ class CurrencyInput extends Component {
   };
 
   render() {
+
+    return <SignIn/>
     return (
       <div className="row">
         <form className="col s6">
