@@ -1,7 +1,8 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
-import { database } from './components/firebase';
-import SignIn from './components/signIn';
+import { database, auth } from "./components/firebase";
+import SignIn from "./components/signIn";
+import CurrentUser from "./components/currentUser";
 
 class CurrencyInput extends Component {
   state = {
@@ -16,8 +17,17 @@ class CurrencyInput extends Component {
       email: "",
       subject: "",
       message: ""
-    }
+      },
+      currentUser: null, loading: true
   };
+
+
+  componentDidMount() {
+      auth.onAuthStateChanged(currentUser => {
+          this.setState({ currentUser, loading: false });
+      });
+    };
+
 
   handleInputChange = event => {
     event.preventDefault();
@@ -44,8 +54,96 @@ class CurrencyInput extends Component {
   };
 
   render() {
+    const { currentUser } = this.state;
+    return (
+      <div className="col-sm-8 flex justify-end">
+        {currentUser && <CurrentUser user={currentUser} />}
+        {!this.state.loading && !currentUser && <SignIn />}
+        {currentUser && (<div className="row">
+        <form className="col s6">
+          <div className="input-field col s6">
+            <input
+              id="last_name"
+              name="USDBid"
+              type="text"
+              className="validate"
+              placeholder="USDBid"
+              onChange={this.handleInputChange}
+              value={this.state.USDBid}
+            />
+            <label htmlFor="Անուն">USDBid</label>
+          </div>
+          <div className="input-field col s6">
+            <input
+              id="last_name"
+              name="USDAsk"
+              type="text"
+              className="validate"
+              placeholder="USDAsk"
+              onChange={this.handleInputChange}
+              value={this.state.USDAsk}
+            />
+            <label htmlFor="Անուն">USDAsk</label>
+          </div>
+          <div className="input-field col s6">
+            <input
+              id="last_name"
+              name="EURBid"
+              type="text"
+              className="validate"
+              placeholder="EURBid"
+              onChange={this.handleInputChange}
+              value={this.state.EURBid}
+            />
+            <label htmlFor="Անուն">EURBid</label>
+          </div>
+          <div className="input-field col s6">
+            <input
+              id="last_name"
+              name="EURAsk"
+              type="text"
+              className="validate"
+              placeholder="EURAsk"
+              onChange={this.handleInputChange}
+              value={this.state.EURAsk}
+            />
+            <label htmlFor="Անուն">EURAsk</label>
+          </div>
+          <div className="input-field col s6">
+            <input
+              id="last_name"
+              name="RUBBid"
+              type="text"
+              className="validate"
+              placeholder="RUBBid"
+              onChange={this.handleInputChange}
+              value={this.state.RUBBid}
+            />
+            <label htmlFor="Անուն">RUBBid</label>
+          </div>
+          <div className="input-field col s6">
+            <input
+              id="last_name"
+              name="RUBAsk"
+              type="text"
+              className="validate"
+              placeholder="RUBAsk"
+              onChange={this.handleInputChange}
+              value={this.state.RUBAsk}
+            />
+            <label htmlFor="Անուն">RUBAsk</label>
+          </div>
 
-    return <SignIn/>
+          <button onClick={this.handleSubmit} type="button" name="submit">
+            Ուղարկել
+          </button>
+        </form>
+      </div>)}
+      </div>
+
+
+    );
+
     return (
       <div className="row">
         <form className="col s6">

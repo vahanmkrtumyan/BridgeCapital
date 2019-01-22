@@ -1,17 +1,23 @@
-import React, { Component } from 'react';
-import './assets/scss/main.scss';
+import React, { Component } from "react";
+import { Route, Switch } from "react-router-dom";
+import "./assets/scss/main.scss";
 // import FeedbackForm from './components/FeedbackForm';
-import PropTypes from 'prop-types';
-import Homepage from './components/Homepage';
-import CurrencyInput from './CurrencyInput';
+import PropTypes from "prop-types";
+import Homepage from "./components/Homepage";
+import CurrencyInput from "./CurrencyInput";
 
 class App extends Component {
   render() {
     return (
       <React.Fragment>
-          <Homepage />
         {/*<FeedbackForm env={this.props.env} />*/}
-        {/*<CurrencyInput/>*/}
+
+        <div>
+          <Switch>
+            <Route path="/Kurs" component={CurrencyInput} />
+            <Route path="/" component={Homepage} />
+          </Switch>
+        </div>
       </React.Fragment>
     );
   }
