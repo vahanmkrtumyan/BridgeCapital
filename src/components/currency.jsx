@@ -40,7 +40,7 @@ class Currency extends Component {
       this.setState({ rate: 1 }, () => {
         this.setState({
           selected1: val,
-          selected2Val: this.state.selected1Val
+          selected1Val: this.state.selected2Val
         });
       });
     } else {
