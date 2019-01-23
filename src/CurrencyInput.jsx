@@ -45,7 +45,8 @@ class CurrencyInput extends Component {
       EURBid: this.state.EURBid,
       EURAsk: this.state.EURAsk,
       RUBBid: this.state.RUBBid,
-      RUBAsk: this.state.RUBAsk
+      RUBAsk: this.state.RUBAsk,
+      AMD: 1
     };
     database
       .ref()
