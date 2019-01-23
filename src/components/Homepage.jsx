@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import HeaderComponent from './homepage/HeaderComponent';
 import BannerComponent from './homepage/BannerComponent';
-import Currency from './currency';
+import TabComponent from './homepage/TabComponent';
+// import Currency from './currency';
 
 class Homepage extends Component {
     render() {
@@ -9,7 +10,9 @@ class Homepage extends Component {
             <React.Fragment>
                 <HeaderComponent />
                 <BannerComponent />
-                <Currency/>
+                <TabComponent />
+
+                {/*<Currency/>*/}
             </React.Fragment>
         );
     }

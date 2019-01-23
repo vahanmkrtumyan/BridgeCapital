@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Fade from 'react-reveal/Fade';
 
 class BannerComponent extends Component {
     render() {
@@ -6,10 +7,14 @@ class BannerComponent extends Component {
             <React.Fragment>
                 <div className="banner">
                     <div className="container">
-                        <div className="banner-inner">
-                            <h1><span>ՈՂՋՈՒՅՆ </span>ՆԵՐԴՐՈՂ</h1>
-                            <p>ԲՐԻՋ ԿԱՊԻՏԱԼԸ ներդրումային ընկերություն է, որի նպատակը բարձրակարգ ծառայությունների մատուցումն է</p>
-                        </div>
+                        <Fade cascade>
+                            <div className="banner-inner">
+
+                                <h1><span>ՈՂՋՈՒՅՆ </span>ՆԵՐԴՐՈՂ</h1>
+                                <p>ԲՐԻՋ ԿԱՊԻՏԱԼԸ ներդրումային ընկերություն է, որի նպատակը բարձրակարգ ծառայությունների մատուցումն է</p>
+
+                            </div>
+                        </Fade>
                     </div>
                 </div>
             </React.Fragment>

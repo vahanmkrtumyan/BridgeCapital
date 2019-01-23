@@ -6,13 +6,17 @@ header {
 
 .logo {
     max-width: 200px;
+    display: block;
 
-    a {
-        display: block;
-
+    &:hover {
         img {
-            width: 100%;
+            opacity: .8;
         }
+    }
+
+    img {
+        width: 100%;
+        transition: all $trns-duration;
     }
 }
 
