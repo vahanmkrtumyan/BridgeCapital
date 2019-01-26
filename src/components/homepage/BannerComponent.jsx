@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Fade from 'react-reveal/Fade';
 
+
 class BannerComponent extends Component {
     render() {
         return (

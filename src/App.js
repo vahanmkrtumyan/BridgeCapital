@@ -6,10 +6,13 @@ import PropTypes from "prop-types";
 import Homepage from "./components/Homepage";
 import CurrencyInput from "./CurrencyInput";
 import NotFound from './components/notFound';
+import {connectTranslations} from "./context/TranslationContext"
 
 class App extends Component {
   render() {
-    return (
+    return this.props.textLoaded ? (
+      
+
       <React.Fragment>
         {/*<FeedbackForm env={this.props.env} />*/}
 
@@ -22,7 +25,7 @@ class App extends Component {
           </Switch>
         </div>
       </React.Fragment>
-    );
+    ): null;
   }
 }
 
@@ -30,4 +33,4 @@ App.propTypes = {
   env: PropTypes.object.isRequired
 };
 
-export default App;
+export default connectTranslations(App);
