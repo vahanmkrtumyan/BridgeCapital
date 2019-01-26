@@ -1,43 +1,79 @@
 header {
     background-color: $color-bg;
-    padding: 20px 0;
+    padding: 25px 0;
     color: $color-secondary;
 }
 
 .logo {
-    max-width: 200px;
+    max-width: 240px;
     display: block;
 
     &:hover {
         img {
-            opacity: .8;
+            opacity: 1;
         }
     }
 
     img {
         width: 100%;
         transition: all $trns-duration;
+        opacity: .5;
     }
 }
 
-.header-nav {
+.menu {
     display: flex;
     justify-content: flex-end;
 
     li {
-        margin: 0 10px;
+        margin: 0 15px;
 
         a {
             display: inline-block;
+            text-transform: uppercase;
+            color: $color-text-50;
+            font-size: $base-font-size;
 
             &:hover {
-                color: $color-primary;
+                color: $color-secondary;
             }
         }
 
         &.active {
             a {
                 color: $color-primary;
+                font-weight: 700;
+            }
+        }
+
+        &.lang {
+            margin: 0;
+
+            &.rus {
+                a {
+                    font-family: 'MyriadPro-Regular';
+                }
+            }
+
+            a {
+                padding-left: 15px;
+                position: relative;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: -1px;
+                    height: 100%;
+                    width: 1px;
+                    border-left: 1px dotted;
+                    transition: all $trns-duration;
+                }
+                &:hover {
+                    &:before {
+                        color: $color-text-50;
+                    }
+                }
             }
         }
     }

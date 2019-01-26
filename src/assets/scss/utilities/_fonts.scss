@@ -24,3 +24,9 @@
 
 //ArialArmST Bold Italic
 @include font-face('ArialArmST/ArialArmST_Bold_Italic/ArialArmSTBoldItalic', 'ArialArmST', italic, 700);
+
+//Bokonique Bold Italic
+@include font-face('bokonique/Bokonique-Bold/Bokonique-Bold', 'Bokonique-Bold', normal, 700);
+
+//MyriadPro Regular Italic
+@include font-face('MyriadPro-Regular/MyriadPro-Regular', 'MyriadPro-Regular', normal, 400);
