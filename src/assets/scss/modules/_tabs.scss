@@ -7,7 +7,7 @@
     display: flex;
 
     li {
-        width: 33.33%;
+        width: calc(100% / 3);
 
         a {
             display: block;
@@ -16,11 +16,33 @@
             font-size: 20px;
             padding: 27px 10px;
             background-color: #fff;
-            border-right: 1px solid #e6e6e6;
-            border-bottom: 1px solid #e6e6e6;
+            border-right: 1px solid #d0d0d0;
+            border-bottom: 1px solid #d0d0d0;
+            cursor: pointer;
+
+            &:after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                bottom: 0;
+                width: 0;
+                transform: translateX(-50%) translateY(100%);
+                height: 0;
+                border-left: 12px solid transparent;
+                border-right: 12px solid transparent;
+                border-top: 12px solid #0062ff;
+                transition: all $trns-duration;
+                opacity: 0;
+            }
         }
 
-        &:not(.active) {
+        &:last-child {
+            a {
+                border-right: none;
+            }
+        }
+
+        &:not(.react-tabs__tab--selected) {
             a {
                 //box-shadow: -1px -1px 6.65px 0.35px rgba(0, 0, 0, 0.2);
 
@@ -28,14 +50,13 @@
                 &:before {
                     content: '';
                     height: 10px;
-                    width: 99%;
+                    width: 95%;
                     position: absolute;
                     left: 50%;
                     transform: translateX(-50%);
                     z-index: -1;
                     bottom: 0;
                     box-shadow: 0px 1px 7px 1px rgba(0, 0, 0, 0.2);
-
                 }
 
                 &:hover {
@@ -45,22 +66,14 @@
         }
 
 
-        &.active {
+        &.react-tabs__tab--selected {
             a {
                 background-color: $color-primary;
                 color: #fff;
 
                 &:after {
-                    content: '';
-                    position: absolute;
-                    left: 50%;
-                    bottom: 0;
-                    width: 0;
-                    transform: translateX(-50%) translateY(100%);
-                    height: 0;
-                    border-left: 12px solid transparent;
-                    border-right: 12px solid transparent;
-                    border-top: 12px solid #0062ff;
+                    opacity: 1;
+
                 }
             }
         }
@@ -76,4 +89,8 @@
             }
         }
     }
+}
+
+.tab-body {
+    padding-top: 100px;
 }

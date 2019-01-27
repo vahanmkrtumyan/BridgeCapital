@@ -20,6 +20,10 @@ body {
 
 a {
     transition: all $trns-duration;
+
+    &.primary-link {
+        color: $color-primary;
+    }
 }
 
 .container {
