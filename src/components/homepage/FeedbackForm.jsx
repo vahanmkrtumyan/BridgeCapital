@@ -55,9 +55,9 @@ class FeedbackForm extends Component {
 
   render() {
     return (
-      <div className="row">
-        <form className="col s6">
-          <div className="input-field col s6">
+      <div>
+        <form className="">
+          <div className="input-field">
             <input
               id="last_name"
               name="name"
@@ -70,7 +70,7 @@ class FeedbackForm extends Component {
             <label htmlFor="Անուն">Անուն</label>
           </div>
 
-          <div className="input-field col s6">
+          <div>
             <input
               id="email"
               type="email"
@@ -82,7 +82,7 @@ class FeedbackForm extends Component {
             <label htmlFor="email">Email</label>
           </div>
           <div className="row">
-            <div className="input-field col s6">
+            <div>
               <input
                 id="subject"
                 type="text"

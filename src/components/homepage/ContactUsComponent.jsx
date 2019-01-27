@@ -1,0 +1,58 @@
+import React, {Component} from 'react';
+import FeedbackForm from './FeedbackForm';
+import Call from "../../assets/img/icons/call.svg";
+import Envelope from "../../assets/img/icons/envelope.svg";
+import Home from "../../assets/img/icons/home.svg";
+import Facebook from "../../assets/img/icons/facebook.svg";
+
+class ContactUsComponent extends Component {
+    render() {
+        return (
+            <React.Fragment>
+                <section className="section section-contact">
+                    <div className="container">
+                        <h2 className="h2">Հետադարձ կապ</h2>
+                        <div className="contact-content">
+                            <p>Որևէ խնդրի կամ հարցերի դեպքում կարող եք կապվել մեր սպասարկման կենտրոնի հետ` զանգահարելով , այցելելով Բրիջ Կապիտալի գրասենյակ,  գրելով մեր ֆեյսբուքյան էջում կամ գրելով էլեկտրոնային նամակ <a className="primary-link" href="mailto:info@BridgeCapital.am">info@BridgeCapital.am</a> հասցեյով:</p>
+                            <p>Մենք կարձագանքենք Ձեզ, առավելագունը` 7 աշխատանքային օրվա ընթացքում: Մեր մասնագետները սիրով կաջակցեն Ձեզ:</p>
+                        </div>
+                        <ul className="contact-list">
+                            <li className="contact-list-item">
+                                <img src={Call} alt="զանգերի սպասարկում"/>
+                                <div>
+                                    <p>զանգերի սպասարկում</p>
+                                    <a href="#" className="primary-link">+374 456532</a>
+                                </div>
+                            </li>
+                            <li className="contact-list-item">
+                                <img src={Envelope} alt="զանգերի սպասարկում"/>
+                                <div>
+                                    <p>էլ. փոստ</p>
+                                    <a href="#" className="primary-link">info@BridgeCapital.am</a>
+                                </div>
+                            </li>
+                            <li className="contact-list-item">
+                                <img src={Home} alt="զանգերի սպասարկում"/>
+                                <div>
+                                    <p>հասցե</p>
+                                    <a href="#" className="primary-link">ՀՀ, ք. Երևան, Տերյան 6</a>
+                                </div>
+                            </li>
+                            <li className="contact-list-item">
+                                <img src={Facebook} alt="զանգերի սպասարկում"/>
+                                <div>
+                                    <p>սոց․ մեդիա</p>
+                                    <a href="#" className="primary-link">Facebook</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className="section-contact-bg"></div>
+                    <FeedbackForm />
+                </section>
+            </React.Fragment>
+        );
+    }
+}
+
+export default ContactUsComponent;
