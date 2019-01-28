@@ -5,27 +5,41 @@ import "./assets/scss/main.scss";
 import PropTypes from "prop-types";
 import Homepage from "./components/Homepage";
 import CurrencyInput from "./CurrencyInput";
-import NotFound from './components/notFound';
-import {connectTranslations} from "./context/TranslationContext"
+import NotFound from "./components/notFound";
+import { connectTranslations } from "./context/TranslationContext";
+import Loading from "./assets/img/loading.svg";
 
 class App extends Component {
   render() {
-    return this.props.textLoaded ? (
-      
-
-      <React.Fragment>
+    return this.props.initialTextLoaded ? (
+      <>
         {/*<FeedbackForm env={this.props.env} />*/}
 
         <div>
-          <Switch>
-            <Route path="/Kurs" component={CurrencyInput} />
-            <Route path="/" exact component={Homepage} />
-            <Route path="/not-found" component={NotFound} />
-            <Redirect to="/not-found" />
-          </Switch>
+      
+            <Switch>
+              <Route path="/Kurs" component={CurrencyInput} />
+              <Route path="/" exact component={Homepage} />
+              <Route path="/not-found" component={NotFound} />
+              <Redirect to="/not-found" />
+            </Switch>
+        
         </div>
-      </React.Fragment>
-    ): null;
+        {this.props.textLoaded ? null : (
+          <img
+            style={{ height: "100vh", width: "100vh", position: "absolute" }}
+            src={Loading}
+            alt="Loading"
+          />
+        )}
+      </>
+    ) : (
+      <div
+        style={{ width: "1200px", height: "1200px", backgroundColor: "red" }}
+      >
+        sadsad
+      </div>
+    );
   }
 }
 
