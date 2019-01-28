@@ -163,6 +163,7 @@ section {
 
 .section-contact {
     text-align: center;
+    padding-bottom: 0;
 
     .contact-content {
         max-width: 750px;
@@ -210,6 +211,18 @@ section {
         width: 53px;
         height: 53px;
     }
+}
+
+.contact-form {
+    padding: 60px 0 40px;
+    background-color: $color-bg-2;
+
+    form {
+        max-width: 650px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
 }
 
 .section-contact-bg {

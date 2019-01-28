@@ -11,9 +11,7 @@ import {connectTranslations} from "./context/TranslationContext"
 class App extends Component {
   render() {
     return this.props.textLoaded ? (
-      
-
-      <React.Fragment>
+        <React.Fragment>
         {/*<FeedbackForm env={this.props.env} />*/}
 
         <div>
@@ -28,7 +26,6 @@ class App extends Component {
     ): null;
   }
 }
-
 App.propTypes = {
   env: PropTypes.object.isRequired
 };

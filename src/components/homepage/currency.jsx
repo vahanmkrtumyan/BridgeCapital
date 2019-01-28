@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { database } from "./firebase";
+import { database } from "../firebase";
 
 class Currency extends Component {
   state = {
@@ -96,48 +96,65 @@ class Currency extends Component {
 
   render() {
     return (
-      <div>
-        <div>
-          <select
-            name="selected1"
-            onChange={this.handleSelect1}
-            value={this.state.selected1}
-          >
-            <option value="AMD">AMD</option>
-            <option value="USDBid">USD</option>
-            <option value="EURBid">EUR</option>
-            <option value="RUBBid">RUB</option>
-          </select>
-          <input
-            name="USDBid"
-            type="number"
-            className="validate"
-            onChange={e => this.handleInputChange(e, 1)}
-            value={this.state.selected1Val}
-          />
-        </div>
-        <div className="input-field col s6">
-          <select
-            name="selected2"
-            onChange={this.handleSelect2}
-            value={this.state.selected2}
-          >
-            <option value="AMD">AMD</option>
-            <option value="USDAsk">USD</option>
-            <option value="EURAsk">EUR</option>
-            <option value="RUBAsk">RUB</option>
-          </select>
-          <input
-            name="USDAsk"
-            type="number"
-            className="validate"
-            onChange={e => this.handleInputChange(e, 2)}
-            value={this.state.selected2Val}
-          />
-        </div>
+        <section className="section-currency">
 
-        <div>Exchange rate: {this.state.rate} </div>
-      </div>
+            <div className="cols-lg-2">
+                <div className="col-lg-8 currency-calc">
+                    <div className="currency-calc-item">
+
+                    </div>
+                </div>
+                <div className="col-lg-4">
+
+                </div>
+            </div>
+
+
+
+            <div>
+                <div>
+                    <select
+                        name="selected1"
+                        onChange={this.handleSelect1}
+                        value={this.state.selected1}
+                    >
+                        <option value="AMD">AMD</option>
+                        <option value="USDBid">USD</option>
+                        <option value="EURBid">EUR</option>
+                        <option value="RUBBid">RUB</option>
+                    </select>
+                    <input
+                        name="USDBid"
+                        type="number"
+                        className="validate"
+                        onChange={e => this.handleInputChange(e, 1)}
+                        value={this.state.selected1Val}
+                    />
+                </div>
+                <div className="input-field col s6">
+                    <select
+                        name="selected2"
+                        onChange={this.handleSelect2}
+                        value={this.state.selected2}
+                    >
+                        <option value="AMD">AMD</option>
+                        <option value="USDAsk">USD</option>
+                        <option value="EURAsk">EUR</option>
+                        <option value="RUBAsk">RUB</option>
+                    </select>
+                    <input
+                        name="USDAsk"
+                        type="number"
+                        className="validate"
+                        onChange={e => this.handleInputChange(e, 2)}
+                        value={this.state.selected2Val}
+                    />
+                </div>
+
+                <div>Exchange rate: {this.state.rate} </div>
+            </div>
+        </section>
+
     );
   }
 }

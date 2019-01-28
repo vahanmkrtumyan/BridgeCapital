@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import Broker from '../../../assets/img/section-img/broker.png'
+import Broker from '../../assets/img/section-img/broker.png'
 import Fade from 'react-reveal/Fade';
-import About from "../../../assets/img/section-img/about-us.png";
+import About from "../../assets/img/section-img/about-us.png";
 
 class TabComponent extends Component {
     render() {

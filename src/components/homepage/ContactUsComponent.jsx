@@ -25,21 +25,21 @@ class ContactUsComponent extends Component {
                                 </div>
                             </li>
                             <li className="contact-list-item">
-                                <img src={Envelope} alt="զանգերի սպասարկում"/>
+                                <img src={Envelope} alt="էլ. փոստ"/>
                                 <div>
                                     <p>էլ. փոստ</p>
                                     <a href="#" className="primary-link">info@BridgeCapital.am</a>
                                 </div>
                             </li>
                             <li className="contact-list-item">
-                                <img src={Home} alt="զանգերի սպասարկում"/>
+                                <img src={Home} alt="հասցե"/>
                                 <div>
                                     <p>հասցե</p>
                                     <a href="#" className="primary-link">ՀՀ, ք. Երևան, Տերյան 6</a>
                                 </div>
                             </li>
                             <li className="contact-list-item">
-                                <img src={Facebook} alt="զանգերի սպասարկում"/>
+                                <img src={Facebook} alt="սոց․ մեդիա"/>
                                 <div>
                                     <p>սոց․ մեդիա</p>
                                     <a href="#" className="primary-link">Facebook</a>
