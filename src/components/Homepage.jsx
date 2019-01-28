@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import HeaderComponent from './homepage/HeaderComponent';
 import BannerComponent from './homepage/BannerComponent';
-import TabComponent from './homepage/tabs/TabComponent';
+import TabComponent from './homepage/TabComponent';
 import SettingsComponent from './homepage/SettingsComponent';
 import AboutComponent from './homepage/AboutComponent';
 import ContactUsComponent from './homepage/ContactUsComponent';
-import FeedbackForm from "./homepage/FeedbackForm";
-// import Currency from './currency';
+import FooterComponent from './homepage/FooterComponent';
+import Currency from './homepage/currency';
 
 class Homepage extends Component {
     render() {
@@ -15,12 +15,11 @@ class Homepage extends Component {
                 <HeaderComponent />
                 <BannerComponent />
                 <TabComponent />
+                {/*<Currency/>*/}
                 <SettingsComponent />
                 <AboutComponent />
                 <ContactUsComponent />
-
-                {/*<FeedbackForm />*/}
-                {/*<Currency/>*/}
+                <FooterComponent />
             </React.Fragment>
         );
     }

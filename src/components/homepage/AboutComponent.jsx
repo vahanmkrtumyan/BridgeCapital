@@ -8,7 +8,7 @@ const AboutComponent = () => {
     return (
         <section className="section grey">
             <div className="container">
-                <div className="cols-sm-2 justify-between section-with-img img-to-right">
+                <div className="cols-md-2 justify-between section-with-img img-to-right">
                     <div className="col-md-5">
                         <h2 className="h2">Մեր մասին</h2>
                         <div>

@@ -11,8 +11,13 @@ import Loading from "./assets/img/loading.svg";
 
 class App extends Component {
   render() {
+<<<<<<< HEAD
     return this.props.initialTextLoaded ? (
       <>
+=======
+    return this.props.textLoaded ? (
+        <React.Fragment>
+>>>>>>> 4f495957d5f276945c594900912f462b8be57741
         {/*<FeedbackForm env={this.props.env} />*/}
 
         <div>
@@ -42,7 +47,6 @@ class App extends Component {
     );
   }
 }
-
 App.propTypes = {
   env: PropTypes.object.isRequired
 };
