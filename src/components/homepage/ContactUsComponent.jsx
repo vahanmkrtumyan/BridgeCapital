@@ -13,7 +13,7 @@ class ContactUsComponent extends Component {
                     <div className="container">
                         <h2 className="h2">Հետադարձ կապ</h2>
                         <div className="contact-content">
-                            <p>Որևէ խնդրի կամ հարցերի դեպքում կարող եք կապվել մեր սպասարկման կենտրոնի հետ` զանգահարելով , այցելելով Բրիջ Կապիտալի գրասենյակ,  գրելով մեր ֆեյսբուքյան էջում կամ գրելով էլեկտրոնային նամակ <a className="primary-link" href="mailto:info@BridgeCapital.am">info@BridgeCapital.am</a> հասցեյով:</p>
+                            <p>Որևէ խնդրի կամ հարցերի դեպքում կարող եք կապվել մեր սպասարկման կենտրոնի հետ` զանգահարելով , այցելելով Բրիջ Կապիտալի գրասենյակ,  գրելով մեր ֆեյսբուքյան էջում կամ գրելով էլեկտրոնային նամակ <a className="primary-link" href="mailto:info@bridgecapital.am">info@bridgecapital.am</a> հասցեով:</p>
                             <p>Մենք կարձագանքենք Ձեզ, առավելագունը` 7 աշխատանքային օրվա ընթացքում: Մեր մասնագետները սիրով կաջակցեն Ձեզ:</p>
                         </div>
                         <ul className="contact-list">
