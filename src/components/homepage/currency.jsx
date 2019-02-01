@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { database } from "../firebase";
+import Arrow from "../../assets/img/icons/arrow-down.svg";
 
 class Currency extends Component {
   state = {
@@ -95,63 +96,105 @@ class Currency extends Component {
   };
 
   render() {
+      let valueLength2 = this.state.selected2.length;
+      let valueLength1 = this.state.selected1Val.length;
     return (
-        <section className="section-currency">
+        <section className="section-currency section">
+            <div className="container">
+                <div className="cols-lg-2">
+                    <div className="col-lg-8">
+                        <h3 className="h3 lg pb-2">Փոխարժեքի հաշվիչ</h3>
+                        <div className="currency-calc">
+                            <div className="currency-calc-item">
+                                <div className="calc-header">
+                                    <span className='flag'></span>
+                                    <div className="select">
+                                        <select
+                                            name="selected1"
+                                            onChange={this.handleSelect1}
+                                            value={this.state.selected1}
+                                        >
+                                            <option value="AMD">AMD</option>
+                                            <option value="USDBid">USD</option>
+                                            <option value="EURBid">EUR</option>
+                                            <option value="RUBBid">RUB</option>
+                                        </select>
+                                        <img src={Arrow} className="arrow" alt=""/>
+                                    </div>
 
-            <div className="cols-lg-2">
-                <div className="col-lg-8 currency-calc">
-                    <div className="currency-calc-item">
+                                </div>
+                                <div className="calc-body">
+                                    <input
+                                        name="USDBid"
+                                        type="number"
+                                        onChange={e => this.handleInputChange(e, 1)}
+                                        value={this.state.selected1Val || 0}
+                                        className={valueLength1 < 6 ? 'validate large' : 'validate small'}
+                                    />
+                                </div>
+                            </div>
+                            <div className="currency-calc-item">
+                                <div className="calc-header">
+                                    <span className='flag'></span>
+                                    <div className="select">
+                                        <select
+                                            name="selected2"
+                                            onChange={this.handleSelect2}
+                                            value={this.state.selected2}
+
+                                        >
+                                            <option value="AMD">AMD</option>
+                                            <option value="USDAsk">USD</option>
+                                            <option value="EURAsk">EUR</option>
+                                            <option value="RUBAsk">RUB</option>
+                                        </select>
+                                        <img src={Arrow} className="arrow" alt=""/>
+                                    </div>
+
+                                </div>
+                                <div className="calc-body">
+                                    <input
+                                        name="USDAsk"
+                                        type="number"
+                                        onChange={e => this.handleInputChange(e, 2)}
+                                        value={this.state.selected2Val || 100000000 }
+                                        className={valueLength2 < 6 ? 'validate large' : 'validate small'}
+                                    />
+                                </div>
+                            </div>
+                        </div>
 
                     </div>
-                </div>
-                <div className="col-lg-4">
+                    <div className="col-lg-4">
+                        <div>
+                            <h3 className="h3 lg pb-2">Փոխարժեքն այսօր</h3>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Արժույթներ</th>
+                                        <th>Առք</th>
+                                        <th>Առք</th>
+                                        <th>Վաճառք</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
 
+                    </div>
                 </div>
             </div>
 
 
-
             <div>
-                <div>
-                    <select
-                        name="selected1"
-                        onChange={this.handleSelect1}
-                        value={this.state.selected1}
-                    >
-                        <option value="AMD">AMD</option>
-                        <option value="USDBid">USD</option>
-                        <option value="EURBid">EUR</option>
-                        <option value="RUBBid">RUB</option>
-                    </select>
-                    <input
-                        name="USDBid"
-                        type="number"
-                        className="validate"
-                        onChange={e => this.handleInputChange(e, 1)}
-                        value={this.state.selected1Val}
-                    />
-                </div>
-                <div className="input-field col s6">
-                    <select
-                        name="selected2"
-                        onChange={this.handleSelect2}
-                        value={this.state.selected2}
-                    >
-                        <option value="AMD">AMD</option>
-                        <option value="USDAsk">USD</option>
-                        <option value="EURAsk">EUR</option>
-                        <option value="RUBAsk">RUB</option>
-                    </select>
-                    <input
-                        name="USDAsk"
-                        type="number"
-                        className="validate"
-                        onChange={e => this.handleInputChange(e, 2)}
-                        value={this.state.selected2Val}
-                    />
-                </div>
 
-                <div>Exchange rate: {this.state.rate} </div>
+                {/*<div>Exchange rate: {this.state.rate} </div>*/}
             </div>
         </section>
 

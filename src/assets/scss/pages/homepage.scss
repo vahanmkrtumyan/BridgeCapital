@@ -228,7 +228,82 @@ section {
 .section-contact-bg {
     height: 200px;
     @include bg-img('contact-bg.png', no-repeat, cover, $color-bg, top);
-    //background: ;
 }
 
+.section-currency {
+    background-color: $color-bg-2;
+}
 
+/*calculator arandznacnel*/
+.currency-calc {
+    display: flex;
+}
+.currency-calc-item {
+    width: 320px;
+    margin-right: 40px;
+
+    .flag {
+        width: 46px;
+        height: 30px;
+        display: inline-block;
+        border-radius: 5px;
+        background-color: darkred;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .select {
+        width: calc(100% - 46px);
+        position: relative;
+    }
+    select {
+        background-color: #02487f;
+        border: none;
+        color: #fff;
+        font-weight: 700;
+        padding: 0 30px 0 10px;
+        -webkit-appearance: none;
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
+    }
+    .arrow {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 14px;
+        pointer-events: none;
+    }
+
+    .calc-header {
+        background-color: #02487f;
+        display: flex;
+        padding: 10px 0 10px 15px;
+    }
+
+    .calc-body {
+        padding: 60px 20px;
+        background-color: #e4eeff;
+        height: 190px;
+        display: flex;
+
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input {
+            color: #757b83;
+            border: none;
+
+
+            &.large {
+                font-size: 60px;
+            }
+            &.small {
+                font-size: 30px;
+            }
+        }
+    }
+}

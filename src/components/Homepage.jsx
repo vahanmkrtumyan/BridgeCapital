@@ -15,7 +15,7 @@ class Homepage extends Component {
                 <HeaderComponent />
                 <BannerComponent />
                 <TabComponent />
-                {/*<Currency/>*/}
+                <Currency/>
                 <SettingsComponent />
                 <AboutComponent />
                 <ContactUsComponent />
