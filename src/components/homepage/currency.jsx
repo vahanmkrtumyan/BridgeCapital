@@ -198,7 +198,7 @@ class Currency extends Component {
                       <td>{this.state.kurs.EURAsk}</td>
                     </tr>
                     <tr>
-                      <td>USD</td>
+                      <td>RUB</td>
                       <td>{this.state.kurs.RUBBid}</td>
                       <td>{this.state.kurs.RUBAsk}</td>
                     </tr>
