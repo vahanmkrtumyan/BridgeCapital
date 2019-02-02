@@ -102,7 +102,6 @@ class Currency extends Component {
   render() {
     let valueLength2 = this.state.selected2Val.length;
     let valueLength1 = this.state.selected1Val.length;
-
     return (
       <section className="section-currency section">
         <div className="container">
@@ -135,7 +134,7 @@ class Currency extends Component {
                       value={this.state.selected1Val}
                       className={
                         //(valueLength1 || valueLength2) < 6 ? "validate large" : "validate small"
-                        (valueLength1 || valueLength2) > 6
+                        (valueLength1 || valueLength2) > 5
                           ? "validate small"
                           : "validate large"
                       }
@@ -166,9 +165,10 @@ class Currency extends Component {
                       onChange={e => this.handleInputChange(e, 2)}
                       value={this.state.selected2Val}
                       className={
-                        (valueLength1 || valueLength2) > 6
+                        (valueLength1 || valueLength2) > 5
                           ? "validate small"
                           : "validate large"
+                          
                       }
                     />
                   </div>
@@ -177,21 +177,30 @@ class Currency extends Component {
             </div>
             <div className="col-lg-4">
               <div>
-                <h3 className="h3 lg pb-2">Փոխարժեքն այսօր</h3>
+                <h3 className="h3 lg pb-2">Փոխարժեք</h3>
                 <table>
                   <thead>
                     <tr>
-                      <th>Արժույթներ</th>
-                      <th>Առք</th>
+                      <th>Արժույթ</th>
                       <th>Առք</th>
                       <th>Վաճառք</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td />
-                      <td />
-                      <td />
+                      <td >USD</td>
+                      <td >{this.state.kurs.USDBid}</td> 
+                      <td >{this.state.kurs.USDAsk}</td> 
+                    </tr>
+                    <tr>
+                      <td >EUR</td>
+                      <td >{this.state.kurs.EURBid}</td> 
+                      <td >{this.state.kurs.EURAsk}</td> 
+                    </tr>
+                    <tr>
+                      <td >USD</td>
+                      <td >{this.state.kurs.RUBBid}</td> 
+                      <td >{this.state.kurs.RUBAsk}</td> 
                     </tr>
                   </tbody>
                 </table>
@@ -202,6 +211,7 @@ class Currency extends Component {
 
         <div>{/*<div>Exchange rate: {this.state.rate} </div>*/}</div>
       </section>
+      
     );
   }
 }
