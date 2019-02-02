@@ -1,6 +1,11 @@
 import React, { Component } from "react";
 import { database } from "../firebase";
 import Arrow from "../../assets/img/icons/arrow-down.svg";
+import USA from "../../assets/img/icons/flags/united-states.svg";
+import Armenia from "../../assets/img/icons/flags/armenia1.svg";
+import Russia from "../../assets/img/icons/flags/russia.svg";
+import Euro from "../../assets/img/icons/flags/european-union.svg";
+import UK from "../../assets/img/icons/flags/united-kingdom.svg";
 
 class Currency extends Component {
   state = {
@@ -103,8 +108,8 @@ class Currency extends Component {
   };
 
   render() {
-    let valueLength2 = this.state.selected2Val.length;
-    let valueLength1 = this.state.selected1Val.length;
+    let maxValue = Math.max(this.state.selected1Val, this.state.selected2Val);
+
     return (
       <section className="section-currency section">
         <div className="container">
@@ -114,7 +119,7 @@ class Currency extends Component {
               <div className="currency-calc">
                 <div className="currency-calc-item">
                   <div className="calc-header">
-                    <span className="flag" />
+                      <img src={Armenia} className="flag" />
                     <div className="select">
                       <select
                         name="selected1"
@@ -137,16 +142,16 @@ class Currency extends Component {
                       value={this.state.selected1Val}
                       className={
                         //(valueLength1 || valueLength2) < 6 ? "validate large" : "validate small"
-                        (valueLength1 || valueLength2) > 5
-                          ? "validate small"
-                          : "validate large"
+                          maxValue > 999999
+                              ? "validate small"
+                              : "validate large"
                       }
                     />
                   </div>
                 </div>
                 <div className="currency-calc-item">
                   <div className="calc-header">
-                    <span className="flag" />
+                    <img src={Armenia} className="flag" />
                     <div className="select">
                       <select
                         name="selected2"
@@ -168,9 +173,9 @@ class Currency extends Component {
                       onChange={e => this.handleInputChange(e, 2)}
                       value={this.state.selected2Val}
                       className={
-                        (valueLength1 || valueLength2) > 5
-                          ? "validate small"
-                          : "validate large"
+                          maxValue > 999999
+                              ? "validate small"
+                              : "validate large"
                       }
                     />
                   </div>
@@ -180,7 +185,7 @@ class Currency extends Component {
             <div className="col-lg-4">
               <div>
                 <h3 className="h3 lg pb-2">Փոխարժեք</h3>
-                <table>
+                <table className="table">
                   <thead>
                     <tr>
                       <th>Արժույթ</th>
@@ -190,17 +195,22 @@ class Currency extends Component {
                   </thead>
                   <tbody>
                     <tr>
-                      <td>USD</td>
+                      <td><img src={USA} className="flag" alt="ԱՄՆ դոլար"/>USD</td>
                       <td>{this.state.kurs.USDBid}</td>
                       <td>{this.state.kurs.USDAsk}</td>
                     </tr>
                     <tr>
-                      <td>EUR</td>
+                      <td><img src={Euro} className="flag" alt="Եվրո"/>EUR</td>
                       <td>{this.state.kurs.EURBid}</td>
                       <td>{this.state.kurs.EURAsk}</td>
                     </tr>
                     <tr>
-                      <td>RUB</td>
+                      <td><img src={Russia} className="flag" alt="Ռուսական ռուբլի"/>RUB</td>
+                      <td>{this.state.kurs.RUBBid}</td>
+                      <td>{this.state.kurs.RUBAsk}</td>
+                    </tr>
+                    <tr>
+                      <td><img src={UK} className="flag" alt="Ֆունտստերլինգ"/>GBP</td>
                       <td>{this.state.kurs.RUBBid}</td>
                       <td>{this.state.kurs.RUBAsk}</td>
                     </tr>

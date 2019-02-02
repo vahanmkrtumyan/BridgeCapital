@@ -1,7 +1,7 @@
 header {
     background-color: $color-bg;
     padding: 25px 0;
-    color: $color-secondary;
+    color: #fff;
 }
 
 .logo {
@@ -33,9 +33,10 @@ header {
             text-transform: uppercase;
             color: $color-text-50;
             font-size: $base-font-size;
+            cursor: pointer;
 
             &:hover {
-                color: $color-secondary;
+                color: #fff;
             }
         }
 
