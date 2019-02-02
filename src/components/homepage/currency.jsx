@@ -17,7 +17,8 @@ class Currency extends Component {
     selected2: "AMD",
     selected1Val: "1",
     selected2Val: "",
-    rate: ""
+    rate: "",
+    inputClass: "validate large"
   };
 
   componentDidMount() {
@@ -69,7 +70,7 @@ class Currency extends Component {
       this.setState({ rate: 1 }, () => {
         this.setState({
           selected2: val,
-          selected1Val: this.state.selected2Val
+          selected2Val: this.state.selected1Val
         });
       });
     } else
@@ -99,8 +100,9 @@ class Currency extends Component {
   };
 
   render() {
-    let valueLength2 = this.state.selected2.length;
+    let valueLength2 = this.state.selected2Val.length;
     let valueLength1 = this.state.selected1Val.length;
+
     return (
       <section className="section-currency section">
         <div className="container">
@@ -132,7 +134,10 @@ class Currency extends Component {
                       onChange={e => this.handleInputChange(e, 1)}
                       value={this.state.selected1Val}
                       className={
-                        valueLength1 < 6 ? "validate large" : "validate small"
+                        //(valueLength1 || valueLength2) < 6 ? "validate large" : "validate small"
+                        (valueLength1 || valueLength2) > 6
+                          ? "validate small"
+                          : "validate large"
                       }
                     />
                   </div>
@@ -161,7 +166,9 @@ class Currency extends Component {
                       onChange={e => this.handleInputChange(e, 2)}
                       value={this.state.selected2Val}
                       className={
-                        valueLength2 < 6 ? "validate large" : "validate small"
+                        (valueLength1 || valueLength2) > 6
+                          ? "validate small"
+                          : "validate large"
                       }
                     />
                   </div>
