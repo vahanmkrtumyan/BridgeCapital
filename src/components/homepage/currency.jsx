@@ -54,7 +54,8 @@ class Currency extends Component {
           this.state.kurs[this.state.selected1] /
           this.state.kurs[this.state.selected2];
         this.setState({ rate }, () => {
-          let newVal = this.state.selected2Val / this.state.rate;
+          let newVal =
+            Math.round((this.state.selected2Val / this.state.rate) * 100) / 100;
           this.setState({ selected1Val: newVal }, () =>
             console.log(this.state.selected2Val)
           );
@@ -79,7 +80,8 @@ class Currency extends Component {
           this.state.kurs[this.state.selected1] /
           this.state.kurs[this.state.selected2];
         this.setState({ rate }, () => {
-          let newVal = this.state.selected1Val * this.state.rate;
+          let newVal =
+            Math.round(this.state.selected1Val * this.state.rate * 100) / 100;
           this.setState({ selected2Val: newVal }, () =>
             console.log(this.state.selected2Val)
           );
