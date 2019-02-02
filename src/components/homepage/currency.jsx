@@ -90,11 +90,12 @@ class Currency extends Component {
   handleInputChange = (e, inputNumber) => {
     if (inputNumber === 1) {
       const newVal1 = e.target.value;
-      const newVal2 = newVal1 * this.state.rate;
+
+      const newVal2 = Math.round(newVal1 * this.state.rate * 100) / 100;
       this.setState({ selected1Val: newVal1, selected2Val: newVal2 });
     } else {
       const newVal2 = e.target.value;
-      const newVal1 = newVal2 / this.state.rate;
+      const newVal1 = Math.round((newVal2 / this.state.rate) * 100) / 100;
       this.setState({ selected1Val: newVal1, selected2Val: newVal2 });
     }
   };
@@ -168,7 +169,6 @@ class Currency extends Component {
                         (valueLength1 || valueLength2) > 5
                           ? "validate small"
                           : "validate large"
-                          
                       }
                     />
                   </div>
@@ -188,19 +188,19 @@ class Currency extends Component {
                   </thead>
                   <tbody>
                     <tr>
-                      <td >USD</td>
-                      <td >{this.state.kurs.USDBid}</td> 
-                      <td >{this.state.kurs.USDAsk}</td> 
+                      <td>USD</td>
+                      <td>{this.state.kurs.USDBid}</td>
+                      <td>{this.state.kurs.USDAsk}</td>
                     </tr>
                     <tr>
-                      <td >EUR</td>
-                      <td >{this.state.kurs.EURBid}</td> 
-                      <td >{this.state.kurs.EURAsk}</td> 
+                      <td>EUR</td>
+                      <td>{this.state.kurs.EURBid}</td>
+                      <td>{this.state.kurs.EURAsk}</td>
                     </tr>
                     <tr>
-                      <td >USD</td>
-                      <td >{this.state.kurs.RUBBid}</td> 
-                      <td >{this.state.kurs.RUBAsk}</td> 
+                      <td>USD</td>
+                      <td>{this.state.kurs.RUBBid}</td>
+                      <td>{this.state.kurs.RUBAsk}</td>
                     </tr>
                   </tbody>
                 </table>
@@ -211,7 +211,6 @@ class Currency extends Component {
 
         <div>{/*<div>Exchange rate: {this.state.rate} </div>*/}</div>
       </section>
-      
     );
   }
 }
