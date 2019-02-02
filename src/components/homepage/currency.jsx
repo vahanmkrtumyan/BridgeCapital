@@ -15,7 +15,7 @@ class Currency extends Component {
     },
     selected1: "USDBid",
     selected2: "AMD",
-    selected1Val: "",
+    selected1Val: "1",
     selected2Val: "",
     rate: ""
   };
@@ -27,7 +27,10 @@ class Currency extends Component {
           let rate =
             this.state.kurs[this.state.selected1] /
             this.state.kurs[this.state.selected2];
-          this.setState({ rate });
+          this.setState({ rate }, () => {
+            let selected2Val = this.state.kurs.USDAsk;
+            this.setState({ selected2Val });
+          });
         });
       }
     });
@@ -96,108 +99,102 @@ class Currency extends Component {
   };
 
   render() {
-      let valueLength2 = this.state.selected2.length;
-      let valueLength1 = this.state.selected1Val.length;
+    let valueLength2 = this.state.selected2.length;
+    let valueLength1 = this.state.selected1Val.length;
     return (
-        <section className="section-currency section">
-            <div className="container">
-                <div className="cols-lg-2">
-                    <div className="col-lg-8">
-                        <h3 className="h3 lg pb-2">Փոխարժեքի հաշվիչ</h3>
-                        <div className="currency-calc">
-                            <div className="currency-calc-item">
-                                <div className="calc-header">
-                                    <span className='flag'></span>
-                                    <div className="select">
-                                        <select
-                                            name="selected1"
-                                            onChange={this.handleSelect1}
-                                            value={this.state.selected1}
-                                        >
-                                            <option value="AMD">AMD</option>
-                                            <option value="USDBid">USD</option>
-                                            <option value="EURBid">EUR</option>
-                                            <option value="RUBBid">RUB</option>
-                                        </select>
-                                        <img src={Arrow} className="arrow" alt=""/>
-                                    </div>
-
-                                </div>
-                                <div className="calc-body">
-                                    <input
-                                        name="USDBid"
-                                        type="number"
-                                        onChange={e => this.handleInputChange(e, 1)}
-                                        value={this.state.selected1Val || 0}
-                                        className={valueLength1 < 6 ? 'validate large' : 'validate small'}
-                                    />
-                                </div>
-                            </div>
-                            <div className="currency-calc-item">
-                                <div className="calc-header">
-                                    <span className='flag'></span>
-                                    <div className="select">
-                                        <select
-                                            name="selected2"
-                                            onChange={this.handleSelect2}
-                                            value={this.state.selected2}
-
-                                        >
-                                            <option value="AMD">AMD</option>
-                                            <option value="USDAsk">USD</option>
-                                            <option value="EURAsk">EUR</option>
-                                            <option value="RUBAsk">RUB</option>
-                                        </select>
-                                        <img src={Arrow} className="arrow" alt=""/>
-                                    </div>
-
-                                </div>
-                                <div className="calc-body">
-                                    <input
-                                        name="USDAsk"
-                                        type="number"
-                                        onChange={e => this.handleInputChange(e, 2)}
-                                        value={this.state.selected2Val || 100000000 }
-                                        className={valueLength2 < 6 ? 'validate large' : 'validate small'}
-                                    />
-                                </div>
-                            </div>
-                        </div>
-
+      <section className="section-currency section">
+        <div className="container">
+          <div className="cols-lg-2">
+            <div className="col-lg-8">
+              <h3 className="h3 lg pb-2">Փոխարժեքի հաշվիչ</h3>
+              <div className="currency-calc">
+                <div className="currency-calc-item">
+                  <div className="calc-header">
+                    <span className="flag" />
+                    <div className="select">
+                      <select
+                        name="selected1"
+                        onChange={this.handleSelect1}
+                        value={this.state.selected1}
+                      >
+                        <option value="AMD">AMD</option>
+                        <option value="USDBid">USD</option>
+                        <option value="EURBid">EUR</option>
+                        <option value="RUBBid">RUB</option>
+                      </select>
+                      <img src={Arrow} className="arrow" alt="" />
                     </div>
-                    <div className="col-lg-4">
-                        <div>
-                            <h3 className="h3 lg pb-2">Փոխարժեքն այսօր</h3>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Արժույթներ</th>
-                                        <th>Առք</th>
-                                        <th>Առք</th>
-                                        <th>Վաճառք</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                    </div>
+                  </div>
+                  <div className="calc-body">
+                    <input
+                      name="USDBid"
+                      type="number"
+                      onChange={e => this.handleInputChange(e, 1)}
+                      value={this.state.selected1Val}
+                      className={
+                        valueLength1 < 6 ? "validate large" : "validate small"
+                      }
+                    />
+                  </div>
                 </div>
+                <div className="currency-calc-item">
+                  <div className="calc-header">
+                    <span className="flag" />
+                    <div className="select">
+                      <select
+                        name="selected2"
+                        onChange={this.handleSelect2}
+                        value={this.state.selected2}
+                      >
+                        <option value="AMD">AMD</option>
+                        <option value="USDAsk">USD</option>
+                        <option value="EURAsk">EUR</option>
+                        <option value="RUBAsk">RUB</option>
+                      </select>
+                      <img src={Arrow} className="arrow" alt="" />
+                    </div>
+                  </div>
+                  <div className="calc-body">
+                    <input
+                      name="USDAsk"
+                      type="number"
+                      onChange={e => this.handleInputChange(e, 2)}
+                      value={this.state.selected2Val}
+                      className={
+                        valueLength2 < 6 ? "validate large" : "validate small"
+                      }
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
-
-
-            <div>
-
-                {/*<div>Exchange rate: {this.state.rate} </div>*/}
+            <div className="col-lg-4">
+              <div>
+                <h3 className="h3 lg pb-2">Փոխարժեքն այսօր</h3>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Արժույթներ</th>
+                      <th>Առք</th>
+                      <th>Առք</th>
+                      <th>Վաճառք</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td />
+                      <td />
+                      <td />
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
 
+        <div>{/*<div>Exchange rate: {this.state.rate} </div>*/}</div>
+      </section>
     );
   }
 }
