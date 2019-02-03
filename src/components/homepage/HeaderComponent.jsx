@@ -94,22 +94,20 @@ class HeaderComponent extends Component {
             <header className="header">
                 <div className="container cols-sm-2 align-center">
                     <Fade cascade>
-                        <div className="col-sm-4">
+                        <div className="col-sm-3">
                             <a href="#" className="logo">
-                                {/*<img src={ svgSource } alt="bridge capital"/>*/}
                                 <InlineSVG src={svgSource} />
-                                {/*<p>Bridge Capital</p>*/}
                             </a>
                         </div>
-                        <div className="col-sm-8">
+                        <div className="col-sm-9">
                             <div className="header-nav">
                                 <ul className="menu">
                                     <li className="active"><a href="#" onClick={this.props.onTab}>{texts.header.services}</a></li>
                                     <li  onClick={this.props.onSettings}><a href="#">Կարգավորումներ</a></li>
                                     <li  onClick={this.props.onAbout}><a href="#">Մեր մասին</a></li>
                                     <li onClick={this.props.onContact}><a href="#">Հետադարձ կապ</a></li>
-                                    <li className="lang rus"><a
-                                    onClick={e =>window.localStorage.getItem("lang") === ('hy-AM') ? this.props.setLocale("ru-RU"):this.props.setLocale("hy-AM")} >{texts.header.language}</a></li>
+                                    {/*<li className="lang rus"><a
+                                    onClick={e =>window.localStorage.getItem("lang") === ('hy-AM') ? this.props.setLocale("ru-RU"):this.props.setLocale("hy-AM")} >{texts.header.language}</a></li>*/}
                                 </ul>
                             </div>
                         </div>

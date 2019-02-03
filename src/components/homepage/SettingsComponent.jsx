@@ -7,7 +7,7 @@ const SettingsComponent = () => {
     return (
         <section className="section">
             <div className="container">
-                <div className="cols-sm-2 justify-between section-with-img">
+                <div className="cols-sm-2 cols-mb justify-between section-with-img">
                     <div className="col-md-5">
                         <div className="section-img">
                             <div className="img">

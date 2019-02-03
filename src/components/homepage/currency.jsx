@@ -113,7 +113,7 @@ class Currency extends Component {
     return (
       <section className="section-currency section">
         <div className="container">
-          <div className="cols-md-2">
+          <div className="cols-md-2 cols-mb">
             <div className="col-md-8">
               <h3 className="h3 lg pb-2">Փոխարժեքի հաշվիչ</h3>
               <div className="currency-calc">

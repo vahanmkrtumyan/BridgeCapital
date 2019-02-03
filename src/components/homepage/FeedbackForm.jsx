@@ -58,7 +58,7 @@ class FeedbackForm extends Component {
             <div className="contact-form">
                 <h3 className="h3 pb-7">Հարցե±ր ունեք: Սիրով կսպասենտք Ձեր նամակներին:</h3>
                 <form className="">
-                    <div className="cols-sm-2 pb-4">
+                    <div className="cols-sm-2 cols-mb pb-4">
                         <div className="col-sm-6">
                             <input
                                 id="last_name"

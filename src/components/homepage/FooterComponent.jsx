@@ -13,7 +13,7 @@ const FooterComponent = (props) => {
     <footer>
       <div className="footer-top">
         <div className="container">
-          <div className="cols-sm-3 align-center">
+          <div className="cols-sm-3 cols-mb align-center">
             <div className="col-sm-6">
               <ul className="footer-links">
                 <li>
@@ -78,7 +78,7 @@ const FooterComponent = (props) => {
       </div>
       <div className="footer-bottom">
         <div className="container">
-          <div className="cols-sm-2 align-center">
+          <div className="cols-sm-2 cols-mb align-center">
             <div className="col-sm-6">
               <a href="#" className="footer-logo" onClick={props.onLogo}>
                 <img src={logo} alt="Բրիջ կապիտալ" />

@@ -27,7 +27,7 @@ class TabComponent extends Component {
                             </TabList>
                             <TabPanel >
                                 <div className="tab-body">
-                                    <div className="cols-sm-2 justify-between section-with-img img-to-right">
+                                    <div className="cols-sm-2 cols-mb justify-between section-with-img img-to-right">
                                         <div className="col-md-5">
                                             <h2 className="h2">Բրոքերային ծառայություն</h2>
 
@@ -63,7 +63,7 @@ class TabComponent extends Component {
                             </TabPanel>
                             <TabPanel >
                                 <div className="tab-body">
-                                    <div className="cols-sm-2 justify-between section-with-img img-to-right">
+                                    <div className="cols-sm-2 cols-mb justify-between section-with-img img-to-right">
                                         <div className="col-md-5">
                                             <h2 className="h2">Խորհրդատվական ծառայություն</h2>
 
@@ -99,7 +99,7 @@ class TabComponent extends Component {
                             </TabPanel>
                             <TabPanel >
                                 <div className="tab-body">
-                                    <div className="cols-sm-2 justify-between section-with-img img-to-right">
+                                    <div className="cols-sm-2 cols-mb justify-between section-with-img img-to-right">
                                         <div className="col-md-5">
                                             <h2 className="h2">Արտարժութային ծառայություն</h2>
 
