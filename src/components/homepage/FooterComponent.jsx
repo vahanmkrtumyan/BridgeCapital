@@ -8,7 +8,7 @@ import Linkedin from "../../assets/img/icons/linkedin.svg";
 import FbSm from "../../assets/img/icons/facebook-small.svg";
 import Copyright from "../../assets/img/icons/copyright.svg";
 
-const FooterComponent = () => {
+const FooterComponent = (props) => {
   return (
     <footer>
       <div className="footer-top">
@@ -80,7 +80,7 @@ const FooterComponent = () => {
         <div className="container">
           <div className="cols-sm-2 align-center">
             <div className="col-sm-6">
-              <a href="#" className="footer-logo">
+              <a href="#" className="footer-logo" onClick={props.onLogo}>
                 <img src={logo} alt="Բրիջ կապիտալ" />
               </a>
             </div>

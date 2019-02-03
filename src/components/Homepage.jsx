@@ -15,7 +15,8 @@ class Homepage extends Component {
     onTab = () => scrollToComponent(this.TabComponent, { offset: 0, align: 'top', duration: 1500});
     onSettings = () => scrollToComponent(this.SettingsComponent, { offset: 0, align: 'top', duration: 1500});
     onAbout = () => scrollToComponent(this.AboutComponent, { offset: 0, align: 'top', duration: 1500});
-    onContact = () => scrollToComponent(this.ContactUsComponent, { offset: 0, align: 'top', duration: 1500})
+    onContact = () => scrollToComponent(this.ContactUsComponent, { offset: 0, align: 'top', duration: 1500});
+    onLogo = () => scrollToComponent(this.HeaderComponent, { offset: 0, align: 'top', duration: 1500});
 
 
     render() {
@@ -30,7 +31,8 @@ class Homepage extends Component {
                 <section className='violet' ref={(section) => { this.SettingsComponent = section; }}><SettingsComponent /></section>
                 <section className='violet' ref={(section) => { this.AboutComponent = section; }}><AboutComponent /></section>
                 <section className='violet' ref={(section) => { this.ContactUsComponent = section; }}><ContactUsComponent /></section>
-                <FooterComponent />
+                <section className='violet' ref={(section) => { this.HeaderComponent = section; }}><FooterComponent  onTab={this.onLogo}/> /></section>
+               
             </React.Fragment>
         );
     }
