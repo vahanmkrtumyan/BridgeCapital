@@ -1,5 +1,11 @@
 import React, { Component } from "react";
 import { database } from "../firebase";
+import Arrow from "../../assets/img/icons/arrow-down.svg";
+import USA from "../../assets/img/icons/flags/united-states.svg";
+import Armenia from "../../assets/img/icons/flags/armenia1.svg";
+import Russia from "../../assets/img/icons/flags/russia.svg";
+import Euro from "../../assets/img/icons/flags/european-union.svg";
+import UK from "../../assets/img/icons/flags/united-kingdom.svg";
 
 class Currency extends Component {
   state = {
@@ -14,9 +20,10 @@ class Currency extends Component {
     },
     selected1: "USDBid",
     selected2: "AMD",
-    selected1Val: "",
+    selected1Val: "1",
     selected2Val: "",
-    rate: ""
+    rate: "",
+    inputClass: "validate large"
   };
 
   componentDidMount() {
@@ -26,7 +33,10 @@ class Currency extends Component {
           let rate =
             this.state.kurs[this.state.selected1] /
             this.state.kurs[this.state.selected2];
-          this.setState({ rate });
+          this.setState({ rate }, () => {
+            let selected2Val = this.state.kurs.USDAsk;
+            this.setState({ selected2Val });
+          });
         });
       }
     });
@@ -49,7 +59,8 @@ class Currency extends Component {
           this.state.kurs[this.state.selected1] /
           this.state.kurs[this.state.selected2];
         this.setState({ rate }, () => {
-          let newVal = this.state.selected2Val / this.state.rate;
+          let newVal =
+            Math.round((this.state.selected2Val / this.state.rate) * 100) / 100;
           this.setState({ selected1Val: newVal }, () =>
             console.log(this.state.selected2Val)
           );
@@ -65,7 +76,7 @@ class Currency extends Component {
       this.setState({ rate: 1 }, () => {
         this.setState({
           selected2: val,
-          selected1Val: this.state.selected2Val
+          selected2Val: this.state.selected1Val
         });
       });
     } else
@@ -74,7 +85,8 @@ class Currency extends Component {
           this.state.kurs[this.state.selected1] /
           this.state.kurs[this.state.selected2];
         this.setState({ rate }, () => {
-          let newVal = this.state.selected1Val * this.state.rate;
+          let newVal =
+            Math.round(this.state.selected1Val * this.state.rate * 100) / 100;
           this.setState({ selected2Val: newVal }, () =>
             console.log(this.state.selected2Val)
           );
@@ -85,76 +97,132 @@ class Currency extends Component {
   handleInputChange = (e, inputNumber) => {
     if (inputNumber === 1) {
       const newVal1 = e.target.value;
-      const newVal2 = newVal1 * this.state.rate;
+
+      const newVal2 = Math.round(newVal1 * this.state.rate * 100) / 100;
       this.setState({ selected1Val: newVal1, selected2Val: newVal2 });
     } else {
       const newVal2 = e.target.value;
-      const newVal1 = newVal2 / this.state.rate;
+      const newVal1 = Math.round((newVal2 / this.state.rate) * 100) / 100;
       this.setState({ selected1Val: newVal1, selected2Val: newVal2 });
     }
   };
 
   render() {
+    let maxValue = Math.max(this.state.selected1Val, this.state.selected2Val);
+
     return (
-        <section className="section-currency">
-
-            <div className="cols-lg-2">
-                <div className="col-lg-8 currency-calc">
-                    <div className="currency-calc-item">
-
-                    </div>
-                </div>
-                <div className="col-lg-4">
-
-                </div>
-            </div>
-
-
-
-            <div>
-                <div>
-                    <select
+      <section className="section-currency section">
+        <div className="container">
+          <div className="cols-md-2">
+            <div className="col-md-8">
+              <h3 className="h3 lg pb-2">Փոխարժեքի հաշվիչ</h3>
+              <div className="currency-calc">
+                <div className="currency-calc-item">
+                  <div className="calc-header">
+                      <img src={Armenia} className="flag" />
+                    <div className="select">
+                      <select
                         name="selected1"
                         onChange={this.handleSelect1}
                         value={this.state.selected1}
-                    >
+                      >
                         <option value="AMD">AMD</option>
                         <option value="USDBid">USD</option>
                         <option value="EURBid">EUR</option>
                         <option value="RUBBid">RUB</option>
-                    </select>
+                      </select>
+                      <img src={Arrow} className="arrow" alt="" />
+                    </div>
+                  </div>
+                  <div className="calc-body">
                     <input
-                        name="USDBid"
-                        type="number"
-                        className="validate"
-                        onChange={e => this.handleInputChange(e, 1)}
-                        value={this.state.selected1Val}
+                      name="USDBid"
+                      type="number"
+                      onChange={e => this.handleInputChange(e, 1)}
+                      value={this.state.selected1Val}
+                      className={
+                        //(valueLength1 || valueLength2) < 6 ? "validate large" : "validate small"
+                          maxValue > 999999
+                              ? "validate small"
+                              : "validate large"
+                      }
                     />
+                  </div>
                 </div>
-                <div className="input-field col s6">
-                    <select
+                <div className="currency-calc-item">
+                  <div className="calc-header">
+                    <img src={Armenia} className="flag" />
+                    <div className="select">
+                      <select
                         name="selected2"
                         onChange={this.handleSelect2}
                         value={this.state.selected2}
-                    >
+                      >
                         <option value="AMD">AMD</option>
                         <option value="USDAsk">USD</option>
                         <option value="EURAsk">EUR</option>
                         <option value="RUBAsk">RUB</option>
-                    </select>
+                      </select>
+                      <img src={Arrow} className="arrow" alt="" />
+                    </div>
+                  </div>
+                  <div className="calc-body">
                     <input
-                        name="USDAsk"
-                        type="number"
-                        className="validate"
-                        onChange={e => this.handleInputChange(e, 2)}
-                        value={this.state.selected2Val}
+                      name="USDAsk"
+                      type="number"
+                      onChange={e => this.handleInputChange(e, 2)}
+                      value={this.state.selected2Val}
+                      className={
+                          maxValue > 999999
+                              ? "validate small"
+                              : "validate large"
+                      }
                     />
+                  </div>
                 </div>
-
-                <div>Exchange rate: {this.state.rate} </div>
+              </div>
             </div>
-        </section>
+            <div className="col-md-4">
+              <div>
+                <h3 className="h3 lg pb-2">Փոխարժեք</h3>
+                <table className="table">
+                  <thead>
+                    <tr>
+                      <th>Արժույթ</th>
+                      <th>Առք</th>
+                      <th>Վաճառք</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><img src={USA} className="flag" alt="ԱՄՆ դոլար"/>USD</td>
+                      <td>{this.state.kurs.USDBid}</td>
+                      <td>{this.state.kurs.USDAsk}</td>
+                    </tr>
+                    <tr>
+                      <td><img src={Euro} className="flag" alt="Եվրո"/>EUR</td>
+                      <td>{this.state.kurs.EURBid}</td>
+                      <td>{this.state.kurs.EURAsk}</td>
+                    </tr>
+                    <tr>
+                      <td><img src={Russia} className="flag" alt="Ռուսական ռուբլի"/>RUB</td>
+                      <td>{this.state.kurs.RUBBid}</td>
+                      <td>{this.state.kurs.RUBAsk}</td>
+                    </tr>
+                    <tr>
+                      <td><img src={UK} className="flag" alt="Ֆունտստերլինգ"/>GBP</td>
+                      <td>{this.state.kurs.RUBBid}</td>
+                      <td>{this.state.kurs.RUBAsk}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <div>{/*<div>Exchange rate: {this.state.rate} </div>*/}</div>
+      </section>
     );
   }
 }

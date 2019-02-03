@@ -11,24 +11,19 @@ import Loading from "./assets/img/loading.svg";
 
 class App extends Component {
   render() {
-<<<<<<< HEAD
     return this.props.initialTextLoaded ? (
       <>
-=======
-    return this.props.textLoaded ? (
-        <React.Fragment>
->>>>>>> 4f495957d5f276945c594900912f462b8be57741
         {/*<FeedbackForm env={this.props.env} />*/}
 
         <div>
-      
+
             <Switch>
               <Route path="/Kurs" component={CurrencyInput} />
               <Route path="/" exact component={Homepage} />
               <Route path="/not-found" component={NotFound} />
               <Redirect to="/not-found" />
             </Switch>
-        
+
         </div>
         {this.props.textLoaded ? null : (
           <img
@@ -38,15 +33,10 @@ class App extends Component {
           />
         )}
       </>
-    ) : (
-      <div
-        style={{ width: "1200px", height: "1200px", backgroundColor: "red" }}
-      >
-        sadsad
-      </div>
-    );
+    ) : null
   }
 }
+
 App.propTypes = {
   env: PropTypes.object.isRequired
 };

@@ -33,7 +33,7 @@
     .banner-inner {
         position: relative;
         z-index: 1;
-        color: $color-secondary;
+        color: #fff;
         width: 48%;
         padding-top: 120px;
     }
@@ -88,7 +88,7 @@ section {
 }
 
 .section {
-    padding: 70px 0;
+    padding: 80px 0;
 }
 
 .section-with-img {
@@ -228,7 +228,33 @@ section {
 .section-contact-bg {
     height: 200px;
     @include bg-img('contact-bg.png', no-repeat, cover, $color-bg, top);
-    //background: ;
 }
 
+.section-currency {
+    background-color: $color-bg-2;
+}
 
+.scroll-to-top {
+    position: fixed;
+    right: 15px;
+    bottom: 40px;
+    width: 60px;
+    height: 60px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all $trns-duration;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0px 7px 20px 0px rgba(0,0,0,0.2);
+
+
+    img {
+
+    }
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+}
