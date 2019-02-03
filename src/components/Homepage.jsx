@@ -11,28 +11,28 @@ import scrollToComponent from 'react-scroll-to-component';
 
 class Homepage extends Component {
 
-     
+
     onTab = () => scrollToComponent(this.TabComponent, { offset: 0, align: 'top', duration: 1500});
-    onSettings = () => scrollToComponent(this.SettingsComponent, { offset: 0, align: 'top', duration: 1500});
-    onAbout = () => scrollToComponent(this.AboutComponent, { offset: 0, align: 'top', duration: 1500});
-    onContact = () => scrollToComponent(this.ContactUsComponent, { offset: 0, align: 'top', duration: 1500});
+    onSettings = () => scrollToComponent(this.SettingsComponent, { offset: 0, align: 'top', duration: 1800});
+    onAbout = () => scrollToComponent(this.AboutComponent, { offset: 0, align: 'top', duration: 2000});
+    onContact = () => scrollToComponent(this.ContactUsComponent, { offset: 0, align: 'top', duration: 2200});
     onLogo = () => scrollToComponent(this.HeaderComponent, { offset: 0, align: 'top', duration: 1500});
 
 
     render() {
-        
+
         return (
             <React.Fragment>
                 <HeaderComponent onTab={this.onTab} onSettings={this.onSettings} onAbout={this.onAbout} onContact={this.onContact}/>
-                
+
                 <BannerComponent />
-                <section className='violet' ref={(section) => { this.TabComponent = section; }}><TabComponent /></section>
+                <div  ref={(section) => { this.TabComponent = section; }}><TabComponent /></div>
                 <Currency/>
-                <section className='violet' ref={(section) => { this.SettingsComponent = section; }}><SettingsComponent /></section>
-                <section className='violet' ref={(section) => { this.AboutComponent = section; }}><AboutComponent /></section>
-                <section className='violet' ref={(section) => { this.ContactUsComponent = section; }}><ContactUsComponent /></section>
-                <section className='violet' ref={(section) => { this.HeaderComponent = section; }}><FooterComponent  onTab={this.onLogo}/> /></section>
-               
+                <div ref={(section) => { this.SettingsComponent = section; }}><SettingsComponent /></div>
+                <div ref={(section) => { this.AboutComponent = section; }}><AboutComponent /></div>
+                <div ref={(section) => { this.ContactUsComponent = section; }}><ContactUsComponent /></div>
+                <div ref={(section) => { this.HeaderComponent = section; }}><FooterComponent  onTab={this.onLogo}/></div>
+
             </React.Fragment>
         );
     }

@@ -2,6 +2,48 @@ header {
     background-color: $color-bg;
     padding: 25px 0;
     color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    transition: all $trns-duration;
+    border-bottom: 1px solid transparent;
+
+    .st0 {
+        transition: all $trns-duration;
+        fill: rgba(255, 255, 255, 0.5);
+    }
+
+    &.sticky {
+        background-color: #fff;
+        padding: 12px 0;
+        border-bottom: 1px solid #e1e1e1;
+        box-shadow: 1px 1px 6px rgba(0,0,0,0.15);
+
+        .logo {
+            max-width: 200px;
+            &:hover {
+                .st0 {
+                    fill: rgba(255, 255, 255, 0.8);
+                }
+            }
+        }
+
+        .st0 {
+            fill: #282828;
+        }
+
+        .menu {
+            li {
+                a {
+                    color: #282828;
+                }
+            }
+        }
+
+
+    }
 }
 
 .logo {
@@ -9,15 +51,9 @@ header {
     display: block;
 
     &:hover {
-        img {
-            opacity: 1;
+        .st0 {
+            fill: rgba(255, 255, 255, 0.8);
         }
-    }
-
-    img {
-        width: 100%;
-        transition: all $trns-duration;
-        opacity: .5;
     }
 }
 
