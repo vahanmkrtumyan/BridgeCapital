@@ -7,18 +7,29 @@ import AboutComponent from './homepage/AboutComponent';
 import ContactUsComponent from './homepage/ContactUsComponent';
 import FooterComponent from './homepage/FooterComponent';
 import Currency from './homepage/currency';
+import scrollToComponent from 'react-scroll-to-component';
 
 class Homepage extends Component {
+
+     
+    onTab = () => scrollToComponent(this.TabComponent, { offset: 0, align: 'top', duration: 1500});
+    onSettings = () => scrollToComponent(this.SettingsComponent, { offset: 0, align: 'top', duration: 1500});
+    onAbout = () => scrollToComponent(this.AboutComponent, { offset: 0, align: 'top', duration: 1500});
+    onContact = () => scrollToComponent(this.ContactUsComponent, { offset: 0, align: 'top', duration: 1500})
+
+
     render() {
+        
         return (
             <React.Fragment>
-                <HeaderComponent />
+                <HeaderComponent onTab={this.onTab} onSettings={this.onSettings} onAbout={this.onAbout} onContact={this.onContact}/>
+                
                 <BannerComponent />
-                <TabComponent />
+                <section className='violet' ref={(section) => { this.TabComponent = section; }}><TabComponent /></section>
                 <Currency/>
-                <SettingsComponent />
-                <AboutComponent />
-                <ContactUsComponent />
+                <section className='violet' ref={(section) => { this.SettingsComponent = section; }}><SettingsComponent /></section>
+                <section className='violet' ref={(section) => { this.AboutComponent = section; }}><AboutComponent /></section>
+                <section className='violet' ref={(section) => { this.ContactUsComponent = section; }}><ContactUsComponent /></section>
                 <FooterComponent />
             </React.Fragment>
         );

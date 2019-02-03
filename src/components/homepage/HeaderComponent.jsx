@@ -24,10 +24,10 @@ class HeaderComponent extends Component {
                         <div className="col-sm-8">
                             <div className="header-nav">
                                 <ul className="menu">
-                                    <li className="active"><a href="#">{texts.header.services}</a></li>
-                                    <li><a >Կարգավորումներ</a></li>
-                                    <li><a href="#">Մեր մասին</a></li>
-                                    <li><a href="#">Հետադարձ կապ</a></li>
+                                    <li className="active"><a href="#" onClick={this.props.onTab}>{texts.header.services}</a></li>
+                                    <li  onClick={this.props.onSettings}><a href="#">Կարգավորումներ</a></li>
+                                    <li  onClick={this.props.onAbout}><a href="#">Մեր մասին</a></li>
+                                    <li onClick={this.props.onContact}><a href="#">Հետադարձ կապ</a></li>
                                     <li className="lang rus"><a
                                     onClick={e =>window.localStorage.getItem("lang") === ('hy-AM') ? this.props.setLocale("ru-RU"):this.props.setLocale("hy-AM")} >{texts.header.language}</a></li>
                                 </ul>

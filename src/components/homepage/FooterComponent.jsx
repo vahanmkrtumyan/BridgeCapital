@@ -18,7 +18,7 @@ const FooterComponent = () => {
               <ul className="footer-links">
                 <li>
                   <a href="#" className="primary-link">
-                    Ֆինանսական հաշվետվոըթյուններ
+                    Ֆինանսական հաշվետվություններ
                   </a>
                 </li>
                 <li>
