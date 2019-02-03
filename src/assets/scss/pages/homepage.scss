@@ -234,3 +234,27 @@ section {
     background-color: $color-bg-2;
 }
 
+.scroll-to-top {
+    position: fixed;
+    right: 15px;
+    bottom: 40px;
+    width: 60px;
+    height: 60px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all $trns-duration;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0px 7px 20px 0px rgba(0,0,0,0.2);
+
+
+    img {
+
+    }
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+}

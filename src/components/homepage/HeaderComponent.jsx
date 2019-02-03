@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import logo from '../../assets/img/logo.svg'
 import Fade from 'react-reveal/Fade';
 import InlineSVG from 'svg-inline-react';
 import { connectTranslations } from "../../context/TranslationContext";
@@ -7,8 +6,8 @@ import { connectTranslations } from "../../context/TranslationContext";
 
 class HeaderComponent extends Component {
     componentDidMount() {
-        var scrollpos = window.scrollY;
-        var header = document.querySelector("header");
+        let scrollpos = window.scrollY;
+        let header = document.querySelector("header");
 
         function add_class_on_scroll() {
             header.classList.add("sticky");
