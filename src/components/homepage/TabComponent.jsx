@@ -8,9 +8,36 @@ import Fade from "react-reveal/Fade";
 import About from "../../assets/img/section-img/about-us.png";
 
 class TabComponent extends Component {
-
   state = {
-    activeClass: 1
+    brok: "Կարդալ ավելին",
+    Xor: "Կարդալ ավելին",
+    Art: "Կարդալ ավելին"
+  };
+
+  handleBrokOpen = () => {
+    this.state.brok === "Կարդալ ավելին"
+      ? this.setState({ brok: "Պակաս" })
+      : this.setState({ brok: "Կարդալ ավելին" });
+  };
+
+  handleXorOpen = () => {
+    this.state.Xor === "Կարդալ ավելին"
+      ? this.setState({ Xor: "Պակաս" })
+      : this.setState({ Xor: "Կարդալ ավելին" });
+  };
+
+  handleArtOpen = () => {
+    this.state.Art === "Կարդալ ավելին"
+      ? this.setState({ Art: "Պակաս" })
+      : this.setState({ Art: "Կարդալ ավելին" });
+  };
+
+  onTab = () => {
+    this.setState({
+      brok: "Կարդալ ավելին",
+      Xor: "Կարդալ ավելին",
+      Art: "Կարդալ ավելին"
+    });
   };
 
   render() {
@@ -20,13 +47,13 @@ class TabComponent extends Component {
           <div className="container">
             <Tabs className="tab">
               <TabList className="tab-header">
-                <Tab className="active">
+                <Tab className="active" onClick={this.onTab}>
                   <a>Բրոքերային</a>
                 </Tab>
-                <Tab>
+                <Tab onClick={this.onTab}>
                   <a>Խորհրդատվական</a>
                 </Tab>
-                <Tab>
+                <Tab onClick={this.onTab}>
                   <a>Արտարժույթային</a>
                 </Tab>
               </TabList>
@@ -39,7 +66,11 @@ class TabComponent extends Component {
                       <SlideToggle
                         duration={800}
                         collapsed
-                        render={({ onToggle, setCollapsibleElement, toggleState }) => (
+                        render={({
+                          onToggle,
+                          setCollapsibleElement,
+                          toggleState
+                        }) => (
                           <div className="my-collapsible">
                             <strong>
                               Բրոքերային ծառայությունները մատուցվում են
@@ -103,14 +134,15 @@ class TabComponent extends Component {
                                   repudiandae tempore ullam!
                                 </p>
                               </div>
-                              
                             </div>
                             <button
                               className="my-collapsible__toggle btn secondary mt-5"
-                              onClick={onToggle}
-                              
+                              onClick={() => {
+                                this.handleBrokOpen();
+                                onToggle();
+                              }}
                             >
-                              Կարդալ ավելին
+                              {this.state.brok}
                             </button>
                           </div>
                         )}
@@ -189,9 +221,12 @@ class TabComponent extends Component {
                             </div>
                             <button
                               className="my-collapsible__toggle btn secondary mt-5"
-                              onClick={onToggle}
+                              onClick={() => {
+                                this.handleXorOpen();
+                                onToggle();
+                              }}
                             >
-                              Կարդալ ավելին
+                              {this.state.Xor}
                             </button>
                           </div>
                         )}
@@ -273,9 +308,12 @@ class TabComponent extends Component {
                             </div>
                             <button
                               className="my-collapsible__toggle btn secondary mt-5"
-                              onClick={onToggle}
+                              onClick={() => {
+                                this.handleArtOpen();
+                                onToggle();
+                              }}
                             >
-                              Կարդալ ավելին
+                              {this.state.Art}
                             </button>
                           </div>
                         )}

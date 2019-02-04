@@ -99,25 +99,25 @@ class HeaderComponent extends Component {
             <div className="col-sm-9">
               <div className="header-nav">
                 <ul className="menu">
-                  <li className={this.props.class == 1 ? "active" : ""}>
+                  <li className={this.props.class === 1 ? "active" : ""}>
                     <a href="#" onClick={this.props.onTab}>
                       {texts.header.services}
                     </a>
                   </li>
                   <li
-                    className={this.props.class == 2 ? "active" : ""}
+                    className={this.props.class === 2 ? "active" : ""}
                     onClick={this.props.onSettings}
                   >
                     <a href="#">Կարգավորումներ</a>
                   </li>
                   <li
-                    className={this.props.class == 3 ? "active" : ""}
+                    className={this.props.class === 3 ? "active" : ""}
                     onClick={this.props.onAbout}
                   >
                     <a href="#">Մեր մասին</a>
                   </li>
                   <li
-                    className={this.props.class == 4 ? "active" : ""}
+                    className={this.props.class === 4 ? "active" : ""}
                     onClick={this.props.onContact}
                   >
                     <a href="#">Հետադարձ կապ</a>
