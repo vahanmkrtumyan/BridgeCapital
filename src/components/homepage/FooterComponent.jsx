@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../../assets/img/logo.svg";
 import Call from "../../assets/img/icons/call.svg";
 import Envelope from "../../assets/img/icons/envelope.svg";
@@ -8,7 +9,7 @@ import Linkedin from "../../assets/img/icons/linkedin.svg";
 import FbSm from "../../assets/img/icons/facebook-small.svg";
 import Copyright from "../../assets/img/icons/copyright.svg";
 
-const FooterComponent = (props) => {
+const FooterComponent = props => {
   return (
     <footer>
       <div className="footer-top">
@@ -17,22 +18,37 @@ const FooterComponent = (props) => {
             <div className="col-sm-6">
               <ul className="footer-links">
                 <li>
-                  <a href="#" className="primary-link">
+                  <Link to={"/about"} className="primary-link">
                     Ֆինանսական հաշվետվություններ
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="primary-link">
+                  <a
+                    href="https://www.cba.am/am/SitePages/Default.aspx"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="primary-link"
+                  >
                     Կենտրոնական բանկ
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="primary-link">
+                  <a
+                    href="http://cda.am/am"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="primary-link"
+                  >
                     Հայաստանի կենտրոնական դեպոզիտարիա
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="primary-link">
+                  <a
+                    href="https://www.fsm.am/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="primary-link"
+                  >
                     Ֆինանսական համակարգի հաշտարար
                   </a>
                 </li>
