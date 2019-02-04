@@ -8,6 +8,11 @@ import Fade from "react-reveal/Fade";
 import About from "../../assets/img/section-img/about-us.png";
 
 class TabComponent extends Component {
+
+  state = {
+    activeClass: 1
+  };
+
   render() {
     return (
       <React.Fragment>
@@ -34,7 +39,7 @@ class TabComponent extends Component {
                       <SlideToggle
                         duration={800}
                         collapsed
-                        render={({ onToggle, setCollapsibleElement }) => (
+                        render={({ onToggle, setCollapsibleElement, toggleState }) => (
                           <div className="my-collapsible">
                             <strong>
                               Բրոքերային ծառայությունները մատուցվում են
@@ -51,8 +56,7 @@ class TabComponent extends Component {
                               </li>
                               <br />
                               <li>
-                                աջակցություն Հայաստանի Կենտրոնական Դեպոզիտարիա
-                                ԲԲԸ-ում դեպո հաշվի բացման գործընթացում,
+                                աջակցություն դեպո հաշվի բացման գործընթացում,
                               </li>
                               <br />
                               <li>
@@ -60,7 +64,7 @@ class TabComponent extends Component {
                                 կատարում,
                               </li>
                               <br />
-                              <li>արժեթղթերի կարճ վաճառքների իրականացում,</li>
+                              <li>արժեթղթերի վաճառքների իրականացում,</li>
                               <br />
                               <li>
                                 արժեթղթերի ընթացիկ գների վերաբերյալ
@@ -99,10 +103,12 @@ class TabComponent extends Component {
                                   repudiandae tempore ullam!
                                 </p>
                               </div>
+                              
                             </div>
                             <button
                               className="my-collapsible__toggle btn secondary mt-5"
                               onClick={onToggle}
+                              
                             >
                               Կարդալ ավելին
                             </button>
