@@ -4,6 +4,10 @@ import InlineSVG from "svg-inline-react";
 import { connectTranslations } from "../../context/TranslationContext";
 
 class HeaderComponent extends Component {
+
+    state = {
+        isOpen: false
+    };
     componentDidMount() {
         let scrollpos = window.scrollY;
         let header = document.querySelector("header");
@@ -28,8 +32,18 @@ class HeaderComponent extends Component {
         });
     }
 
+    onToggleClassHandler = () => {
+        this.setState( prevState => ({
+            isOpen: !prevState.isOpen
+
+        }));
+
+    };
     render() {
         const { texts } = this.props;
+        const { isOpen } = this.state;
+        const hamburgerClassName = isOpen ? "open" : "closed";
+        const menuOpenClassName = isOpen ? "open" : "";
 
         const svgSource = `<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 618.5 96.5" style="enable-background:new 0 0 618.5 96.5; fill:#282828" xml:space="preserve">
@@ -96,7 +110,7 @@ class HeaderComponent extends Component {
                         </a>
                         <div className="header-nav">
 
-                            <div className="hamburger closed">
+                            <div onClick={this.onToggleClassHandler} className={"hamburger " + hamburgerClassName}>
                                 <div className="burger-main">
                                     <div className="burger-inner">
                                         <span className="top"></span>
@@ -119,7 +133,7 @@ class HeaderComponent extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <ul className="menu">
+                            <ul className={"menu " + menuOpenClassName}>
                                 <li className={this.props.class === 1 ? "active" : ""}>
                                     <a href="#" onClick={this.props.onTab}>
                                         {texts.header.services}

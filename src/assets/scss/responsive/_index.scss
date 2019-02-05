@@ -155,15 +155,19 @@
     }
 
     .menu {
-        //display: none;
+        display: none;
         flex-direction: column;
         position: absolute;
         width: 100%;
         left: 0;
-        z-index: 1111111111;
+        z-index: 10;
         text-align: center;
         background: #fff;
         box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+
+        &.open {
+            display: block;
+        }
 
         li {
             margin: 0;
