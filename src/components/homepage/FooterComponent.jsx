@@ -14,7 +14,7 @@ const FooterComponent = props => {
     <footer>
       <div className="footer-top">
         <div className="container">
-          <div className="cols-sm-3 cols-mb align-center">
+          <div className="cols-sm-3 align-center">
             <div className="col-sm-6">
               <ul className="footer-links">
                 <li>
