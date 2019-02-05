@@ -19,7 +19,7 @@ class FinStatements extends Component {
     console.log(Object.values(this.state.statements));
     return (
       <div>
-        <div>'sd' </div>
+        <div><h2>{Object.keys(this.state.statements)[0]}</h2> <ul><li></li></ul> </div>
       </div>
     );
   }
