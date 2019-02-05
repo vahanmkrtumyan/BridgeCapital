@@ -18,7 +18,7 @@ const FooterComponent = props => {
             <div className="col-sm-6">
               <ul className="footer-links">
                 <li>
-                  <Link to={"/about"} className="primary-link">
+                  <Link to={"/FinStatements"} className="primary-link">
                     Ֆինանսական հաշվետվություններ
                   </Link>
                 </li>

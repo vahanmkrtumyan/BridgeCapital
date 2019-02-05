@@ -17,9 +17,19 @@ class FinStatements extends Component {
   render() {
     console.log(Object.keys(this.state.statements));
     console.log(Object.values(this.state.statements));
+    console.log(this.state.statements);
+
     return (
       <div>
-        <div><h2>{Object.keys(this.state.statements)[0]}</h2> <ul><li></li></ul> </div>
+        <div>
+          {Object.keys(this.state.statements).map(item => (
+            <h1 key={item}>{item}
+            {Object.values(this.state.statements).map(n => (<h1>{Object.keys(n)}</h1> ))}
+            </h1> 
+            
+          ))}
+        </div>
+        
       </div>
     );
   }
