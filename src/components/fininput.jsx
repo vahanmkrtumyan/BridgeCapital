@@ -1,15 +1,17 @@
 import PropTypes from "prop-types";
 import React, { Component } from "react";
-import { database, auth } from "./components/firebase";
-import SignIn from "./components/signIn";
-import CurrentUser from "./components/currentUser";
+import {storage, database, auth } from "../components/firebase";
+import SignIn from "../components/signIn";
+import CurrentUser from "../components/currentUser";
 
 class FinInput extends Component {
   state = {
-    year: 0,
+    year: '',
     name: "",
     currentUser: null,
-    loading: true
+    loading: true,
+    downloadURL: '',
+    fileName: ''
   };
 
   componentDidMount() {
@@ -29,22 +31,91 @@ class FinInput extends Component {
   handleSubmit = e => {
     e.preventDefault();
 
-    const errors = this.validate();
-    this.setState({ errors: errors || {} });
-    if (errors) return;
 
     const data = {
       year: this.state.year,
-      name: this.state.name
+      name: this.state.name,
+      downloadURL: this.state.downloadURL,
     };
     database
       .ref()
       .child("Statements")
       .child(this.state.year)
+      .child(this.state.name)
       .set(data);
 
     this.props.history.push("/");
   };
+
+
+  handleSelect = e => {
+    const file = e.target.files[0];
+
+    var metadata = {
+      conetentType: "pdf"
+    };
+    var storageRef = storage.ref("statements/" + file.name);
+    var uploadTask = storageRef.put(file, metadata);
+    let fileName = file.name;
+
+    this.setState({ fileName });
+
+    // Listen for state changes, errors, and completion of the upload.
+    uploadTask.on(
+      "state_changed", // or 'state_changed'
+      snapshot => {
+        // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+        let progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        this.setState();
+        var prg = progress.toString();
+        if (0 < progress < 1) {
+          this.setState({ disabled: "disabled" });
+          console.log(this.state.disabled);
+        }
+        if ((progress = 25)) {
+          this.setState({ progress });
+        }
+        if ((progress = 50)) {
+          this.setState({ progress });
+        }
+        if ((progress = 100)) {
+          this.setState({ progress });
+        }
+        console.log("Upload is " + progress + "% done");
+        switch (snapshot.state) {
+          case "paused": // or 'paused'
+            console.log("Upload is paused");
+            break;
+          case "running": // or 'running'
+            console.log("Upload is running");
+            break;
+        }
+      },
+
+      error => {
+        // A full list of error codes is available at
+        // https://firebase.google.com/docs/storage/web/handle-errors
+        switch (error.code) {
+          case "storage/unauthorized":
+            // User doesn't have permission to access the object
+            break;
+
+          case "storage/unknown":
+            // Unknown error occurred, inspect error.serverResponse
+            break;
+        }
+      },
+      () => {
+        // Upload completed successfully, now we can get the download URL
+        uploadTask.snapshot.ref.getDownloadURL().then(downloadURL => {
+
+          this.setState({ downloadURL }, () => console.log(this.state.downloadURL));
+          this.setState({ disabled: false });
+        });
+      }
+    );
+  };
+
 
   render() {
     const { currentUser } = this.state;
@@ -58,30 +129,30 @@ class FinInput extends Component {
               <div className="input-field col s6">
                 <input
                   id="year"
-                  name="USDBid"
+                  name="year"
                   type="text"
                   className="validate"
                   placeholder="USDBid"
                   onChange={this.handleInputChange}
-                  value={this.state.USDBid}
+                  value={this.state.year}
                 />
                 <label htmlFor="Անուն">Տարի</label>
               </div>
               <div className="input-field col s6">
                 <input
-                  id="last_name"
-                  name="USDAsk"
+                  id="name"
+                  name="name"
                   type="text"
                   className="validate"
                   placeholder="USDAsk"
                   onChange={this.handleInputChange}
-                  value={this.state.USDAsk}
+                  value={this.state.name}
                 />
                 <label htmlFor="Անուն">Հաշվետվության անվանում</label>
               </div>
               <input
                 type="file"
-                name={this.state.data.name}
+                name={this.state.name}
                 onChange={this.handleSelect}
               />
               <button onClick={this.handleSubmit} type="button" name="submit">
@@ -96,10 +167,6 @@ class FinInput extends Component {
 }
 
 export default FinInput;
-
-CurrencyInput.propTypes = {
-  env: PropTypes.object.isRequired
-};
 
 /*import React from "react";
 import { storage, database } from "./firebase";

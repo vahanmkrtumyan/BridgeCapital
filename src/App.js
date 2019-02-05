@@ -9,6 +9,7 @@ import About from './components/About'
 import NotFound from "./components/notFound";
 import { connectTranslations } from "./context/TranslationContext";
 import Loading from "./assets/img/loading.svg";
+import FinInput from './components/fininput';
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
 
             <Switch>
               <Route path="/Kurs" component={CurrencyInput} />
+              <Route path="/FinInput" component={FinInput} />
               <Route path="/" exact component={Homepage} />
               <Route path="/about" exact component={About} />
               <Route path="/not-found" component={NotFound} />
@@ -38,9 +40,5 @@ class App extends Component {
     ) : null
   }
 }
-
-App.propTypes = {
-  env: PropTypes.object.isRequired
-};
 
 export default connectTranslations(App);
