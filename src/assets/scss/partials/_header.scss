@@ -25,13 +25,15 @@ header {
             max-width: 200px;
             &:hover {
                 .st0 {
-                    fill: rgba(255, 255, 255, 0.8);
+                    fill: #282828;
+                    opacity: 1;
                 }
             }
         }
 
         .st0 {
             fill: #282828;
+            opacity: .8;
         }
 
         .menu {
@@ -84,7 +86,7 @@ header {
 
         &.active {
             a {
-                color: $color-primary;
+                color: $color-primary !important;
                 font-weight: 700;
             }
         }

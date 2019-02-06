@@ -115,7 +115,7 @@ class Currency extends Component {
         <div className="container">
           <div className="cols-md-2 cols-mb">
             <div className="col-md-8">
-              <h3 className="h3 lg pb-2">Փոխարժեքի հաշվիչ</h3>
+              <h3 className="h3 lg pb-4">Փոխարժեքի հաշվիչ</h3>
               <div className="currency-calc">
                 <div className="currency-calc-item">
                   <div className="calc-header">
