@@ -9,15 +9,30 @@ class FinStatements extends Component {
   componentDidMount() {
     database.ref("Statements").on("value", snapshot => {
       if (snapshot.val() !== null) {
-        this.setState({ statements: snapshot.val() }, () => {});
+        this.setState({ statements: snapshot.val() }, () => {
+          console.log(
+            Object.keys(
+              Object.values(this.state.statements)[
+                Object.keys(Object.values(this.state.statements))[0]
+              ]
+            )[2]
+          );
+        });
       }
     });
   }
 
   render() {
     console.log(Object.keys(this.state.statements));
-    console.log(Object.values(this.state.statements)[0]);
-    console.log(this.state.statements);
+    console.log(Object.values(this.state.statements));
+    console.log(Object.keys(Object.values(this.state.statements)));
+    let asd = Object.values(this.state.statements)[
+      Object.keys(Object.values(this.state.statements))[0]
+    ];
+    
+    
+
+
 
     return (
       <div>
@@ -26,7 +41,7 @@ class FinStatements extends Component {
             <h1 key={item}>
               {item}
               {Object.values(this.state.statements).map(n => (
-                <h1>
+                <div>
                   <a
                     href={
                       Object.values(n)[
@@ -40,10 +55,11 @@ class FinStatements extends Component {
                       ].name
                     }
                   </a>
-                </h1>
+                </div>
               ))}
             </h1>
           ))}
+          
         </div>
       </div>
     );
