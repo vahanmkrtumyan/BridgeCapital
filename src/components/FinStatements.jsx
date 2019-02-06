@@ -3,7 +3,7 @@ import { database } from "./firebase";
 
 class FinStatements extends Component {
   state = {
-    statements: {}
+    statements: null
   };
 
   componentDidMount() {
@@ -23,46 +23,39 @@ class FinStatements extends Component {
   }
 
   render() {
-    console.log(Object.keys(this.state.statements));
-    console.log(Object.values(this.state.statements));
-    console.log(Object.keys(Object.values(this.state.statements)));
-    let asd = Object.values(this.state.statements)[
-      Object.keys(Object.values(this.state.statements))[0]
-    ];
-    
-    
-
-
+    let asd;
+    (this.state.statements !== null) ? console.log(Object.values(Object.values(this.state.statements)[0])) : console.log(14);
+    (this.state.statements !== null) ? console.log(Object.keys(Object.values(this.state.statements))) : console.log(14);
 
     return (
+      (this.state.statements !== null) ?
       <div>
         <div>
           {Object.keys(this.state.statements).map(item => (
             <h1 key={item}>
               {item}
-              {Object.values(this.state.statements).map(n => (
-                <div>
-                  <a
-                    href={
-                      Object.values(n)[
-                        Object.values(this.state.statements).indexOf(n)
-                      ].downloadURL
-                    }
-                  >
-                    {
-                      Object.values(n)[
-                        Object.values(this.state.statements).indexOf(n)
-                      ].name
-                    }
-                  </a>
-                </div>
+              {Object.values(this.state.statements).map(n => (console.log(n)
+                // <div>
+                //   <a
+                //     href={
+                //       Object.values(n)[
+                //         Object.values(this.state.statements).indexOf(n)
+                //       ].downloadURL
+                //     }
+                //   >
+                //     {
+                //       Object.values(n)[
+                //         Object.values(this.state.statements).indexOf(n)
+                //       ].name
+                //     }
+                //   </a>
+                // </div>
               ))}
             </h1>
           ))}
-          
         </div>
       </div>
-    );
+    : '');
   }
 }
 
