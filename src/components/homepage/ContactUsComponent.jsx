@@ -15,7 +15,7 @@ class ContactUsComponent extends Component {
             <div className="contact-content">
               <p>
                 Որևէ խնդրի կամ հարցերի դեպքում կարող եք կապվել մեր սպասարկման
-                կենտրոնի հետ` զանգահարելով , այցելելով Բրիջ Կապիտալի գրասենյակ,
+                կենտրոնի հետ` զանգահարելով , այցելելով Բրիդջ Կապիտալի գրասենյակ,
                 գրելով մեր ֆեյսբուքյան էջում կամ գրելով էլեկտրոնային նամակ{" "}
                 <a className="primary-link" href="mailto:info@bridgecapital.am">
                   info@bridgecapital.am

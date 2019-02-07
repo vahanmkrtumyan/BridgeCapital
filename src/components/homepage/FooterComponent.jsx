@@ -97,12 +97,12 @@ const FooterComponent = props => {
           <div className="cols-sm-2 cols-mb align-center">
             <div className="col-sm-6">
               <a href="#" className="footer-logo" onClick={props.onLogo}>
-                <img src={logo} alt="Բրիջ կապիտալ" />
+                <img src={logo} alt="Բրիդջ կապիտալ" />
               </a>
             </div>
             <div className="col-sm-6">
               <p className="text-sm-right text-xs-center">
-                <img src={Copyright} alt="Բրիջ կապիտալ" /> Բրիջ կապիտալ, 2019:
+                <img src={Copyright} alt="Բրիդջ կապիտալ" /> Բրիդջ կապիտալ, 2019:
                 Բոլոր իրավունքները պաշտպանված են:
               </p>
             </div>

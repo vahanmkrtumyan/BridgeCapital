@@ -39,10 +39,13 @@ class FinStatements extends Component {
               {Object.values(this.state.statements[item]).map(n => (
                 <div>
                   <a
+                  target="_blank"
+                  rel="noopener noreferrer"
                     href={
                       Object.values(this.state.statements[item])[
                         Object.values(this.state.statements[item]).indexOf(n)
                       ]["downloadURL"]
+                      
                     }
                   >
                     {

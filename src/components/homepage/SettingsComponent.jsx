@@ -32,19 +32,25 @@ class SettingsComponent extends Component {
                 collapsed
                 render={({ onToggle, setCollapsibleElement }) => (
                   <div className="my-collapsible">
+                    <strong>Օրենքներ</strong>
                     <strong>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                      sed do eiusmod tempor incididunt ut labore et dolore
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.arlis.am/documentview.aspx?docID=1"
+                      >
+                        ՀՀ Սահմանադրություն
+                      </a>
                     </strong>
-                    <p>
-                      Magna aliqua. Ut enim ad minim veniam, quis nostrud
-                      exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    </p>
-                    <p>
-                      Consequat. Duis aute irure dolor in reprehenderit in
-                      voluptate velit esse cillum dolore eu fugiat nulla
-                      pariatur. Excepteur sint occaecat cupidatat non
-                    </p>
+                    <strong>
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.arlis.am/documentview.aspx?docid=74658"
+                      >
+                        ՀՀ Քաղաքացիական օրենսգիրք
+                      </a>
+                    </strong>
                     <p>
                       Proident, sunt in culpa qui officia deserunt mollit anim
                       id est laborum. Sed ut perspiciatis unde omnis iste natus
