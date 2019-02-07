@@ -114,6 +114,141 @@ class SettingsComponent extends Component {
                     >
                       <div className="my-collapsible__content-inner">
                         <strong>Իրավական ակտեր</strong>
+                        <strong>
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://www.cba.am/AM/laregulations/kan-401_2.pdf"
+                          >
+                            Կանոնակարգ 4/01 (ներդրումային ընկերությունների
+                            գրանցումն ու լիցենզավորումը)
+                          </a>
+                        </strong>
+                        <strong>
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://www.cba.am/AM/laregulations/kan-402.pdf"
+                          >
+                            Կանոնակարգ 4/02 (ներդրումային ընկերությունների
+                            հիմնական տնտեսական նորմատիվները)
+                          </a>
+                        </strong>
+                        <strong>
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://www.cba.am/AM/laregulations/kan-403.pdf"
+                          >
+                            Կանոնակարգ 4/03 (ներդրումային ծառայություններ
+                            մատուցող անձանց` Կենտրոնական Բանկ ներկայացվող
+                            հաշվետվությունները)
+                          </a>
+                        </strong>
+                        <strong>
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://www.cba.am/AM/laregulations/kan-405.pdf"
+                          >
+                            Կանոնակարգ 4/05 (ներդրումային ծառայություններ
+                            մատուցող անձանց մասնագիտական որակավորման չափանիշներ)
+                          </a>
+                        </strong>
+                        <strong>
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://www.cba.am/AM/laregulations/kan-406.pdf"
+                          >
+                            Կանոնակարգ 4/06 (որակավորված ներդրողներ համարելու
+                            չափանիշները և անձանց` որպես որակավորված ներդրողներ
+                            գրանցման կարգը)
+                          </a>
+                        </strong>
+                        <strong>
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://www.cba.am/AM/laregulations/kan-407.pdf"
+                          >
+                            Կանոնակարգ 4/07 (ներդրումային ծառայություններ
+                            մատուցող անձանց գործունեության նկատմամբ պահանջները){" "}
+                          </a>
+                        </strong>
+                        <strong>
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://www.cba.am/AM/laregulations/kan-408.pdf"
+                          >
+                            Կանոնակարգ 4/08 (ՀՀ ԿԲ ներկայացված
+                            հաշվետվությունները հանրությանը մատչելի դարձնելու
+                            պահանջից բացառությունները){" "}
+                          </a>
+                        </strong>
+                        <strong>
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://www.cba.am/AM/laregulations/kan-409.pdf"
+                          >
+                            Կանոնակարգ 4/09 (հաշվետու թողարկողների
+                            ֆինանսատնտեսական գործունեության աուդիտն իրականացնող
+                            անձանց ներկայացվող չափանիշները){" "}
+                          </a>
+                        </strong>
+                        <strong>
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://www.cba.am/AM/laregulations/kan-410.pdf"
+                          >
+                            Կանոնակարգ 4/10 (արժեթղթերը հանձնելու առաջարկի
+                            կազմը, պայմանները, փոփոխությունները)
+                          </a>
+                        </strong>
+                        <strong>
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://www.cba.am/AM/laregulations/kan-411.pdf"
+                          >
+                            Կանոնակարգ 4/11 (ֆինանսատնտեսական գործունեության
+                            աուդիտն իրականացնող անձանց ներկայացվող չափանիշները){" "}
+                          </a>
+                        </strong>
+                        <strong>
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://www.cba.am/AM/laregulations/kan-412.pdf"
+                          >
+                            Կանոնակարգ 4/12 (ներդրումային ծառայություններ
+                            մատուցող անձանց հաճախորդների միջոցների պաշտպանության
+                            կանոնները){" "}
+                          </a>
+                        </strong>
+                        <strong>
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://www.arlis.am/DocumentView.aspx?DocID=79619"
+                          >
+                            Կանոնակարգ 33 (արժեթղթերի պահառության
+                            գործունեությունը){" "}
+                          </a>
+                        </strong>
+                        <strong>
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href="https://www.cba.am/Storage/AM/downloads/FDK/Regulation/regulation_on_minimum_aml_cft_requirements_arm.pdf"
+                          >
+                            Փողերի լվացման և ահաբեկչության ֆինանսավորման դեմ
+                            պայքարի վերաբերյալ կանոնակարգ և հայտարարություն
+                          </a>
+                        </strong>
                       </div>
                     </div>
                     <button
