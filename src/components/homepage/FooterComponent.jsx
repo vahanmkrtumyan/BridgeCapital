@@ -10,6 +10,21 @@ import FbSm from "../../assets/img/icons/facebook-small.svg";
 import Copyright from "../../assets/img/icons/copyright.svg";
 
 const FooterComponent = props => {
+  let today = new Date();
+  let dd = 1;
+  let mm = today.getMonth() + 1; //January is 0!
+  let yyyy = today.getFullYear();
+
+  if (dd < 10) {
+    dd = "0" + dd;
+  }
+
+  if (mm < 10) {
+    mm = "0" + mm;
+  }
+
+  today = dd + "/" + mm + "/" + yyyy;
+
   return (
     <footer>
       <div className="footer-top">
@@ -104,6 +119,9 @@ const FooterComponent = props => {
               <p className="text-sm-right text-xs-center">
                 <img src={Copyright} alt="Բրիդջ կապիտալ" /> Բրիդջ կապիտալ, 2019:
                 Բոլոր իրավունքները պաշտպանված են:
+              </p>
+              <p className="text-sm-right text-xs-center">
+                Էջը թարմացվել է` {today}
               </p>
             </div>
           </div>
