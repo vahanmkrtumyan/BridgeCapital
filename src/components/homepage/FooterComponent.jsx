@@ -10,10 +10,10 @@ import FbSm from "../../assets/img/icons/facebook-small.svg";
 import Copyright from "../../assets/img/icons/copyright.svg";
 
 const FooterComponent = props => {
-  let today = new Date();
+  let date = new Date();
   let dd = 1;
-  let mm = today.getMonth() + 1; //January is 0!
-  let yyyy = today.getFullYear();
+  let mm = date.getMonth() + 1; //January is 0!
+  let yyyy = date.getFullYear();
 
   if (dd < 10) {
     dd = "0" + dd;
@@ -23,7 +23,7 @@ const FooterComponent = props => {
     mm = "0" + mm;
   }
 
-  today = dd + "/" + mm + "/" + yyyy;
+  date = dd + "/" + mm + "/" + yyyy;
 
   return (
     <footer>
@@ -73,7 +73,7 @@ const FooterComponent = props => {
               <ul className="footer-contact">
                 <li>
                   <img src={Call} alt="զանգերի սպասարկում" />
-                  <span>+374 456532</span>
+                  <span>+374 11441012</span>
                 </li>
                 <li>
                   <img src={Home} alt="հասցե" />
@@ -121,7 +121,7 @@ const FooterComponent = props => {
                 Բոլոր իրավունքները պաշտպանված են:
               </p>
               <p className="text-sm-right text-xs-center">
-                Էջը թարմացվել է` {today}
+                Էջը թարմացվել է` {date}
               </p>
             </div>
           </div>

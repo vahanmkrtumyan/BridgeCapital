@@ -51,12 +51,63 @@ class SettingsComponent extends Component {
                         ՀՀ Քաղաքացիական օրենսգիրք
                       </a>
                     </strong>
-                    <p>
-                      Proident, sunt in culpa qui officia deserunt mollit anim
-                      id est laborum. Sed ut perspiciatis unde omnis iste natus
-                      error sit voluptatem accusantium doloremque laudantium,
-                      totam rem aperiam, eaque ipsa quae ab illo inventore
-                    </p>
+                    <strong>
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.arlis.am/documentview.aspx?docid=80072"
+                      >
+                        Արժեթղթերի շուկայի մասին ՀՀ օրենքը
+                      </a>
+                    </strong>
+                    <strong>
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.arlis.am/documentview.aspx?docid=69106"
+                      >
+                        Բաժնետիրական ընկերությունների մասին ՀՀ օրենքը
+                      </a>
+                    </strong>
+                    <strong>
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.arlis.am/documentview.aspx?docID=64645"
+                      >
+                        Ապահովված հիփոթեքային պարտատոմսերի մասին ՀՀ օրենքը
+                      </a>
+                    </strong>
+                    <strong>
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.arlis.am/documentview.aspx?docid=50589"
+                      >
+                        Արժութային կարգավորման և արժութային վերահսկողության
+                        մասին ՀՀ օրենքը
+                      </a>
+                    </strong>
+                    <strong>
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.arlis.am/documentview.aspx?docID=44695"
+                      >
+                        Ակտիվների արժեթղթավորման և ակտիվներով ապահովված
+                        արժեթղթերի մասին ՀՀ օրենքը
+                      </a>
+                    </strong>
+                    <strong>
+                      <a
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        href="https://www.arlis.am/documentview.aspx?docID=93142"
+                      >
+                        Փողերի լվացման և ահաբեկչության ֆինանսավորման դեմ պայքարի
+                        մասին ՀՀ օրենքը
+                      </a>
+                    </strong>
                     <div
                       className="my-collapsible__content"
                       ref={setCollapsibleElement}
