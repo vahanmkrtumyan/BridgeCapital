@@ -15,6 +15,7 @@
 
             img {
                 width: 27px;
+                min-width: 27px;
                 height: 27px;
                 margin-right: 12px;
                 vertical-align: middle;
@@ -28,6 +29,7 @@
 
         li {
             width: 27px;
+            min-width: 27px;
             height: 27px;
             margin-left: 20px;
         }
@@ -39,7 +41,7 @@
 
     .footer-logo {
         width: 178px;
-        display: block;
+        display: inline-block;
         padding: 18px 0;
 
         img {
@@ -57,6 +59,7 @@
     p {
         color: rgba(133, 147, 173, 0.5);
         margin-bottom: 0;
+        text-align: center;
 
         img  {
             width: 13px;

@@ -43,7 +43,7 @@ class Homepage extends Component {
     scrollToComponent(this.TabComponent, {
       offset: -65,
       align: "top",
-      duration: 1500
+      duration: 1000
     });
     this.setState({ activeClass: 1 });
   };
@@ -51,7 +51,7 @@ class Homepage extends Component {
     scrollToComponent(this.SettingsComponent, {
       offset: -60,
       align: "top",
-      duration: 1800
+      duration: 1000
     });
     this.setState({ activeClass: 2 });
   };
@@ -59,7 +59,7 @@ class Homepage extends Component {
     scrollToComponent(this.AboutComponent, {
       offset: -60,
       align: "top",
-      duration: 2000
+      duration: 1000
     });
     this.setState({ activeClass: 3 });
   };
@@ -67,7 +67,7 @@ class Homepage extends Component {
     scrollToComponent(this.ContactUsComponent, {
       offset: -60,
       align: "top",
-      duration: 2200
+      duration: 1000
     });
     this.setState({ activeClass: 4 });
   };
@@ -75,21 +75,26 @@ class Homepage extends Component {
     scrollToComponent(this.HeaderComponent, {
       offset: -60,
       align: "top",
-      duration: 1500
+      duration: 1000
     });
-    this.setState({ activeClass: 1 });
+    this.setState({ activeClass: 5 });
   };
 
   render() {
     return (
       <React.Fragment>
-        <HeaderComponent
-          onTab={this.onTab}
-          onSettings={this.onSettings}
-          onAbout={this.onAbout}
-          onContact={this.onContact}
-          class={this.state.activeClass}
-        />
+          <div
+              ref={section => {
+                  this.HeaderComponent = section;
+              }}
+          >
+            <HeaderComponent
+              onSettings={this.onSettings}
+              onAbout={this.onAbout}
+              onContact={this.onContact}
+              class={this.state.activeClass}
+            />
+          </div>
         <BannerComponent />
         <div
           ref={section => {
@@ -120,15 +125,9 @@ class Homepage extends Component {
         >
           <ContactUsComponent />
         </div>
-        <div
-          ref={section => {
-            this.HeaderComponent = section;
-          }}
-        >
-          <FooterComponent onTab={this.onLogo} />
-        </div>
+          <FooterComponent  />
         <a className="scroll-to-top">
-          <img src={ScrollTop} alt="" />
+          <img src={ScrollTop} onClick={this.onLogo} alt="" />
         </a>
       </React.Fragment>
     );

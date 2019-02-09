@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import About from "../../assets/img/section-img/about-us.png";
+import Users from "../../assets/img/section-img/users.png";
 import { SlideToggle } from "react-slide-toggle";
 
 class AboutComponent extends Component {
@@ -16,7 +16,7 @@ class AboutComponent extends Component {
     return (
       <section className="section grey">
         <div className="container">
-          <div className="cols-md-2 cols-mb justify-between section-with-img img-to-right">
+          <div className="cols-sm-2 cols-mb justify-between section-with-img img-to-right">
             <div className="col-md-5">
               <h2 className="h2">Հաճախորդների իրավունքները</h2>
               <SlideToggle
@@ -34,7 +34,7 @@ class AboutComponent extends Component {
                     </p>
                     <p>+37411441012</p>
                     <p>info@bridgecapital.am</p>
-                    
+
                     <div
                       className="my-collapsible__content"
                       ref={setCollapsibleElement}
@@ -64,7 +64,7 @@ class AboutComponent extends Component {
             <div className="col-md-5">
               <div className="section-img">
                 <div className="img">
-                  <img src={About} alt="Բրոքերային ծառայություն" />
+                  <img src={Users} alt="Բրոքերային ծառայություն" />
                 </div>
               </div>
             </div>

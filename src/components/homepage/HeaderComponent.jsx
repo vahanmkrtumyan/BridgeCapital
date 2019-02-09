@@ -108,60 +108,66 @@ class HeaderComponent extends Component {
                         <a href="#" className="logo">
                             <InlineSVG src={svgSource} />
                         </a>
-                        <div className="header-nav">
-
-                            <div onClick={this.onToggleClassHandler} className={"hamburger " + hamburgerClassName}>
-                                <div className="burger-main">
-                                    <div className="burger-inner">
-                                        <span className="top"></span>
-                                        <span className="mid"></span>
-                                        <span className="bot"></span>
-                                    </div>
-                                </div>
+                    </Fade>
+                    <div className="header-nav">
 
 
-                                <div className="svg-main">
-                                    <svg className="svg-circle">
-                                        <path className="path" fill="none" stroke="#fff" stroke-miterlimit="10"
-                                              stroke-width="4"
-                                              d="M 34 2 C 16.3 2 2 16.3 2 34 s 14.3 32 32 32 s 32 -14.3 32 -32 S 51.7 2 34 2"/>
-                                    </svg>
-                                </div>
-                                <div className="path-burger">
-                                    <div className="animate-path">
-                                        <div className="path-rotation"></div>
-                                    </div>
+                        <div onClick={this.onToggleClassHandler} className={"hamburger " + hamburgerClassName}>
+                            <div className="burger-main">
+                                <div className="burger-inner">
+                                    <span className="top"></span>
+                                    <span className="mid"></span>
+                                    <span className="bot"></span>
                                 </div>
                             </div>
-                            <ul className={"menu " + menuOpenClassName}>
-                                <li className={this.props.class === 1 ? "active" : ""}>
-                                    <a href="#" onClick={this.props.onTab}>
-                                        {texts.header.services}
-                                    </a>
-                                </li>
-                                <li
-                                    className={this.props.class === 2 ? "active" : ""}
-                                    onClick={this.props.onSettings}
-                                >
-                                    <a href="#">Կարգավորումներ</a>
-                                </li>
-                                <li
-                                    className={this.props.class === 3 ? "active" : ""}
-                                    onClick={this.props.onAbout}
-                                >
-                                    <a href="#">Մեր մասին</a>
-                                </li>
-                                <li
-                                    className={this.props.class === 4 ? "active" : ""}
-                                    onClick={this.props.onContact}
-                                >
-                                    <a href="#">Հետադարձ կապ</a>
-                                </li>
-                                {/*<li className="lang rus"><a
-                                    onClick={e =>window.localStorage.getItem("lang") === ('hy-AM') ? this.props.setLocale("ru-RU"):this.props.setLocale("hy-AM")} >{texts.header.language}</a></li>*/}
-                            </ul>
+
+
+                            <div className="svg-main">
+                                <svg className="svg-circle">
+                                    <path className="path" fill="none" stroke="#fff" stroke-miterlimit="10"
+                                          stroke-width="4"
+                                          d="M 34 2 C 16.3 2 2 16.3 2 34 s 14.3 32 32 32 s 32 -14.3 32 -32 S 51.7 2 34 2"/>
+                                </svg>
+                            </div>
+                            <div className="path-burger">
+                                <div className="animate-path">
+                                    <div className="path-rotation"></div>
+                                </div>
+                            </div>
                         </div>
-                    </Fade>
+                        <ul className={"menu " + menuOpenClassName}>
+                            <li className={this.props.class === 1 ? "active" : ""}>
+                                <a href="#" onClick={this.props.onTab}>
+                                    {texts.header.services}
+                                </a>
+                            </li>
+                            <li
+                                className={this.props.class === 2 ? "active" : ""}
+                                onClick={this.props.onSettings}
+                            >
+                                <a href="#">Կարգավորումներ</a>
+                            </li>
+
+                            <li
+                                className={this.props.class === 3 ? "active" : ""}
+                                onClick={this.props.onAbout}
+                            >
+                                <a href="#">Իրավունքներ</a>
+                            </li>
+
+                            <li
+                                className={this.props.class === 4 ? "active" : ""}
+                                onClick={this.props.onContact}
+                            >
+                                <a href="#">Հետադարձ կապ</a>
+                            </li>
+                            <li>
+                                <a href="#">Մեր մասին</a>
+                            </li>
+                            {/*<li className="lang rus"><a
+                                    onClick={e =>window.localStorage.getItem("lang") === ('hy-AM') ? this.props.setLocale("ru-RU"):this.props.setLocale("hy-AM")} >{texts.header.language}</a></li>*/}
+                        </ul>
+                    </div>
                 </div>
             </header>
         );

@@ -29,8 +29,8 @@ const FooterComponent = props => {
     <footer>
       <div className="footer-top">
         <div className="container">
-          <div className="cols-sm-3 align-center">
-            <div className="col-sm-6">
+          <div className="cols-xs-3">
+            <div className="col-xs-6">
               <ul className="footer-links">
                 <li>
                   <Link to={"/FinStatements"} className="primary-link">
@@ -69,7 +69,7 @@ const FooterComponent = props => {
                 </li>
               </ul>
             </div>
-            <div className="col-sm-4">
+            <div className="col-sm-4 col-xs-6">
               <ul className="footer-contact">
                 <li>
                   <img src={Call} alt="զանգերի սպասարկում" />
@@ -109,21 +109,23 @@ const FooterComponent = props => {
       </div>
       <div className="footer-bottom">
         <div className="container">
-          <div className="cols-sm-2 cols-mb align-center">
-            <div className="col-sm-6">
+          <div className="cols-sm-3 align-center">
+            <div className="col-sm-3">
               <a href="#" className="footer-logo" onClick={props.onLogo}>
                 <img src={logo} alt="Բրիդջ կապիտալ" />
               </a>
             </div>
-            <div className="col-sm-6">
+            <div className="col-sm-5">
               <p className="text-sm-right text-xs-center">
                 <img src={Copyright} alt="Բրիդջ կապիտալ" /> Բրիդջ կապիտալ, 2019:
                 Բոլոր իրավունքները պաշտպանված են:
               </p>
-              <p className="text-sm-right text-xs-center">
-                Էջը թարմացվել է` {date}
-              </p>
             </div>
+              <div className="col-sm-3">
+                  <p className="text-sm-right text-xs-center">
+                      Էջը թարմացվել է` {date}
+                  </p>
+              </div>
           </div>
         </div>
       </div>
