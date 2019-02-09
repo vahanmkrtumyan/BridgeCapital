@@ -9,43 +9,32 @@ class FinStatements extends Component {
   componentDidMount() {
     database.ref("Statements").on("value", snapshot => {
       if (snapshot.val() !== null) {
-        this.setState({ statements: snapshot.val() }, () => {
-          console.log(
-            Object.keys(
-              Object.values(this.state.statements)[
-                Object.keys(Object.values(this.state.statements))[0]
-              ]
-            )[2]
-          );
-        });
+        this.setState({ statements: snapshot.val() });
       }
     });
   }
 
   render() {
+    let arr;
     this.state.statements !== null
-      ? console.log(Object.values(Object.values(this.state.statements)[0]))
-      : console.log(14);
-    this.state.statements !== null
-      ? console.log(Object.values(this.state.statements[2019])[0]["name"])
-      : console.log(14);
+      ? (arr = Object.keys(this.state.statements).reverse())
+      : (arr = "");
 
     return this.state.statements !== null ? (
       <div>
         <div>
-          {Object.keys(this.state.statements).map(item => (
+          {arr.map(item => (
             <h1 key={item}>
               {item}
               {Object.values(this.state.statements[item]).map(n => (
                 <div>
                   <a
-                  target="_blank"
-                  rel="noopener noreferrer"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     href={
                       Object.values(this.state.statements[item])[
                         Object.values(this.state.statements[item]).indexOf(n)
                       ]["downloadURL"]
-                      
                     }
                   >
                     {
