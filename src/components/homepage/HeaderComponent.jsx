@@ -136,8 +136,12 @@ class HeaderComponent extends Component {
                             </div>
                         </div>
                         <ul className={"menu " + menuOpenClassName}>
-                            <li className={this.props.class === 1 ? "active" : ""}>
-                                <a href="#" onClick={this.props.onTab}>
+                            <li
+                                className={this.props.class === 1 ? "active" : ""}
+                                onClick={this.props.onTab}
+                            >
+
+                                <a href="#">
                                     {texts.header.services}
                                 </a>
                             </li>

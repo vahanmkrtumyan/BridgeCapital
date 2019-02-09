@@ -89,6 +89,7 @@ class Homepage extends Component {
               }}
           >
             <HeaderComponent
+              onTab={this.onTab}
               onSettings={this.onSettings}
               onAbout={this.onAbout}
               onContact={this.onContact}
