@@ -149,8 +149,7 @@ section {
 
     &:not(.img-to-right) {
         .img {
-            &:before {
-                content: '';
+            .border {
                 position: absolute;
                 top: -50px;
                 right: 0;

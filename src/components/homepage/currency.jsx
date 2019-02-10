@@ -8,6 +8,7 @@ import Euro from "../../assets/img/icons/flags/european-union.svg";
 import UK from "../../assets/img/icons/flags/united-kingdom.svg";
 import Pulse from 'react-reveal/Pulse';
 import Fade from 'react-reveal/Fade';
+import Flip from 'react-reveal/Flip';
 
 class Currency extends Component {
     state = {
@@ -139,7 +140,7 @@ class Currency extends Component {
                             </Fade>
 
                             <div className="currency-calc">
-                                <Pulse count={2}>
+                                <Pulse count={3}>
                                     <div className="currency-calc-item">
                                         <div className="calc-header">
                                             <img src={flag1} className="flag" />
@@ -171,7 +172,7 @@ class Currency extends Component {
                                         </div>
                                     </div>
                                 </Pulse>
-                                <Pulse count={2}>
+                                <Pulse count={3}>
                                     <div className="currency-calc-item">
                                         <div className="calc-header">
                                             <img src={flag2} className="flag" />
@@ -208,54 +209,58 @@ class Currency extends Component {
                         </div>
                         <div className="col-md-4">
                             <div>
-                                <h3 className="h3 lg pb-2">Փոխարժեք</h3>
-                                <table className="table">
-                                    <thead>
-                                    <tr>
-                                        <th>Արժույթ</th>
-                                        <th>Առք</th>
-                                        <th>Վաճառք</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
-                                    <tr>
-                                        <td>
-                                            <img src={USA} className="flag" alt="ԱՄՆ դոլար" />
-                                            USD
-                                        </td>
-                                        <td>{this.state.kurs.USDBid}</td>
-                                        <td>{this.state.kurs.USDAsk}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <img src={Euro} className="flag" alt="Եվրո" />
-                                            EUR
-                                        </td>
-                                        <td>{this.state.kurs.EURBid}</td>
-                                        <td>{this.state.kurs.EURAsk}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <img
-                                                src={Russia}
-                                                className="flag"
-                                                alt="Ռուսական ռուբլի"
-                                            />
-                                            RUB
-                                        </td>
-                                        <td>{this.state.kurs.RUBBid}</td>
-                                        <td>{this.state.kurs.RUBAsk}</td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <img src={UK} className="flag" alt="Ֆունտստերլինգ" />
-                                            GBP
-                                        </td>
-                                        <td>{this.state.kurs.RUBBid}</td>
-                                        <td>{this.state.kurs.RUBAsk}</td>
-                                    </tr>
-                                    </tbody>
-                                </table>
+                                <Fade right>
+                                    <h3 className="h3 lg pb-2">Փոխարժեք</h3>
+                                </Fade>
+                                <Flip bottom fraction={1}>
+                                    <table className="table">
+                                        <thead>
+                                        <tr>
+                                            <th>Արժույթ</th>
+                                            <th>Առք</th>
+                                            <th>Վաճառք</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <img src={USA} className="flag" alt="ԱՄՆ դոլար" />
+                                                USD
+                                            </td>
+                                            <td>{this.state.kurs.USDBid}</td>
+                                            <td>{this.state.kurs.USDAsk}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src={Euro} className="flag" alt="Եվրո" />
+                                                EUR
+                                            </td>
+                                            <td>{this.state.kurs.EURBid}</td>
+                                            <td>{this.state.kurs.EURAsk}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img
+                                                    src={Russia}
+                                                    className="flag"
+                                                    alt="Ռուսական ռուբլի"
+                                                />
+                                                RUB
+                                            </td>
+                                            <td>{this.state.kurs.RUBBid}</td>
+                                            <td>{this.state.kurs.RUBAsk}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src={UK} className="flag" alt="Ֆունտստերլինգ" />
+                                                GBP
+                                            </td>
+                                            <td>{this.state.kurs.RUBBid}</td>
+                                            <td>{this.state.kurs.RUBAsk}</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </Flip>
                             </div>
                         </div>
                     </div>
