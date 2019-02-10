@@ -7,6 +7,8 @@ import AboutComponent from "./homepage/AboutComponent";
 import ContactUsComponent from "./homepage/ContactUsComponent";
 import FooterComponent from "./homepage/FooterComponent";
 import Currency from "./homepage/currency";
+import Owners from './homepage/Owners';
+import Scrollspy from 'react-scrollspy'
 import scrollToComponent from "react-scroll-to-component";
 import ScrollTop from "../assets/img/icons/scroll-top.svg";
 
@@ -81,7 +83,15 @@ class Homepage extends Component {
   };
 
   render() {
+
+    var y = window.scrollY;
+console.log(y)
+
+
+
+
     return (
+      
       <React.Fragment>
           <div
               ref={section => {
@@ -118,7 +128,9 @@ class Homepage extends Component {
           }}
         >
           <AboutComponent />
+          
         </div>
+        <Owners/>
         <div
           ref={section => {
             this.ContactUsComponent = section;
@@ -126,6 +138,7 @@ class Homepage extends Component {
         >
           <ContactUsComponent />
         </div>
+      
           <FooterComponent  />
         <a className="scroll-to-top">
           <img src={ScrollTop} onClick={this.onLogo} alt="" />
