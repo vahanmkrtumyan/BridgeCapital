@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { database } from "./firebase";
+import FooterComponent from "./homepage/FooterComponent";
 
 class FinStatements extends Component {
   state = {
@@ -21,6 +22,7 @@ class FinStatements extends Component {
       : (arr = "");
 
     return this.state.statements !== null ? (
+      <div>
       <div>
         <div>
           {arr.map(item => (
@@ -49,8 +51,9 @@ class FinStatements extends Component {
           ))}
         </div>
       </div>
-    ) : (
-      ""
+      <FooterComponent/>
+      </div>) : (
+      <FooterComponent/>
     );
   }
 }

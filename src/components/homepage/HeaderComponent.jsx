@@ -2,50 +2,48 @@ import React, { Component } from "react";
 import Fade from "react-reveal/Fade";
 import InlineSVG from "svg-inline-react";
 import { connectTranslations } from "../../context/TranslationContext";
+import { Link } from "react-router-dom";
 
 class HeaderComponent extends Component {
+  state = {
+    isOpen: false
+  };
+  componentDidMount() {
+    let scrollpos = window.scrollY;
+    let header = document.querySelector("header");
 
-    state = {
-        isOpen: false
-    };
-    componentDidMount() {
-        let scrollpos = window.scrollY;
-        let header = document.querySelector("header");
-
-        function add_class_on_scroll() {
-            header.classList.add("sticky");
-        }
-
-        function remove_class_on_scroll() {
-            header.classList.remove("sticky");
-        }
-
-        window.addEventListener("scroll", function() {
-            //Here you forgot to update the value
-            scrollpos = window.scrollY;
-
-            if (scrollpos > 0) {
-                add_class_on_scroll();
-            } else {
-                remove_class_on_scroll();
-            }
-        });
+    function add_class_on_scroll() {
+      header.classList.add("sticky");
     }
 
-    onToggleClassHandler = () => {
-        this.setState( prevState => ({
-            isOpen: !prevState.isOpen
+    function remove_class_on_scroll() {
+      header.classList.remove("sticky");
+    }
 
-        }));
+    window.addEventListener("scroll", function() {
+      //Here you forgot to update the value
+      scrollpos = window.scrollY;
 
-    };
-    render() {
-        const { texts } = this.props;
-        const { isOpen } = this.state;
-        const hamburgerClassName = isOpen ? "open" : "closed";
-        const menuOpenClassName = isOpen ? "open" : "";
+      if (scrollpos > 0) {
+        add_class_on_scroll();
+      } else {
+        remove_class_on_scroll();
+      }
+    });
+  }
 
-        const svgSource = `<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+  onToggleClassHandler = () => {
+    this.setState(prevState => ({
+      isOpen: !prevState.isOpen
+    }));
+  };
+  render() {
+    const { texts } = this.props;
+    const { isOpen } = this.state;
+    const hamburgerClassName = isOpen ? "open" : "closed";
+    const menuOpenClassName = isOpen ? "open" : "";
+
+    const svgSource = `<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 618.5 96.5" style="enable-background:new 0 0 618.5 96.5; fill:#282828" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#FFFFFF;}
@@ -101,81 +99,83 @@ class HeaderComponent extends Component {
 </g>
 </svg>`;
 
-        return (
-            <header className="header">
-                <div className="container cols-sm-2 align-center">
-                    <Fade cascade delay={300}>
-                        <a href="#" className="logo">
-                            <InlineSVG src={svgSource} />
-                        </a>
-                    </Fade>
-                    <div className="header-nav">
-
-
-                        <div onClick={this.onToggleClassHandler} className={"hamburger " + hamburgerClassName}>
-                            <div className="burger-main">
-                                <div className="burger-inner">
-                                    <span className="top"></span>
-                                    <span className="mid"></span>
-                                    <span className="bot"></span>
-                                </div>
-                            </div>
-
-
-                            <div className="svg-main">
-                                <svg className="svg-circle">
-                                    <path className="path" fill="none" stroke="#fff" stroke-miterlimit="10"
-                                          stroke-width="4"
-                                          d="M 34 2 C 16.3 2 2 16.3 2 34 s 14.3 32 32 32 s 32 -14.3 32 -32 S 51.7 2 34 2"/>
-                                </svg>
-                            </div>
-                            <div className="path-burger">
-                                <div className="animate-path">
-                                    <div className="path-rotation"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <ul className={"menu " + menuOpenClassName}>
-                            <li
-                                className={this.props.class === 1 ? "active" : ""}
-                                onClick={this.props.onTab}
-                            >
-
-                                <a href="#">
-                                    {texts.header.services}
-                                </a>
-                            </li>
-                            <li
-                                className={this.props.class === 2 ? "active" : ""}
-                                onClick={this.props.onSettings}
-                            >
-                                <a href="#">Կարգավորումներ</a>
-                            </li>
-
-                            <li
-                                className={this.props.class === 3 ? "active" : ""}
-                                onClick={this.props.onAbout}
-                            >
-                                <a href="#">Իրավունքներ</a>
-                            </li>
-
-                            <li
-                                className={this.props.class === 4 ? "active" : ""}
-                                onClick={this.props.onContact}
-                            >
-                                <a href="#">Հետադարձ կապ</a>
-                            </li>
-                            <li>
-                                <a href="#">Մեր մասին</a>
-                            </li>
-                            {/*<li className="lang rus"><a
-                                    onClick={e =>window.localStorage.getItem("lang") === ('hy-AM') ? this.props.setLocale("ru-RU"):this.props.setLocale("hy-AM")} >{texts.header.language}</a></li>*/}
-                        </ul>
-                    </div>
+    return (
+      <header className="header">
+        <div className="container cols-sm-2 align-center">
+          <Fade cascade delay={300}>
+            <a href="#" className="logo">
+              <InlineSVG src={svgSource} />
+            </a>
+          </Fade>
+          <div className="header-nav">
+            <div
+              onClick={this.onToggleClassHandler}
+              className={"hamburger " + hamburgerClassName}
+            >
+              <div className="burger-main">
+                <div className="burger-inner">
+                  <span className="top" />
+                  <span className="mid" />
+                  <span className="bot" />
                 </div>
-            </header>
-        );
-    }
+              </div>
+
+              <div className="svg-main">
+                <svg className="svg-circle">
+                  <path
+                    className="path"
+                    fill="none"
+                    stroke="#fff"
+                    stroke-miterlimit="10"
+                    stroke-width="4"
+                    d="M 34 2 C 16.3 2 2 16.3 2 34 s 14.3 32 32 32 s 32 -14.3 32 -32 S 51.7 2 34 2"
+                  />
+                </svg>
+              </div>
+              <div className="path-burger">
+                <div className="animate-path">
+                  <div className="path-rotation" />
+                </div>
+              </div>
+            </div>
+            <ul className={"menu " + menuOpenClassName}>
+              <li
+                className={this.props.class === 1 ? "active" : ""}
+                onClick={this.props.onTab}
+              >
+                <a href="#">{texts.header.services}</a>
+              </li>
+              <li
+                className={this.props.class === 2 ? "active" : ""}
+                onClick={this.props.onSettings}
+              >
+                <a href="#">Կարգավորումներ</a>
+              </li>
+
+              <li
+                className={this.props.class === 3 ? "active" : ""}
+                onClick={this.props.onAbout}
+              >
+                <a href="#">Իրավունքներ</a>
+              </li>
+
+              <li
+                className={this.props.class === 4 ? "active" : ""}
+                onClick={this.props.onContact}
+              >
+                <a href="#">Հետադարձ կապ</a>
+              </li>
+              <li>
+                <Link to={`/About`}>Մեր մասին</Link>
+              </li>
+              {/*<li className="lang rus"><a
+                                    onClick={e =>window.localStorage.getItem("lang") === ('hy-AM') ? this.props.setLocale("ru-RU"):this.props.setLocale("hy-AM")} >{texts.header.language}</a></li>*/}
+            </ul>
+          </div>
+        </div>
+      </header>
+    );
+  }
 }
 
 export default connectTranslations(HeaderComponent);
