@@ -1,6 +1,6 @@
 .banner {
     position: relative;
-    height: 650px;
+    height: 800px;
     @include bg-img('hero.png', no-repeat, cover, $color-bg, top);
     background-attachment: fixed;
 
@@ -36,7 +36,7 @@
         z-index: 1;
         color: #fff;
         width: 48%;
-        padding-top: 120px;
+        padding-top: 200px;
     }
 
     h1 {
@@ -136,8 +136,7 @@ section {
             right: 100%;
             transform: translateX(100%) translateY(-50%);
 
-            &:before {
-                content: '';
+            .border {
                 position: absolute;
                 left: -50px;
                 bottom: 0;

@@ -104,7 +104,7 @@ class HeaderComponent extends Component {
         return (
             <header className="header">
                 <div className="container cols-sm-2 align-center">
-                    <Fade cascade>
+                    <Fade cascade delay={300}>
                         <a href="#" className="logo">
                             <InlineSVG src={svgSource} />
                         </a>

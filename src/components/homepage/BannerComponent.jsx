@@ -7,7 +7,7 @@ class BannerComponent extends Component {
             <React.Fragment>
                 <div className="banner">
                     <div className="container">
-                        <Fade cascade>
+                        <Fade delay={300} cascade>
                             <div className="banner-inner">
 
                                 <h1>ՈՂՋՈՒՅՆ <span>ՆԵՐԴՐՈՂ</span></h1>
