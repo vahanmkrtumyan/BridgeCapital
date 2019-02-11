@@ -37,14 +37,14 @@ class Homepage extends Component {
       this.refs["settings"]
     ).getBoundingClientRect();
     let tabs = tab.top + window.scrollY;
-    let tabsBot = tab.bottom + window.scrollY;
+    let tabsBot = tab.bottom + window.scrollY - 20;
     console.log(tab);
 
     let about = ReactDOM.findDOMNode(
       this.refs["about"]
     ).getBoundingClientRect();
     let abouts = about.top + window.scrollY;
-    let aboutsBot = about.bottom + window.scrollY;
+    let aboutsBot = about.bottom + window.scrollY - 20;
 
     window.addEventListener("scroll", function() {
       //Here you forgot to update the value
@@ -56,7 +56,11 @@ class Homepage extends Component {
         remove_class_on_scroll();
       }
 
-      if (scrollpos > tabs && scrollpos < tabsBot) {
+      if (scrollpos < tabs - 400) {
+        changeClass(1);
+      }
+
+      if (scrollpos > (tabs -100) && scrollpos < tabsBot) {
         changeClass(2);
       }
 
