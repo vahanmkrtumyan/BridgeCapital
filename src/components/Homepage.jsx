@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ReactDOM from "react-dom";
 import HeaderComponent from "./homepage/HeaderComponent";
 import BannerComponent from "./homepage/BannerComponent";
 import TabComponent from "./homepage/TabComponent";
@@ -7,7 +8,7 @@ import AboutComponent from "./homepage/AboutComponent";
 import ContactUsComponent from "./homepage/ContactUsComponent";
 import FooterComponent from "./homepage/FooterComponent";
 import Currency from "./homepage/currency";
-import Owners from './homepage/Owners';
+import Owners from "./homepage/Owners";
 import scrollToComponent from "react-scroll-to-component";
 import ScrollTop from "../assets/img/icons/scroll-top.svg";
 
@@ -28,6 +29,23 @@ class Homepage extends Component {
       scrollTop.classList.remove("show");
     }
 
+    let changeClass = number => {
+      this.setState({ activeClass: number }, () => console.log("changed"));
+    };
+
+    let tab = ReactDOM.findDOMNode(
+      this.refs["settings"]
+    ).getBoundingClientRect();
+    let tabs = tab.top + window.scrollY;
+    let tabsBot = tab.bottom + window.scrollY;
+    console.log(tab);
+
+    let about = ReactDOM.findDOMNode(
+      this.refs["about"]
+    ).getBoundingClientRect();
+    let abouts = about.top + window.scrollY;
+    let aboutsBot = about.bottom + window.scrollY;
+
     window.addEventListener("scroll", function() {
       //Here you forgot to update the value
       scrollpos = window.scrollY;
@@ -36,6 +54,14 @@ class Homepage extends Component {
         add_class_on_scroll();
       } else {
         remove_class_on_scroll();
+      }
+
+      if (scrollpos > tabs && scrollpos < tabsBot) {
+        changeClass(2);
+      }
+
+      if (scrollpos > abouts && scrollpos < aboutsBot) {
+        changeClass(3);
       }
     });
   }
@@ -82,29 +108,21 @@ class Homepage extends Component {
   };
 
   render() {
-
-    var y = window.scrollY;
-console.log(y)
-
-
-
-
     return (
-      
       <React.Fragment>
-          <div
-              ref={section => {
-                  this.HeaderComponent = section;
-              }}
-          >
-            <HeaderComponent
-              onTab={this.onTab}
-              onSettings={this.onSettings}
-              onAbout={this.onAbout}
-              onContact={this.onContact}
-              class={this.state.activeClass}
-            />
-          </div>
+        <div
+          ref={section => {
+            this.HeaderComponent = section;
+          }}
+        >
+          <HeaderComponent
+            onTab={this.onTab}
+            onSettings={this.onSettings}
+            onAbout={this.onAbout}
+            onContact={this.onContact}
+            class={this.state.activeClass}
+          />
+        </div>
         <BannerComponent />
         <div
           ref={section => {
@@ -113,23 +131,24 @@ console.log(y)
         >
           <TabComponent />
         </div>
-        <Currency />
+        <div>
+          <Currency />
+        </div>
         <div
           ref={section => {
             this.SettingsComponent = section;
           }}
         >
-          <SettingsComponent />
+          <SettingsComponent ref="settings" />
         </div>
         <div
           ref={section => {
             this.AboutComponent = section;
           }}
         >
-          <AboutComponent />
-          
+          <AboutComponent ref="about" />
         </div>
-        <Owners/>
+        <Owners />
         <div
           ref={section => {
             this.ContactUsComponent = section;
@@ -137,8 +156,8 @@ console.log(y)
         >
           <ContactUsComponent />
         </div>
-      
-          <FooterComponent  />
+
+        <FooterComponent />
         <a className="scroll-to-top">
           <img src={ScrollTop} onClick={this.onLogo} alt="" />
         </a>
