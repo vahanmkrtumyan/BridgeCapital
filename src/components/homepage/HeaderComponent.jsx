@@ -141,29 +141,29 @@ class HeaderComponent extends Component {
             <ul className={"menu " + menuOpenClassName}>
               <li
                 className={this.props.class === 1 ? "active" : ""}
-                onClick={this.props.onTab}
+                onClick={() => {this.props.onTab(); this.onToggleClassHandler() }}
               >
                 <a href="#">{texts.header.services}</a>
               </li>
               <li
                 className={this.props.class === 2 ? "active" : ""}
-                onClick={this.props.onSettings}
+                onClick={() => {this.props.onSettings(); this.onToggleClassHandler() }}
               >
                 <a href="#">Կարգավորումներ</a>
               </li>
 
-              <li
+              {/*<li
                 className={this.props.class === 3 ? "active" : ""}
-                onClick={this.props.onAbout}
+                onClick={() => {this.props.onAbout(); this.onToggleClassHandler() }}
               >
                 <a href="#">Հաճախորդների իրավունքներ</a>
-              </li>
+              </li>*/}
 
               <li
-                className={this.props.class === 4 ? "active" : ""}
-                onClick={this.props.onContact}
+                className={this.props.class === 3 ? "active" : ""}
+                onClick={() => {this.props.onContact(); this.onToggleClassHandler() }}
               >
-                <a href="#">Հետադարձ կապ</a>
+                <a  >Հետադարձ կապ</a>
               </li>
               <li>
                 <Link to={`/About`}>Մեր մասին</Link>

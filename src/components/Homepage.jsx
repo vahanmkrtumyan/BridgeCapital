@@ -30,7 +30,7 @@ class Homepage extends Component {
     }
 
     let changeClass = number => {
-      this.setState({ activeClass: number }, () => console.log("changed"));
+      this.setState({ activeClass: number });
     };
 
     let tab = ReactDOM.findDOMNode(
@@ -38,7 +38,6 @@ class Homepage extends Component {
     ).getBoundingClientRect();
     let tabs = tab.top + window.scrollY;
     let tabsBot = tab.bottom + window.scrollY - 300;
-    console.log(tab);
 
     let about = ReactDOM.findDOMNode(
       this.refs["about"]

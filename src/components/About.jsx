@@ -24,7 +24,7 @@ class AboutComponent extends Component {
                   duration={800}
                   collapsed
                   render={({ onToggle, setCollapsibleElement }) => (
-                    <div className="my-collapsible">
+                    <div className="my-collapsible text-inside">
                       <strong>
                         Lorem ipsum dolor sit amet, consectetur adipisicing
                         elit, sed do eiusmod tempor incididunt ut labore et

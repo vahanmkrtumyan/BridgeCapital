@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import React, { Component } from "react";
 import {storage, database, auth } from "../components/firebase";
 import SignIn from "../components/signIn";
@@ -198,7 +197,7 @@ class OrderForm extends Form {
     progress: 0
   };
 
-  
+
 
 
   componentDidMount() {

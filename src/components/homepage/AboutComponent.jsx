@@ -20,13 +20,13 @@ class AboutComponent extends Component {
         <div className="container">
           <div className="cols-sm-2 cols-mb justify-between section-with-img img-to-right">
             <div className="col-md-5">
-              <Fade bottom fraction={1}>
+              <Fade bottom fraction={0.3}>
                 <h2 className="h2">Հաճախորդների իրավունքները</h2>
                 <SlideToggle
                   duration={800}
                   collapsed
                   render={({ onToggle, setCollapsibleElement }) => (
-                    <div className="my-collapsible">
+                    <div className="my-collapsible text-inside">
                       <p>
                         Հայտնում ենք, որ Ձեր բողոք - պահանջները, ինչպես նաև
                         առաջարկությունները կարող եք ներկայացնել հետևյալ
@@ -34,12 +34,7 @@ class AboutComponent extends Component {
                         հանդիսացող հաճախորդները հնարավորություն ունեն
                         ներկայացնելու ընկերության և հաճախորդի միջև կնքվող
                         գործարքից բխող պահանջները ֆինանսական համակարգի
-                        հաշտարարին:
-                      </p>
-                      <p>+37411441012</p>
-                      <p>info@bridgecapital.am</p>
-                      <p>
-                        Բրիդջ Կապիտալ ՓԲԸ-ն ֆինանսական համակարգի հաշտարարի
+                        հաշտարարին: Բրիդջ Կապիտալ ՓԲԸ-ն ֆինանսական համակարգի հաշտարարի
                         որոշումները վիճարկելու իրավունքից հրաժարվելու վերաբերյալ
                         համաձայնագիր չի կնքել:
                       </p>
@@ -50,7 +45,7 @@ class AboutComponent extends Component {
                         <div className="my-collapsible__content-inner">
                           <p>
                             Ցանկացած անձ իրավունք ունի ստանալու Բրիդջ Կապիտալ
-                            ՓԲԸ-ի վերաբերյալ «Արժեթղթերի շուկայի մասին» ՀՀ
+                            ՓԲԸ-ի վերաբերյալ &lt;&lt;Արժեթղթերի շուկայի մասին&gt;&gt; ՀՀ
                             օրենքի 65-րդ հոդվածով սահմանված տեղեկությունները:
                             Թղթային տարբերակով տեղեկատվության տրամադրման դեպքում
                             կգանձվի պատճենահանման գինը: Ժամկետը` դիմումը
@@ -74,7 +69,7 @@ class AboutComponent extends Component {
               </Fade>
             </div>
             <div className="col-md-5">
-              <Fade right duration={1500} fraction={1}>
+              <Fade right duration={1500} fraction={0.3}>
                 <div className="section-img">
                   <div className="img">
                     <Fade bottom delay={900}>

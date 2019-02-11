@@ -14,3 +14,51 @@ h3.h3 {
         font-weight: 400;
     }
 }
+
+.text-inside {
+    p {
+        line-height: 24px;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        font-size: 18px;
+        color: $color-primary;
+        margin-bottom: 10px;
+    }
+
+    .link-list {
+        margin-bottom: 30px;
+
+        li {
+            a {
+                line-height: 30px;
+                font-weight: 700;
+                color: #3c3c3c;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+    }
+
+    .ul {
+        margin-left: 20px;
+
+        li {
+            list-style-type: none;
+            line-height: 25px;
+
+            &::before {
+                content: "\2022";
+                color: $color-primary;
+                font-weight: bold;
+                display: inline-block;
+                width: 1em;
+                margin-left: -1em;
+            }
+        }
+    }
+}

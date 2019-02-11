@@ -147,6 +147,3 @@ class FeedbackForm extends Component {
 
 export default FeedbackForm;
 
-FeedbackForm.propTypes = {
-    env: PropTypes.object.isRequired
-};

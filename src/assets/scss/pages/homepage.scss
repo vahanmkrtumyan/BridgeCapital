@@ -1,7 +1,7 @@
 .banner {
     position: relative;
     height: 800px;
-    @include bg-img('hero.png', no-repeat, cover, $color-bg, top);
+    @include bg-img('hero.jpg', no-repeat, cover, $color-bg, top);
     background-attachment: fixed;
 
     &:before {

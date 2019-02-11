@@ -24,7 +24,7 @@ class ContactUsComponent extends Component {
                                     գրելով մեր ֆեյսբուքյան էջում կամ գրելով էլեկտրոնային նամակ{" "}
                                     <a className="primary-link" href="mailto:info@bridgecapital.am">
                                         info@bridgecapital.am
-                                    </a>{" "}
+                                    </a>
                                     հասցեով:
                                 </p>
                                 <p>
