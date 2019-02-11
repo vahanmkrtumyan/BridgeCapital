@@ -37,7 +37,7 @@ class Homepage extends Component {
       this.refs["settings"]
     ).getBoundingClientRect();
     let tabs = tab.top + window.scrollY;
-    let tabsBot = tab.bottom + window.scrollY - 60;
+    let tabsBot = tab.bottom + window.scrollY - 300;
     console.log(tab);
 
     let about = ReactDOM.findDOMNode(
@@ -49,7 +49,7 @@ class Homepage extends Component {
     let contact = ReactDOM.findDOMNode(
       this.refs["contact"]
     ).getBoundingClientRect();
-    let contacts = contact.top + window.scrollY - 60;
+    let contacts = contact.top + window.scrollY - 80;
     let contactsBot = contact.bottom + window.scrollY - 60;
 
     window.addEventListener("scroll", function() {

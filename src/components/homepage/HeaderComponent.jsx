@@ -156,7 +156,7 @@ class HeaderComponent extends Component {
                 className={this.props.class === 3 ? "active" : ""}
                 onClick={this.props.onAbout}
               >
-                <a href="#">Իրավունքներ</a>
+                <a href="#">Հաճախորդների իրավունքներ</a>
               </li>
 
               <li
