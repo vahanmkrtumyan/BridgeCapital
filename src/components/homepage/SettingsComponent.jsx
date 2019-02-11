@@ -25,7 +25,7 @@ class SettingsComponent extends Component {
         <div className="container">
           <div className="cols-sm-2 cols-mb justify-between section-with-img">
             <div className="col-md-5">
-              <Fade left duration={1500} fraction={1}>
+              <Fade left duration={1000} fraction={1}>
                 <div className="section-img">
                   <div className="img">
                     <Fade right delay={900}>

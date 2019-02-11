@@ -37,14 +37,20 @@ class Homepage extends Component {
       this.refs["settings"]
     ).getBoundingClientRect();
     let tabs = tab.top + window.scrollY;
-    let tabsBot = tab.bottom + window.scrollY - 20;
+    let tabsBot = tab.bottom + window.scrollY - 60;
     console.log(tab);
 
     let about = ReactDOM.findDOMNode(
       this.refs["about"]
     ).getBoundingClientRect();
-    let abouts = about.top + window.scrollY;
-    let aboutsBot = about.bottom + window.scrollY - 20;
+    let abouts = about.top + window.scrollY - 60;
+    let aboutsBot = about.bottom + window.scrollY - 60;
+
+    let contact = ReactDOM.findDOMNode(
+      this.refs["contact"]
+    ).getBoundingClientRect();
+    let contacts = contact.top + window.scrollY - 60;
+    let contactsBot = contact.bottom + window.scrollY - 60;
 
     window.addEventListener("scroll", function() {
       //Here you forgot to update the value
@@ -60,12 +66,16 @@ class Homepage extends Component {
         changeClass(1);
       }
 
-      if (scrollpos > (tabs -100) && scrollpos < tabsBot) {
+      if (scrollpos > tabs - 100 && scrollpos < tabsBot) {
         changeClass(2);
       }
 
       if (scrollpos > abouts && scrollpos < aboutsBot) {
         changeClass(3);
+      }
+
+      if (scrollpos > contacts && scrollpos < contactsBot) {
+        changeClass(4);
       }
     });
   }
@@ -158,7 +168,7 @@ class Homepage extends Component {
             this.ContactUsComponent = section;
           }}
         >
-          <ContactUsComponent />
+          <ContactUsComponent ref="contact" />
         </div>
 
         <FooterComponent />
