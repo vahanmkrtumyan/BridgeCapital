@@ -8,7 +8,6 @@ import ContactUsComponent from "./homepage/ContactUsComponent";
 import FooterComponent from "./homepage/FooterComponent";
 import Currency from "./homepage/currency";
 import Owners from './homepage/Owners';
-import Scrollspy from 'react-scrollspy'
 import scrollToComponent from "react-scroll-to-component";
 import ScrollTop from "../assets/img/icons/scroll-top.svg";
 
