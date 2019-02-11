@@ -195,7 +195,7 @@ class Currency extends Component {
                                                 name="USDAsk"
                                                 type="number"
                                                 onChange={e => this.handleInputChange(e, 2)}
-                                                value={this.state.selected2Val}
+                                                value= {this.state.selected2Val}
                                                 className={
                                                     maxValue > 999999 ? "validate small" : "validate large"
                                                 }
