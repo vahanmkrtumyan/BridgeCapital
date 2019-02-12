@@ -177,7 +177,7 @@ section {
             position: absolute;
             height: 2px;
             width: 50%;
-            background-color: $color-primary;
+            background-color: rgba(0, 98, 255, 0.2);
             bottom: 0;
             left: 50%;
             transform: translateX(-50%);
@@ -233,6 +233,10 @@ section {
 
 .section-currency {
     background-color: $color-bg-2;
+
+    h3 {
+        color: rgba(255, 255, 255, 0.4);
+    }
 }
 
 .scroll-to-top {

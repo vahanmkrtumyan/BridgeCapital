@@ -159,6 +159,7 @@ class Currency extends Component {
                                             </div>
                                         </div>
                                         <div className="calc-body">
+                                            <h4>Ունեմ</h4>
                                             <input
                                                 name="USDBid"
                                                 type="number"
@@ -191,6 +192,7 @@ class Currency extends Component {
                                             </div>
                                         </div>
                                         <div className="calc-body">
+                                            <h4>Ուզում եմ</h4>
                                             <input
                                                 name="USDAsk"
                                                 type="number"

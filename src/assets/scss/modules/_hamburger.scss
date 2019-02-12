@@ -144,7 +144,6 @@
     width: 30px;
     height: 34px;
     margin: 0 4px 0 0;
-    background: #fff;
 }
 
 .hamburger.open .animate-path {
@@ -168,16 +167,16 @@
 header {
     &.sticky {
         .burger-main span {
-            background: black;
+            background: rgba(40, 40, 40, 0.7);
         }
         .path-rotation:before {
-            background: black;
+            background: rgba(40, 40, 40, 0.7);
         }
         .svg-circle {
-            stroke: black;
+            stroke: rgba(40, 40, 40, 0.7);
 
             .path {
-                stroke: black !important;
+                stroke: rgba(40, 40, 40, 0.7) !important;
             }
         }
     }

@@ -39,7 +39,7 @@ class ContactUsComponent extends Component {
                                 <li className="contact-list-item">
                                     <img src={Call} alt="զանգերի սպասարկում" />
                                     <div>
-                                        <p>զանգերի սպասարկում</p>
+                                        <p>Զանգերի Սպասարկում</p>
                                         <a href="#" className="primary-link">
                                             +374 11441012
                                         </a>
@@ -50,7 +50,7 @@ class ContactUsComponent extends Component {
                                 <li className="contact-list-item">
                                     <img src={Envelope} alt="էլ. փոստ" />
                                     <div>
-                                        <p>էլ. փոստ</p>
+                                        <p>Էլ. փոստ</p>
                                         <a href="#" className="primary-link">
                                             info@bridgebcapital.am
                                         </a>
@@ -61,7 +61,7 @@ class ContactUsComponent extends Component {
                                 <li className="contact-list-item">
                                     <img src={Home} alt="հասցե" />
                                     <div>
-                                        <p>հասցե</p>
+                                        <p>Հասցե</p>
                                         <a href="#" className="primary-link">
                                             ք. Երևան, Տերյան 61
                                         </a>
@@ -73,7 +73,7 @@ class ContactUsComponent extends Component {
                                 <li className="contact-list-item">
                                     <img src={Facebook} alt="սոց․ մեդիա" />
                                     <div>
-                                        <p>սոց․ մեդիա</p>
+                                        <p>Սոց․ մեդիա</p>
                                         <a href="#" className="primary-link">
                                             Facebook
                                         </a>

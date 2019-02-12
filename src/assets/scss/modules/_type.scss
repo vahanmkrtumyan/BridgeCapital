@@ -22,22 +22,29 @@ h3.h3 {
     }
 
     h3 {
-        font-size: 18px;
-        color: $color-primary;
-        margin-bottom: 10px;
+        font-size: 16px;
+        margin-bottom: 12px;
     }
 
     .link-list {
-        margin-bottom: 30px;
+        margin-bottom: 20px;
 
         li {
             a {
-                line-height: 30px;
+                line-height: 24px;
                 font-weight: 700;
+                font-size: 13px;
                 color: #3c3c3c;
 
                 &:hover {
                     text-decoration: underline;
+                }
+
+                img {
+                    width: 12px;
+                    height: auto;
+                    vertical-align: middle;
+                    margin-left: 10px;
                 }
             }
         }
@@ -46,6 +53,7 @@ h3.h3 {
 
     .ul {
         margin-left: 20px;
+        font-size: 13px;
 
         li {
             list-style-type: none;

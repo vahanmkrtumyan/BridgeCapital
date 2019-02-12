@@ -1,11 +1,9 @@
 import React, { Component } from "react";
 import Settings from "../../assets/img/section-img/settings.png";
+import Arrow from "../../assets/img/icons/mouse-pointer-pointing-left.svg";
+import ArrowFill from "../../assets/img/icons/arrow-pointing-left.svg";
 import { SlideToggle } from "react-slide-toggle";
-import Slide from "react-reveal/Slide";
 import Fade from "react-reveal/Fade";
-import Spin from "react-reveal/Spin";
-import Flip from "react-reveal/Flip";
-import Rotate from "react-reveal/Rotate";
 import Zoom from "react-reveal/Zoom";
 
 class SettingsComponent extends Component {
@@ -55,7 +53,7 @@ class SettingsComponent extends Component {
                                                         href="https://www.arlis.am/documentview.aspx?docID=1"
                                                     >
                                                         ՀՀ Սահմանադրություն
-                                                    </a>
+                                                        <img src={ArrowFill} alt=""/></a>
                                                 </li>
                                                 <li>
                                                     <a
@@ -64,7 +62,7 @@ class SettingsComponent extends Component {
                                                         href="https://www.arlis.am/documentview.aspx?docid=74658"
                                                     >
                                                         ՀՀ Քաղաքացիական օրենսգիրք
-                                                    </a>
+                                                        <img src={ArrowFill} alt=""/></a>
                                                 </li>
                                                 <li>
                                                     <a
@@ -73,7 +71,7 @@ class SettingsComponent extends Component {
                                                         href="https://www.arlis.am/documentview.aspx?docid=80072"
                                                     >
                                                         Արժեթղթերի շուկայի մասին ՀՀ օրենքը
-                                                    </a>
+                                                        <img src={ArrowFill} alt=""/></a>
                                                 </li>
                                                 <li>
                                                     <a
@@ -82,7 +80,7 @@ class SettingsComponent extends Component {
                                                         href="https://www.arlis.am/documentview.aspx?docid=69106"
                                                     >
                                                         Բաժնետիրական ընկերությունների մասին ՀՀ օրենքը
-                                                    </a>
+                                                    <img src={ArrowFill} alt=""/></a>
                                                 </li>
                                                 <li>
                                                     <a
@@ -91,7 +89,7 @@ class SettingsComponent extends Component {
                                                         href="https://www.arlis.am/documentview.aspx?docID=64645"
                                                     >
                                                         Ապահովված հիփոթեքային պարտատոմսերի մասին ՀՀ օրենքը
-                                                    </a>
+                                                    <img src={ArrowFill} alt=""/></a>
                                                 </li>
                                                 <li>
                                                     <a
@@ -101,7 +99,7 @@ class SettingsComponent extends Component {
                                                     >
                                                         Արժութային կարգավորման և արժութային վերահսկողության
                                                         մասին ՀՀ օրենքը
-                                                    </a>
+                                                    <img src={ArrowFill} alt=""/></a>
                                                 </li>
                                                 <li>
                                                     <a
@@ -111,7 +109,7 @@ class SettingsComponent extends Component {
                                                     >
                                                         Ակտիվների արժեթղթավորման և ակտիվներով ապահովված
                                                         արժեթղթերի մասին ՀՀ օրենքը
-                                                    </a>
+                                                    <img src={ArrowFill} alt=""/></a>
                                                 </li>
                                                 <li>
                                                     <a
@@ -121,7 +119,7 @@ class SettingsComponent extends Component {
                                                     >
                                                         Փողերի լվացման և ահաբեկչության ֆինանսավորման դեմ
                                                         պայքարի մասին ՀՀ օրենքը
-                                                    </a>
+                                                    <img src={ArrowFill} alt=""/></a>
                                                 </li>
                                             </ul>
                                             <div
@@ -139,7 +137,7 @@ class SettingsComponent extends Component {
                                                             >
                                                                 Կանոնակարգ 4/01 (ներդրումային ընկերությունների
                                                                 գրանցումն ու լիցենզավորումը)
-                                                            </a>
+                                                            <img src={ArrowFill} alt=""/></a>
                                                         </li>
                                                         <li>
                                                             <a
@@ -149,7 +147,7 @@ class SettingsComponent extends Component {
                                                             >
                                                                 Կանոնակարգ 4/02 (ներդրումային ընկերությունների
                                                                 հիմնական տնտեսական նորմատիվները)
-                                                            </a>
+                                                            <img src={ArrowFill} alt=""/></a>
                                                         </li>
                                                         <li>
                                                             <a
@@ -160,7 +158,7 @@ class SettingsComponent extends Component {
                                                                 Կանոնակարգ 4/03 (ներդրումային ծառայություններ
                                                                 մատուցող անձանց` Կենտրոնական Բանկ ներկայացվող
                                                                 հաշվետվությունները)
-                                                            </a>
+                                                            <img src={ArrowFill} alt=""/></a>
                                                         </li>
                                                         <li>
                                                             <a
@@ -171,7 +169,7 @@ class SettingsComponent extends Component {
                                                                 Կանոնակարգ 4/05 (ներդրումային ծառայություններ
                                                                 մատուցող անձանց մասնագիտական որակավորման
                                                                 չափանիշներ)
-                                                            </a>
+                                                            <img src={ArrowFill} alt=""/></a>
                                                         </li>
                                                         <li>
                                                             <a
@@ -182,7 +180,7 @@ class SettingsComponent extends Component {
                                                                 Կանոնակարգ 4/06 (որակավորված ներդրողներ համարելու
                                                                 չափանիշները և անձանց` որպես որակավորված ներդրողներ
                                                                 գրանցման կարգը)
-                                                            </a>
+                                                            <img src={ArrowFill} alt=""/></a>
                                                         </li>
                                                         <li>
                                                             <a
@@ -193,7 +191,7 @@ class SettingsComponent extends Component {
                                                                 Կանոնակարգ 4/07 (ներդրումային ծառայություններ
                                                                 մատուցող անձանց գործունեության նկատմամբ
                                                                 պահանջները){" "}
-                                                            </a>
+                                                            <img src={ArrowFill} alt=""/></a>
                                                         </li>
                                                         <li>
                                                             <a
@@ -204,7 +202,7 @@ class SettingsComponent extends Component {
                                                                 Կանոնակարգ 4/08 (ՀՀ ԿԲ ներկայացված
                                                                 հաշվետվությունները հանրությանը մատչելի դարձնելու
                                                                 պահանջից բացառությունները){" "}
-                                                            </a>
+                                                            <img src={ArrowFill} alt=""/></a>
                                                         </li>
                                                         <li>
                                                             <a
@@ -215,7 +213,7 @@ class SettingsComponent extends Component {
                                                                 Կանոնակարգ 4/09 (հաշվետու թողարկողների
                                                                 ֆինանսատնտեսական գործունեության աուդիտն
                                                                 իրականացնող անձանց ներկայացվող չափանիշները){" "}
-                                                            </a>
+                                                            <img src={ArrowFill} alt=""/></a>
                                                         </li>
                                                         <li>
                                                             <a
@@ -225,7 +223,7 @@ class SettingsComponent extends Component {
                                                             >
                                                                 Կանոնակարգ 4/10 (արժեթղթերը հանձնելու առաջարկի
                                                                 կազմը, պայմանները, փոփոխությունները)
-                                                            </a>
+                                                            <img src={ArrowFill} alt=""/></a>
                                                         </li>
                                                         <li>
                                                             <a
@@ -236,7 +234,7 @@ class SettingsComponent extends Component {
                                                                 Կանոնակարգ 4/11 (ֆինանսատնտեսական գործունեության
                                                                 աուդիտն իրականացնող անձանց ներկայացվող
                                                                 չափանիշները){" "}
-                                                            </a>
+                                                            <img src={ArrowFill} alt=""/></a>
                                                         </li>
                                                         <li>
                                                             <a
@@ -247,7 +245,7 @@ class SettingsComponent extends Component {
                                                                 Կանոնակարգ 4/12 (ներդրումային ծառայություններ
                                                                 մատուցող անձանց հաճախորդների միջոցների
                                                                 պաշտպանության կանոնները){" "}
-                                                            </a>
+                                                            <img src={ArrowFill} alt=""/></a>
                                                         </li>
                                                         <li>
                                                             <a
@@ -257,7 +255,7 @@ class SettingsComponent extends Component {
                                                             >
                                                                 Կանոնակարգ 33 (արժեթղթերի պահառության
                                                                 գործունեությունը){" "}
-                                                            </a>
+                                                            <img src={ArrowFill} alt=""/></a>
                                                         </li>
                                                         <li>
                                                             <a
@@ -267,7 +265,7 @@ class SettingsComponent extends Component {
                                                             >
                                                                 Փողերի լվացման և ահաբեկչության ֆինանսավորման դեմ
                                                                 պայքարի վերաբերյալ կանոնակարգ և հայտարարություն
-                                                            </a>
+                                                            <img src={ArrowFill} alt=""/></a>
                                                         </li>
                                                     </ul>
                                                 </div>

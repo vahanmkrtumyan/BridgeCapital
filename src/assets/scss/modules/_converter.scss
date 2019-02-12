@@ -1,61 +1,72 @@
 .currency-calc {
-  display: flex;
+    display: flex;
 }
 .currency-calc-item {
-  width: 320px;
-  margin-right: 40px;
+    width: 320px;
+    margin-right: 40px;
 
-  .select {
-    width: calc(100% - 46px);
-    position: relative;
-  }
-  select {
-    background-color: #5c6578;
-    border: none;
-    color: #fff;
-    font-weight: 700;
-    padding: 0 30px 0 10px;
-    -webkit-appearance: none;
-    height: 100%;
-    width: 100%;
-    cursor: pointer;
-  }
-  .arrow {
-    position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 14px;
-    pointer-events: none;
-  }
-
-  .calc-header {
-    background-color: rgba(255, 255, 255, 0.3);
-    display: flex;
-    padding: 10px 0 10px 15px;
-  }
-
-  .calc-body {
-    padding: 60px 20px;
-    background-color: rgba(255, 255, 255, 0.1);
-    height: 190px;
-    display: flex;
-
-    input[type="number"]::-webkit-inner-spin-button,
-    input[type="number"]::-webkit-outer-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
+    .select {
+        width: calc(100% - 46px);
+        position: relative;
     }
-    input {
-      color: #fff;
-      border: none;
-
-      &.large {
-        font-size: 60px;
-      }
-      &.small {
-        font-size: 35px;
-      }
+    select {
+        background-color: #5c6578;
+        border: none;
+        color: #fff;
+        font-weight: 700;
+        padding: 0 30px 0 10px;
+        -webkit-appearance: none;
+        height: 100%;
+        width: 100%;
+        cursor: pointer;
     }
-  }
+    .arrow {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 14px;
+        pointer-events: none;
+    }
+
+    .calc-header {
+        background-color: rgba(255, 255, 255, 0.3);
+        display: flex;
+        padding: 10px 0 10px 15px;
+    }
+
+    .calc-body {
+        padding: 60px 20px;
+        background-color: rgba(255, 255, 255, 0.1);
+        height: 190px;
+        display: flex;
+        position: relative;
+
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input {
+            color: #fff;
+            border: none;
+            padding: 0;
+
+            &.large {
+                font-size: 60px;
+            }
+            &.small {
+                font-size: 35px;
+            }
+        }
+
+        h4 {
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 400;
+        }
+    }
 }
