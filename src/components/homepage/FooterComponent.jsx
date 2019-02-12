@@ -77,7 +77,7 @@ const FooterComponent = props => {
                 </li>
                 <li>
                   <img src={Home} alt="հասցե" />
-                  <span>ՀՀ, ք. Երևան, Տերյան 6</span>
+                  <span>ՀՀ, ք. Երևան, Տերյան 61</span>
                 </li>
                 <li>
                   <img src={Envelope} alt="էլ. փոստ" />
@@ -121,11 +121,11 @@ const FooterComponent = props => {
                 Բոլոր իրավունքները պաշտպանված են:
               </p>
             </div>
-              <div className="col-sm-3">
-                  <p className="text-sm-right text-xs-center">
-                      Էջը թարմացվել է` {date}
-                  </p>
-              </div>
+            <div className="col-sm-3">
+              <p className="text-sm-right text-xs-center">
+                Էջը թարմացվել է` {date}
+              </p>
+            </div>
           </div>
         </div>
       </div>

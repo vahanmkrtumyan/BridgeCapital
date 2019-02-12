@@ -41,7 +41,7 @@ class ContactUsComponent extends Component {
                                     <div>
                                         <p>զանգերի սպասարկում</p>
                                         <a href="#" className="primary-link">
-                                            +374 456532
+                                            +374 11441012
                                         </a>
                                     </div>
                                 </li>
@@ -63,7 +63,7 @@ class ContactUsComponent extends Component {
                                     <div>
                                         <p>հասցե</p>
                                         <a href="#" className="primary-link">
-                                            ՀՀ, ք. Երևան, Տերյան 6
+                                            ք. Երևան, Տերյան 61
                                         </a>
                                     </div>
                                 </li>
