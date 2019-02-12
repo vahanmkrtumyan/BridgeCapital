@@ -69,12 +69,10 @@ class Homepage extends Component {
         changeClass(2);
       }
 
-      if (scrollpos > abouts && scrollpos < aboutsBot) {
-        changeClass(3);
-      }
+      
 
       if (scrollpos > contacts && scrollpos < contactsBot) {
-        changeClass(4);
+        changeClass(3);
       }
     });
   }
