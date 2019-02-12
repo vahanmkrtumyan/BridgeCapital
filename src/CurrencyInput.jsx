@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { database, auth } from "./components/firebase";
 import SignIn from "./components/signIn";
 import CurrentUser from "./components/currentUser";
+import styles from './button.scss';
 
 class CurrencyInput extends Component {
   state = {
@@ -55,31 +56,40 @@ class CurrencyInput extends Component {
   };
 
   render() {
+
+    const divStyle = {
+      color: "black"
+      
+    };
+
+
+  
+
     const { currentUser } = this.state;
     return (
       <div className="col-sm-8 flex justify-end">
         {currentUser && <CurrentUser user={currentUser} />}
         {!this.state.loading && !currentUser && <SignIn />}
         {currentUser && (<div className="row">
-        <form className="col s6">
+        <form className="col s6" >
           <div className="input-field col s6">
             <input
-              id="last_name"
+              id="USDBid"
               name="USDBid"
               type="text"
-              className="validate"
+              className="card-slide"
               placeholder="USDBid"
               onChange={this.handleInputChange}
               value={this.state.USDBid}
             />
-            <label htmlFor="Անուն">USDBid</label>
+            <label htmlFor="USDBid">USDBid</label>
           </div>
           <div className="input-field col s6">
             <input
               id="last_name"
               name="USDAsk"
               type="text"
-              className="validate"
+              style={divStyle}
               placeholder="USDAsk"
               onChange={this.handleInputChange}
               value={this.state.USDAsk}
@@ -91,7 +101,7 @@ class CurrencyInput extends Component {
               id="last_name"
               name="EURBid"
               type="text"
-              className="validate"
+              style={divStyle}
               placeholder="EURBid"
               onChange={this.handleInputChange}
               value={this.state.EURBid}
@@ -103,7 +113,7 @@ class CurrencyInput extends Component {
               id="last_name"
               name="EURAsk"
               type="text"
-              className="validate"
+              style={divStyle}
               placeholder="EURAsk"
               onChange={this.handleInputChange}
               value={this.state.EURAsk}
@@ -115,7 +125,7 @@ class CurrencyInput extends Component {
               id="last_name"
               name="RUBBid"
               type="text"
-              className="validate"
+              style={divStyle}
               placeholder="RUBBid"
               onChange={this.handleInputChange}
               value={this.state.RUBBid}
@@ -127,7 +137,7 @@ class CurrencyInput extends Component {
               id="last_name"
               name="RUBAsk"
               type="text"
-              className="validate"
+              style={divStyle}
               placeholder="RUBAsk"
               onChange={this.handleInputChange}
               value={this.state.RUBAsk}
@@ -135,7 +145,7 @@ class CurrencyInput extends Component {
             <label htmlFor="Անուն">RUBAsk</label>
           </div>
 
-          <button onClick={this.handleSubmit} type="button" name="submit">
+          <button onClick={this.handleSubmit} type="button" name="submit" className={styles}>
             Ուղարկել
           </button>
         </form>

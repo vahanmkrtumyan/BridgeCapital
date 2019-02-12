@@ -131,7 +131,7 @@ class FinInput extends Component {
                   name="year"
                   type="text"
                   className="validate"
-                  placeholder="USDBid"
+                  placeholder="Տարի"
                   onChange={this.handleInputChange}
                   value={this.state.year}
                 />
@@ -143,7 +143,7 @@ class FinInput extends Component {
                   name="name"
                   type="text"
                   className="validate"
-                  placeholder="USDAsk"
+                  placeholder="Անվանում"
                   onChange={this.handleInputChange}
                   value={this.state.name}
                 />
