@@ -1,5 +1,5 @@
 button{
-    background:#05398e;
+    background:#0062ff;
     color:#fff;
     border:none;
     position:relative;
@@ -12,7 +12,7 @@ button{
   }
   button:hover{
     background:#fff;
-    color:#05398e;
+    color:#0062ff;
   }
   button:before,button:after{
     content:'';
@@ -21,7 +21,7 @@ button{
     right:0;
     height:2px;
     width:0;
-    background: #05398e;
+    background: #0062ff;
     transition:400ms ease all;
   }
   button:after{
