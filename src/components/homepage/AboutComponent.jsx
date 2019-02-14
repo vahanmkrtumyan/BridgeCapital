@@ -69,13 +69,13 @@ class AboutComponent extends Component {
               </Fade>
             </div>
             <div className="col-md-5">
-              <Fade right duration={1500} fraction={0.3}>
+              <Fade right duration={1000} fraction={0.3}>
                 <div className="section-img">
                   <div className="img">
                     <Fade bottom delay={900}>
                       <span className="border" />
                     </Fade>
-                    <Zoom delay={900} duration={1500} fraction={0.5}>
+                    <Zoom delay={900} duration={1000} fraction={0.5}>
                       <img src={Users} alt="Բրոքերային ծառայություն" />
                     </Zoom>
                   </div>

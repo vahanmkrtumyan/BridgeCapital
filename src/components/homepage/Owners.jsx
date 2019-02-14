@@ -5,7 +5,7 @@ class Owners extends Component {
   render() {
     return (
       <React.Fragment>
-        <Fade left duration={1500} fraction={1}>
+        <Fade left duration={1000} fraction={1}>
           <section className="section section-contact">
             <div className="container">
               <h2 className="h2">Բաժնետերեր և ներդրողներ</h2>
