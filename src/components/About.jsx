@@ -1,12 +1,16 @@
 import React, { Component } from "react";
 import FooterComponent from "./homepage/FooterComponent";
 import { SlideToggle } from "react-slide-toggle";
+import { Link } from "react-router-dom";
 
 class AboutComponent extends Component {
   state = {
     brok: "Կարդալ ավելին"
   };
 
+  // componentDidMount() {
+  //   window.scrollTo(0,0);
+  // };
   handleBrokOpen = () => {
     this.state.brok === "Կարդալ ավելին"
       ? this.setState({ brok: "Պակաս" })
@@ -19,6 +23,9 @@ class AboutComponent extends Component {
           <div className="container">
             <div className="cols-md-2 cols-mb justify-between section-with-img img-to-right">
               <div className="col-md-5">
+              <li>
+                <Link to={`/`}>Գլխավոր էջ</Link>
+              </li>
                 <h2 className="h2">Մեր մասին</h2>
                 <SlideToggle
                   duration={800}
