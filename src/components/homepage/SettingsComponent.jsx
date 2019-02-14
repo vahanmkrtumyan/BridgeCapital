@@ -52,8 +52,9 @@ class SettingsComponent extends Component {
                                                         rel="noopener noreferrer"
                                                         href="https://www.arlis.am/documentview.aspx?docID=1"
                                                     >
+
                                                         ՀՀ Սահմանադրություն
-                                                        <img src={ArrowFill} alt=""/></a>
+                                                    </a>
                                                 </li>
                                                 <li>
                                                     <a
@@ -61,8 +62,9 @@ class SettingsComponent extends Component {
                                                         rel="noopener noreferrer"
                                                         href="https://www.arlis.am/documentview.aspx?docid=74658"
                                                     >
+
                                                         ՀՀ Քաղաքացիական օրենսգիրք
-                                                        <img src={ArrowFill} alt=""/></a>
+                                                    </a>
                                                 </li>
                                                 <li>
                                                     <a
@@ -70,8 +72,9 @@ class SettingsComponent extends Component {
                                                         rel="noopener noreferrer"
                                                         href="https://www.arlis.am/documentview.aspx?docid=80072"
                                                     >
+
                                                         Արժեթղթերի շուկայի մասին ՀՀ օրենքը
-                                                        <img src={ArrowFill} alt=""/></a>
+                                                    </a>
                                                 </li>
                                                 <li>
                                                     <a
@@ -79,8 +82,9 @@ class SettingsComponent extends Component {
                                                         rel="noopener noreferrer"
                                                         href="https://www.arlis.am/documentview.aspx?docid=69106"
                                                     >
+
                                                         Բաժնետիրական ընկերությունների մասին ՀՀ օրենքը
-                                                    <img src={ArrowFill} alt=""/></a>
+                                                    </a>
                                                 </li>
                                                 <li>
                                                     <a
@@ -88,8 +92,9 @@ class SettingsComponent extends Component {
                                                         rel="noopener noreferrer"
                                                         href="https://www.arlis.am/documentview.aspx?docID=64645"
                                                     >
+
                                                         Ապահովված հիփոթեքային պարտատոմսերի մասին ՀՀ օրենքը
-                                                    <img src={ArrowFill} alt=""/></a>
+                                                    </a>
                                                 </li>
                                                 <li>
                                                     <a
@@ -97,9 +102,10 @@ class SettingsComponent extends Component {
                                                         rel="noopener noreferrer"
                                                         href="https://www.arlis.am/documentview.aspx?docid=50589"
                                                     >
+
                                                         Արժութային կարգավորման և արժութային վերահսկողության
                                                         մասին ՀՀ օրենքը
-                                                    <img src={ArrowFill} alt=""/></a>
+                                                    </a>
                                                 </li>
                                                 <li>
                                                     <a
@@ -107,9 +113,10 @@ class SettingsComponent extends Component {
                                                         rel="noopener noreferrer"
                                                         href="https://www.arlis.am/documentview.aspx?docID=44695"
                                                     >
+
                                                         Ակտիվների արժեթղթավորման և ակտիվներով ապահովված
                                                         արժեթղթերի մասին ՀՀ օրենքը
-                                                    <img src={ArrowFill} alt=""/></a>
+                                                    </a>
                                                 </li>
                                                 <li>
                                                     <a
@@ -117,9 +124,10 @@ class SettingsComponent extends Component {
                                                         rel="noopener noreferrer"
                                                         href="https://www.arlis.am/documentview.aspx?docID=93142"
                                                     >
+
                                                         Փողերի լվացման և ահաբեկչության ֆինանսավորման դեմ
                                                         պայքարի մասին ՀՀ օրենքը
-                                                    <img src={ArrowFill} alt=""/></a>
+                                                    </a>
                                                 </li>
                                             </ul>
                                             <div
@@ -135,9 +143,10 @@ class SettingsComponent extends Component {
                                                                 rel="noopener noreferrer"
                                                                 href="https://www.cba.am/AM/laregulations/kan-401_2.pdf"
                                                             >
+
                                                                 Կանոնակարգ 4/01 (ներդրումային ընկերությունների
                                                                 գրանցումն ու լիցենզավորումը)
-                                                            <img src={ArrowFill} alt=""/></a>
+                                                            </a>
                                                         </li>
                                                         <li>
                                                             <a
@@ -147,7 +156,7 @@ class SettingsComponent extends Component {
                                                             >
                                                                 Կանոնակարգ 4/02 (ներդրումային ընկերությունների
                                                                 հիմնական տնտեսական նորմատիվները)
-                                                            <img src={ArrowFill} alt=""/></a>
+                                                            </a>
                                                         </li>
                                                         <li>
                                                             <a
@@ -155,10 +164,11 @@ class SettingsComponent extends Component {
                                                                 rel="noopener noreferrer"
                                                                 href="https://www.cba.am/AM/laregulations/kan-403.pdf"
                                                             >
+
                                                                 Կանոնակարգ 4/03 (ներդրումային ծառայություններ
                                                                 մատուցող անձանց` Կենտրոնական Բանկ ներկայացվող
                                                                 հաշվետվությունները)
-                                                            <img src={ArrowFill} alt=""/></a>
+                                                            </a>
                                                         </li>
                                                         <li>
                                                             <a
@@ -166,10 +176,11 @@ class SettingsComponent extends Component {
                                                                 rel="noopener noreferrer"
                                                                 href="https://www.cba.am/AM/laregulations/kan-405.pdf"
                                                             >
+
                                                                 Կանոնակարգ 4/05 (ներդրումային ծառայություններ
                                                                 մատուցող անձանց մասնագիտական որակավորման
                                                                 չափանիշներ)
-                                                            <img src={ArrowFill} alt=""/></a>
+                                                            </a>
                                                         </li>
                                                         <li>
                                                             <a
@@ -177,10 +188,11 @@ class SettingsComponent extends Component {
                                                                 rel="noopener noreferrer"
                                                                 href="https://www.cba.am/AM/laregulations/kan-406.pdf"
                                                             >
+
                                                                 Կանոնակարգ 4/06 (որակավորված ներդրողներ համարելու
                                                                 չափանիշները և անձանց` որպես որակավորված ներդրողներ
                                                                 գրանցման կարգը)
-                                                            <img src={ArrowFill} alt=""/></a>
+                                                            </a>
                                                         </li>
                                                         <li>
                                                             <a
@@ -188,10 +200,11 @@ class SettingsComponent extends Component {
                                                                 rel="noopener noreferrer"
                                                                 href="https://www.cba.am/AM/laregulations/kan-407.pdf"
                                                             >
+
                                                                 Կանոնակարգ 4/07 (ներդրումային ծառայություններ
                                                                 մատուցող անձանց գործունեության նկատմամբ
-                                                                պահանջները){" "}
-                                                            <img src={ArrowFill} alt=""/></a>
+                                                                պահանջները)
+                                                            </a>
                                                         </li>
                                                         <li>
                                                             <a
@@ -199,10 +212,11 @@ class SettingsComponent extends Component {
                                                                 rel="noopener noreferrer"
                                                                 href="https://www.cba.am/AM/laregulations/kan-408.pdf"
                                                             >
+
                                                                 Կանոնակարգ 4/08 (ՀՀ ԿԲ ներկայացված
                                                                 հաշվետվությունները հանրությանը մատչելի դարձնելու
-                                                                պահանջից բացառությունները){" "}
-                                                            <img src={ArrowFill} alt=""/></a>
+                                                                պահանջից բացառությունները)
+                                                            </a>
                                                         </li>
                                                         <li>
                                                             <a
@@ -210,10 +224,11 @@ class SettingsComponent extends Component {
                                                                 rel="noopener noreferrer"
                                                                 href="https://www.cba.am/AM/laregulations/kan-409.pdf"
                                                             >
+
                                                                 Կանոնակարգ 4/09 (հաշվետու թողարկողների
                                                                 ֆինանսատնտեսական գործունեության աուդիտն
-                                                                իրականացնող անձանց ներկայացվող չափանիշները){" "}
-                                                            <img src={ArrowFill} alt=""/></a>
+                                                                իրականացնող անձանց ներկայացվող չափանիշները)
+                                                            </a>
                                                         </li>
                                                         <li>
                                                             <a
@@ -221,9 +236,10 @@ class SettingsComponent extends Component {
                                                                 rel="noopener noreferrer"
                                                                 href="https://www.cba.am/AM/laregulations/kan-410.pdf"
                                                             >
+
                                                                 Կանոնակարգ 4/10 (արժեթղթերը հանձնելու առաջարկի
                                                                 կազմը, պայմանները, փոփոխությունները)
-                                                            <img src={ArrowFill} alt=""/></a>
+                                                            </a>
                                                         </li>
                                                         <li>
                                                             <a
@@ -231,10 +247,11 @@ class SettingsComponent extends Component {
                                                                 rel="noopener noreferrer"
                                                                 href="https://www.cba.am/AM/laregulations/kan-411.pdf"
                                                             >
+
                                                                 Կանոնակարգ 4/11 (ֆինանսատնտեսական գործունեության
                                                                 աուդիտն իրականացնող անձանց ներկայացվող
-                                                                չափանիշները){" "}
-                                                            <img src={ArrowFill} alt=""/></a>
+                                                                չափանիշները)
+                                                            </a>
                                                         </li>
                                                         <li>
                                                             <a
@@ -242,10 +259,11 @@ class SettingsComponent extends Component {
                                                                 rel="noopener noreferrer"
                                                                 href="https://www.cba.am/AM/laregulations/kan-412.pdf"
                                                             >
+
                                                                 Կանոնակարգ 4/12 (ներդրումային ծառայություններ
                                                                 մատուցող անձանց հաճախորդների միջոցների
-                                                                պաշտպանության կանոնները){" "}
-                                                            <img src={ArrowFill} alt=""/></a>
+                                                                պաշտպանության կանոնները)
+                                                            </a>
                                                         </li>
                                                         <li>
                                                             <a
@@ -253,9 +271,10 @@ class SettingsComponent extends Component {
                                                                 rel="noopener noreferrer"
                                                                 href="https://www.arlis.am/DocumentView.aspx?DocID=79619"
                                                             >
+
                                                                 Կանոնակարգ 33 (արժեթղթերի պահառության
-                                                                գործունեությունը){" "}
-                                                            <img src={ArrowFill} alt=""/></a>
+                                                                գործունեությունը)
+                                                            </a>
                                                         </li>
                                                         <li>
                                                             <a
@@ -263,9 +282,10 @@ class SettingsComponent extends Component {
                                                                 rel="noopener noreferrer"
                                                                 href="https://www.cba.am/Storage/AM/downloads/FDK/Regulation/regulation_on_minimum_aml_cft_requirements_arm.pdf"
                                                             >
+
                                                                 Փողերի լվացման և ահաբեկչության ֆինանսավորման դեմ
                                                                 պայքարի վերաբերյալ կանոնակարգ և հայտարարություն
-                                                            <img src={ArrowFill} alt=""/></a>
+                                                            </a>
                                                         </li>
                                                     </ul>
                                                 </div>

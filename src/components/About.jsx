@@ -87,7 +87,7 @@ class AboutComponent extends Component {
                         }}
                       >
                         {this.state.brok}
-                      </button>{" "}
+                      </button>
                     </div>
                   )}
                 />

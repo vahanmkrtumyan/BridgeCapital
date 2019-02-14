@@ -29,12 +29,29 @@ h3.h3 {
     .link-list {
         margin-bottom: 20px;
 
+
         li {
+
             a {
+                padding-left: 30px;
                 line-height: 24px;
                 font-weight: 700;
                 font-size: 13px;
                 color: #3c3c3c;
+                position: relative;
+                display: inline-block;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 3px;
+                    left: 8px;
+                    @include bg-img('icons/arrow-pointing-left.svg', no-repeat, contain, top);
+                    width: 12px;
+                    height: 14px;
+                    transform: rotate(180deg);
+                    color: $color-primary;
+                }
 
                 &:hover {
                     text-decoration: underline;
@@ -58,8 +75,10 @@ h3.h3 {
         li {
             list-style-type: none;
             line-height: 25px;
+            position: relative;
 
             &::before {
+                position: absolute;
                 content: "\2022";
                 color: $color-primary;
                 font-weight: bold;
