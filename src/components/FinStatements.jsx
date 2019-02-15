@@ -14,8 +14,19 @@ class FinStatements extends Component {
       }
     });
   }
+  
+  
 
   render() {
+
+    let style = {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "center",
+      margin: "50px",
+      padding: "50px"
+    }
+
     let arr;
     this.state.statements !== null
       ? (arr = Object.keys(this.state.statements).reverse())
@@ -23,11 +34,11 @@ class FinStatements extends Component {
 
     return this.state.statements !== null ? (
       <div>
-      <div>
+      <div style={style}>
         <div>
           {arr.map(item => (
             <h1 key={item}>
-              {item}
+              {item} թվականի հաշվետվություններ
               {Object.values(this.state.statements[item]).map(n => (
                 <div>
                   <a
