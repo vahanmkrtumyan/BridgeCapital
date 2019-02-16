@@ -1,4 +1,4 @@
-header {
+.header {
     background-color: $color-bg;
     padding: 25px 0;
     color: #fff;
@@ -124,4 +124,11 @@ header {
             }
         }
     }
+}
+
+.header-abs {
+    position: absolute;
+    z-index: 1;
+    padding-top: 30px;
+    top: 0;
 }

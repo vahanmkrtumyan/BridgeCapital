@@ -111,9 +111,9 @@ const FooterComponent = props => {
         <div className="container">
           <div className="cols-sm-3 align-center">
             <div className="col-sm-3">
-              <a href="#" className="footer-logo" onClick={props.onLogo}>
+              <Link to={`/`} className="footer-logo" >
                 <img src={logo} alt="Բրիդջ կապիտալ" />
-              </a>
+              </Link>
             </div>
             <div className="col-sm-5">
               <p className="text-sm-right text-xs-center">

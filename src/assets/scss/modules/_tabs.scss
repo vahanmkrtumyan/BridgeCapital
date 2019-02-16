@@ -96,3 +96,35 @@
 .tab-body {
     padding-top: 100px;
 }
+
+.tab-nav {
+    ul {
+        width: 100%;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+
+        li {
+            a {
+                border-bottom: 1px solid #ebebeb;
+                font-size: 18px;
+                font-weight: bold;
+                padding: 35px 15px;
+                display: block;
+                line-height: 30px;
+            }
+
+            &:last-child {
+                a {
+                    border-bottom: none;
+                }
+            }
+
+            &.active {
+                a {
+                    background-color: $color-primary;
+                    color: #fff;
+                }
+            }
+        }
+
+    }
+}

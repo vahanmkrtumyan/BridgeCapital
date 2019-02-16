@@ -1,0 +1,13 @@
+.about-page {
+    .main {
+        padding-top: 50px;
+    }
+
+    [class^="about-"] {
+        padding-bottom: 80px;
+    }
+
+    .scheme {
+        max-width: 100%;
+    }
+}

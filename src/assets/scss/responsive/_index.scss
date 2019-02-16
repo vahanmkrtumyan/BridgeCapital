@@ -13,6 +13,11 @@
 
 @media (max-width: $screen-md) {
 
+    h1.h1 {
+        font-size: 55px;
+        padding-bottom: 20px;
+    }
+
     .container {
         max-width: 100%;
         padding-left: ($cont-padding / 2);
@@ -23,7 +28,7 @@
         padding: 50px 0;
     }
 
-    header {
+    .header {
         padding: 12px 0;
     }
 
@@ -73,16 +78,13 @@
     }
 
     .banner {
-        height: 500px;
+        height: 550px;
 
         .banner-inner {
-            padding-top: 100px;
+            padding-top: 90px;
+            width: 65%;
         }
 
-        h1 {
-            font-size: 55px;
-            padding-bottom: 20px;
-        }
 
         p {
             font-size: 20px;
@@ -172,6 +174,9 @@
 }
 
 @media (max-width: $screen-sm) {
+    h1.h1 {
+        font-size: 35px;
+    }
 
     section {
         h2 {
@@ -193,12 +198,10 @@
         height: 400px;
         background-image: none;
 
-        h1 {
-            font-size: 35px;
-        }
 
         p {
             font-size: 18px;
+            line-height: 28px;
         }
 
         .banner-inner {
@@ -290,6 +293,12 @@
 }
 
 @media (max-width: 480px) {
+    .banner {
+        p {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
     .tab {
         li {
             width: 100%;
