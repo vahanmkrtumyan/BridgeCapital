@@ -131,4 +131,9 @@
     z-index: 1;
     padding-top: 30px;
     top: 0;
+
+    .st0 {
+        transition: all $trns-duration;
+        fill: rgba(255, 255, 255, 0.5);
+    }
 }

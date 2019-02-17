@@ -8,11 +8,20 @@ import scheme from "../assets/img/scheme.png";
 import pdf from "../assets/img/icons/pdf.svg";
 import staffImg from "../assets/img/section-img/about-us.png";
 import scrollToComponent from "react-scroll-to-component";
+import Modal from 'react-responsive-modal';
 
 class AboutComponent extends Component {
     state = {
-        brok: "Կարդալ ավելին",
-        activeClass: 1
+        activeClass: 1,
+        open: false,
+    };
+
+    onOpenModal = () => {
+        this.setState({ open: true });
+    };
+
+    onCloseModal = () => {
+        this.setState({ open: false });
     };
 
     onClickTab1 = () => {
@@ -126,6 +135,7 @@ class AboutComponent extends Component {
 	<path class="st0" d="M603.3,63.8H618v5.1h-19.9v-36h5.2V63.8z"/>
 </g>
 </svg>`;
+        const { open } = this.state;
         return (
             <div className="about-page">
                 <div className="narrow-banner" style={{backgroundImage: 'url(' + aboutBanner + ')'}}>
@@ -145,20 +155,20 @@ class AboutComponent extends Component {
                     <div className="container">
                         <div className="cols-sm-2 cols-mb justify-between ">
                             <aside className="col-sm-4">
-                                <nav className="tab-nav" style={{position: 'sticky', top: '20px'}}>
+                                <nav className="tab-nav">
                                     <ul>
                                         <li onClick={this.onClickTab1} className={this.state.activeClass === 1 ? "active " : ""}>
                                             <a href="#">Ընդհանուր տեղեկություններ</a>
                                         </li>
                                         <li onClick={this.onClickTab2} className={this.state.activeClass === 2 ? "active " : ""}>
                                             <a href="#">Առաքելությունը
-                                                եվ նպատակները</a>
+                                                և նպատակները</a>
                                         </li>
                                         <li onClick={this.onClickTab3} className={this.state.activeClass === 3 ? "active " : ""}>
                                             <a href="#">Կազմակերպական կառուցվածքը</a>
                                         </li>
                                         <li onClick={this.onClickTab4} className={this.state.activeClass === 4 ? "active " : ""}>
-                                            <a href="#">հիմնադիր փաստաթղթեր</a>
+                                            <a href="#">Հիմնադիր փաստաթղթեր</a>
                                         </li>
                                         <li onClick={this.onClickTab5} className={this.state.activeClass === 5 ? "active " : ""}>
                                             <a href="#">Նշանակալից մասնակիցներ</a>
@@ -170,7 +180,7 @@ class AboutComponent extends Component {
 
                                 </nav>
                             </aside>
-                            <section className="col-sm-7 text-inside">
+                            <section className="col-sm-8 text-inside">
                                 <div className="about-1" ref={section => { this.component1 = section;}}>
                                     <h2 className="h2">Ընդհանուր տեղեկություններ</h2>
 
@@ -232,7 +242,7 @@ class AboutComponent extends Component {
                                     <h2 className="h2">Ղեկավարներ և անձնակազմ</h2>
                                     <div className="cols-sm-3 justify-center">
                                         <div className="col-sm-4">
-                                            <a className="staff-card">
+                                            <a className="staff-card" onClick={this.onOpenModal}>
                                                 <div className="staff-card-img">
                                                     <img src={staffImg} alt=""/>
                                                 </div>
@@ -298,6 +308,13 @@ class AboutComponent extends Component {
 
 
                 <FooterComponent />
+
+
+
+                {/*modal*/}
+                <Modal open={open}  onClose={this.onCloseModal} center>
+                    <h2>Simple centered modal</h2>
+                </Modal>
             </div>
         );
     }

@@ -220,7 +220,7 @@
     .tab-header {
         li {
             a {
-                padding:  15px 5px;
+                padding:  15px 4px;
                 font-size: 16px;
             }
         }
@@ -300,18 +300,34 @@
         }
     }
     .tab {
-        li {
-            width: 100%;
+        .tab-header {
+            border-radius: 5px;
 
-            a {
-                border: none;
-                border-radius: 0 !important;
+            li {
+                width: 100%;
 
-                &:after {
-                    content: none;
+                a {
+                    border: none;
+
+                    &:after {
+                        content: none;
+                    }
+                }
+
+                &:first-child {
+                    a {
+                        border-radius: 5px 5px 0 0;
+                    }
+                }
+
+                &:last-child {
+                    a {
+                        border-radius: 0 0 5px 5px;
+                    }
                 }
             }
         }
+
 
     }
 
