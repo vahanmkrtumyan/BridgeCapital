@@ -75,7 +75,7 @@ class AboutComponent extends Component {
                     <Fade bottom delay={900}>
                       <span className="border" />
                     </Fade>
-                    <Zoom delay={900} duration={1000} fraction={0.5}>
+                    <Zoom delay={900} duration={500} fraction={0.3}>
                       <img src={Users} alt="Բրոքերային ծառայություն" />
                     </Zoom>
                   </div>

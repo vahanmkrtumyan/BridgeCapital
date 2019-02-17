@@ -1,6 +1,9 @@
 .about-page {
+    .h2 {
+        text-align: center;
+    }
     .main {
-        padding-top: 50px;
+        padding-top: 70px;
     }
 
     [class^="about-"] {
@@ -9,5 +12,71 @@
 
     .scheme {
         max-width: 100%;
+    }
+
+    .about-4 {
+        .files {
+            text-align: center;
+            display: block;
+
+            img {
+                display: inline-block;
+                width: 80px;
+
+            }
+            span {
+                padding-top: 15px;
+                display: block;
+                color: $color-primary;
+            }
+
+
+        }
+    }
+
+    .staff-card {
+        display: block;
+        padding: 13px;
+        box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+        background-color: #fff;
+        border: 1px solid #ebebeb;
+        cursor: pointer;
+        margin-bottom: 25px;
+        transition: all $trns-duration;
+        position: relative;
+
+        strong {
+           margin: 15px 0 5px;
+        }
+        .staff-card-text {
+            text-align: center;
+        }
+        p {
+            opacity: 0.5;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            transition: all $trns-duration;
+            transform: scale(1);
+        }
+        .staff-card-img {
+            overflow: hidden;
+        }
+
+        &:hover {
+            box-shadow: 2px 2px 15px 2px rgba(0,0,0,0.15);
+            z-index: 1;
+
+            .staff-card-img {
+                img {
+                    transform: scale(1.08);
+                }
+            }
+            strong {
+                color: $color-primary;
+            }
+        }
     }
 }

@@ -220,7 +220,7 @@ section {
 
 .section-contact-bg {
     height: 200px;
-    @include bg-img('contact-bg.png', no-repeat, cover, $color-bg, top);
+    @include bg-img('contact-bg.jpg', no-repeat, cover, $color-bg, top);
 }
 
 .section-currency {

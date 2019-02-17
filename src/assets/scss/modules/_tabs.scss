@@ -98,6 +98,9 @@
 }
 
 .tab-nav {
+    background-color: #fff;
+    max-width: 363px;
+
     ul {
         width: 100%;
         box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
@@ -107,14 +110,21 @@
                 border-bottom: 1px solid #ebebeb;
                 font-size: 18px;
                 font-weight: bold;
-                padding: 35px 15px;
+                padding: 20px 15px;
                 display: block;
                 line-height: 30px;
+                transition: all $trns-duration;
             }
 
             &:last-child {
                 a {
                     border-bottom: none;
+                }
+            }
+
+            &:hover {
+                a {
+                    background-color: #f2f2f2;
                 }
             }
 
