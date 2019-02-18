@@ -8,79 +8,81 @@ import scheme from "../assets/img/scheme.png";
 import pdf from "../assets/img/icons/pdf.svg";
 import staffImg from "../assets/img/section-img/about-us.png";
 import scrollToComponent from "react-scroll-to-component";
-import Modal from 'react-responsive-modal';
+import Modal from "react-responsive-modal";
 
 class AboutComponent extends Component {
-    state = {
-        activeClass: 1,
-        open: false,
-    };
+  state = {
+    activeClass: 1,
+    open: false,
+    Stepan: false
+  };
 
-    onOpenModal = () => {
-        this.setState({ open: true });
-    };
+  onOpenModal = anun => {
+    this.setState({ [anun]: !this.state.Stepan }, () =>
+      console.log(this.state.Stepan)
+    );
+  };
 
-    onCloseModal = () => {
-        this.setState({ open: false });
-    };
+  onCloseModal = () => {
+    this.setState({ Stepan: false });
+  };
 
-    onClickTab1 = () => {
-        scrollToComponent(this.component1, {
-            offset: -20,
-            align: "top",
-            duration: 1000
-        });
-        this.setState({ activeClass: 1 });
-    };
+  onClickTab1 = () => {
+    scrollToComponent(this.component1, {
+      offset: -20,
+      align: "top",
+      duration: 1000
+    });
+    this.setState({ activeClass: 1 });
+  };
 
-    onClickTab2 = () => {
-        scrollToComponent(this.component2, {
-            offset: -20,
-            align: "top",
-            duration: 1000
-        });
-        this.setState({ activeClass: 2 });
-    };
+  onClickTab2 = () => {
+    scrollToComponent(this.component2, {
+      offset: -20,
+      align: "top",
+      duration: 1000
+    });
+    this.setState({ activeClass: 2 });
+  };
 
-    onClickTab3 = () => {
-        scrollToComponent(this.component3, {
-            offset: -20,
-            align: "top",
-            duration: 1000
-        });
-        this.setState({ activeClass: 3 });
-    };
+  onClickTab3 = () => {
+    scrollToComponent(this.component3, {
+      offset: -20,
+      align: "top",
+      duration: 1000
+    });
+    this.setState({ activeClass: 3 });
+  };
 
-    onClickTab4 = () => {
-        scrollToComponent(this.component4, {
-            offset: -20,
-            align: "top",
-            duration: 1000
-        });
-        this.setState({ activeClass: 4 });
-    };
+  onClickTab4 = () => {
+    scrollToComponent(this.component4, {
+      offset: -20,
+      align: "top",
+      duration: 1000
+    });
+    this.setState({ activeClass: 4 });
+  };
 
-    onClickTab5 = () => {
-        scrollToComponent(this.component5, {
-            offset: -20,
-            align: "top",
-            duration: 1000
-        });
-        this.setState({ activeClass: 5 });
-    };
+  onClickTab5 = () => {
+    scrollToComponent(this.component5, {
+      offset: -20,
+      align: "top",
+      duration: 1000
+    });
+    this.setState({ activeClass: 5 });
+  };
 
-    onClickTab6 = () => {
-        scrollToComponent(this.component6, {
-            offset: -20,
-            align: "top",
-            duration: 1000
-        });
-        this.setState({ activeClass: 6 });
-    };
+  onClickTab6 = () => {
+    scrollToComponent(this.component6, {
+      offset: -20,
+      align: "top",
+      duration: 1000
+    });
+    this.setState({ activeClass: 6 });
+  };
 
-    render() {
-
-        const svgSource = `<svg width="100%" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+  render() {
+    const svgSource = `<svg width="100%" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 618.5 96.5" style="enable-background:new 0 0 618.5 96.5; fill:#282828" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#FFFFFF;}
@@ -135,189 +137,274 @@ class AboutComponent extends Component {
 	<path class="st0" d="M603.3,63.8H618v5.1h-19.9v-36h5.2V63.8z"/>
 </g>
 </svg>`;
-        const { open } = this.state;
-        return (
-            <div className="about-page">
-                <div className="narrow-banner" style={{backgroundImage: 'url(' + aboutBanner + ')'}}>
-                    <div className="container" >
-                        <header className="header-abs">
-                            <Link to={`/`} className="logo">
-                                <InlineSVG src={svgSource} />
-                            </Link>
-                        </header>
-                        <div className="inner">
-                            <h1 className="h1">մեր մասին</h1>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="main">
-                    <div className="container">
-                        <div className="cols-sm-2 cols-mb justify-between ">
-                            <aside className="col-sm-4">
-                                <nav className="tab-nav">
-                                    <ul>
-                                        <li onClick={this.onClickTab1} className={this.state.activeClass === 1 ? "active " : ""}>
-                                            <a href="#">Ընդհանուր տեղեկություններ</a>
-                                        </li>
-                                        <li onClick={this.onClickTab2} className={this.state.activeClass === 2 ? "active " : ""}>
-                                            <a href="#">Առաքելությունը
-                                                և նպատակները</a>
-                                        </li>
-                                        <li onClick={this.onClickTab3} className={this.state.activeClass === 3 ? "active " : ""}>
-                                            <a href="#">Կազմակերպական կառուցվածքը</a>
-                                        </li>
-                                        <li onClick={this.onClickTab4} className={this.state.activeClass === 4 ? "active " : ""}>
-                                            <a href="#">Հիմնադիր փաստաթղթեր</a>
-                                        </li>
-                                        <li onClick={this.onClickTab5} className={this.state.activeClass === 5 ? "active " : ""}>
-                                            <a href="#">Նշանակալից մասնակիցներ</a>
-                                        </li>
-                                        <li onClick={this.onClickTab6} className={this.state.activeClass === 6 ? "active " : ""}>
-                                            <a href="#">Ղեկավարներ և անձնակազմ</a>
-                                        </li>
-                                    </ul>
-
-                                </nav>
-                            </aside>
-                            <section className="col-sm-8 text-inside">
-                                <div className="about-1" ref={section => { this.component1 = section;}}>
-                                    <h2 className="h2">Ընդհանուր տեղեկություններ</h2>
-
-                                    <p>&lt;&lt;Բրիդջ Կապիտալ &gt;&gt; ՓԲԸ-ն որպես ներդրումային ընկերություն գրանցվել և լիցենզավորվել է Հայաստանի Հանրապետության Կենտրոնական բանկի կողմից 2018թ. դեկտեմբերի 24-ին:</p>
-
-                                    <p>&lt;&lt;Բրիդջ Կապիտալ&gt;&gt; ՓԲԸ-ն հանդիսանում է ներդրումային ընկերություն, որն իր հաճախորդներին տրամադրում է մի շարք ֆինանսական ծառայություններ ինչպիսիք են՝ միջնորդական ծառայությունների մատուցումը աշխարի մեծագույն բորսաներում ցուցակված արժեթղթերի գծով, արժեթղթերում ներդրումների հետ կապված խորհրդատվության տրամադրում հաճախորդներին, արտարժույթի դիլերային առք ու վաճառքի գործառնությունների իրականացումը, ֆինանսական ածանցյալ գործիքների տրամադրումը և այլն:</p>
-                                    <p>Մենք աշխատում ենք ամեն երկուշաբթիից ուրբաթ ժամը 09:00ից 18:00-ն:</p>
-                                </div>
-                                <div className="about-2" ref={section => { this.component2 = section;}}>
-                                    <h2 className="h2">Առաքելությունը
-                                        և նպատակները</h2>
-                                    <p>Մեր առաքելությունն է մատուցել մեր հաճախորդներին որակյալ և մշտապես հասանելի ներդրումային ծառայություններ,  ապահովել կայուն, զարգացող և երկարաժամկետ գործընկերային հարաբերություններ:</p>
-
-                                    <p>Մեր նպատակներն են՝</p>
-
-                                    <ul className="ul">
-                                        <li>Տրամադրել ներդրումային ծառայություններ լայն շրջանակ ընկերության հաճախորդներ համար:</li>
-                                        <li>Ապահովել հասանելիություն միջազգայնորեն ճանաչված բազմազան ներդումային հարթակներին:</li>
-                                        <li>Ապահովել հասանելիություն միջազգայնորեն ճանաչված բազմազան ներդումային հարթակներին:</li>
-                                        <li>Ապահովել հասանելիություն միջազգայնորեն ճանաչված բազմազան ներդումային հարթակներին:</li>
-                                    </ul>
-                                </div>
-                                <div className="about-3" ref={section => { this.component3 = section;}}>
-                                    <h2 className="h2">Կազմակերպական կառուցվածքը</h2>
-                                    <p className="pb-5">Ստորև ներկայացված է ընկերության կազմակերպչական կառուցվածքը.</p>
-                                    <img className="scheme" src={scheme} alt="scheme"/>
-                                </div>
-                                <div className="about-4" ref={section => { this.component4 = section;}}>
-                                    <h2 className="h2">հիմնադիր փաստաթղթեր</h2>
-                                    <p className="pb-7">Այստեղ կարող եք ծանոթանալ Բրիջ Կապիտալի մասնագիտական գործունեությունն ապահովող և կարգավորող հիմնական փաստաթղթերին․</p>
-                                    <div className="cols-sm-3 justify-between">
-                                        <div className="col-sm-4">
-                                            <a href="#" className="files">
-                                                <img src={pdf} alt=""/>
-                                                <span>Լիցենզի</span>
-                                            </a>
-                                        </div>
-                                        <div className="col-sm-4">
-                                            <a href="#" className="files">
-                                                <img src={pdf} alt=""/>
-                                                <span>Գրանցման վկայական</span>
-                                            </a>
-                                        </div>
-                                        <div className="col-sm-4">
-                                            <a href="#" className="files">
-                                                <img src={pdf} alt=""/>
-                                                <span>Կանոնադրություն</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="about-5" ref={section => { this.component5 = section;}}>
-                                    <h2 className="h2">Նշանակալից մասնակիցներ</h2>
-                                    <p>Նշանակալից մասնակցի անվանումը – Նարգիզյան Նարեկ Վարդանի <br/>
-                                        Նշանակալից մասնակցի մասնակցության չափը – 100%
-                                    </p>
-                                </div>
-                                <div className="about-6" ref={section => { this.component6 = section;}}>
-                                    <h2 className="h2">Ղեկավարներ և անձնակազմ</h2>
-                                    <div className="cols-sm-3 justify-center">
-                                        <div className="col-sm-4">
-                                            <a className="staff-card" onClick={this.onOpenModal}>
-                                                <div className="staff-card-img">
-                                                    <img src={staffImg} alt=""/>
-                                                </div>
-                                                <div className="staff-card-text">
-                                                    <strong>Անուն Ազգանուն</strong>
-                                                    <p>Գործադիր տնօրեն</p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div className="col-sm-4">
-                                            <a className="staff-card">
-                                                <div className="staff-card-img">
-                                                    <img src={staffImg} alt=""/>
-                                                </div>
-                                                <div className="staff-card-text">
-                                                    <strong>Անուն Ազգանուն</strong>
-                                                    <p>Գործադիր տնօրեն</p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div className="col-sm-4">
-                                            <a className="staff-card">
-                                                <div className="staff-card-img">
-                                                    <img src={staffImg} alt=""/>
-                                                </div>
-                                                <div className="staff-card-text">
-                                                    <strong>Անուն Ազգանուն</strong>
-                                                    <p>Գործադիր տնօրեն</p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div className="col-sm-4">
-                                            <a className="staff-card">
-                                                <div className="staff-card-img">
-                                                    <img src={staffImg} alt=""/>
-                                                </div>
-                                                <div className="staff-card-text">
-                                                    <strong>Անուն Ազգանուն</strong>
-                                                    <p>Գործադիր տնօրեն</p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div className="col-sm-4">
-                                            <a className="staff-card">
-                                                <div className="staff-card-img">
-                                                    <img src={staffImg} alt=""/>
-                                                </div>
-                                                <div className="staff-card-text">
-                                                    <strong>Անուն Ազգանուն</strong>
-                                                    <p>Գործադիր տնօրեն</p>
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-                    </div>
-
-
-                </div>
-
-
-
-                <FooterComponent />
-
-
-
-                {/*modal*/}
-                <Modal open={open}  onClose={this.onCloseModal} center>
-                    <h2>Simple centered modal</h2>
-                </Modal>
+    const { open } = this.state;
+    return (
+      <div className="about-page">
+        <div
+          className="narrow-banner"
+          style={{ backgroundImage: "url(" + aboutBanner + ")" }}
+        >
+          <div className="container">
+            <header className="header-abs">
+              <Link to={`/`} className="logo">
+                <InlineSVG src={svgSource} />
+              </Link>
+            </header>
+            <div className="inner">
+              <h1 className="h1">մեր մասին</h1>
             </div>
-        );
-    }
+          </div>
+        </div>
+
+        <div className="main">
+          <div className="container">
+            <div className="cols-sm-2 cols-mb justify-between ">
+              <aside className="col-sm-4">
+                <nav className="tab-nav">
+                  <ul>
+                    <li
+                      onClick={this.onClickTab1}
+                      className={this.state.activeClass === 1 ? "active " : ""}
+                    >
+                      <a href="#">Ընդհանուր տեղեկություններ</a>
+                    </li>
+                    <li
+                      onClick={this.onClickTab2}
+                      className={this.state.activeClass === 2 ? "active " : ""}
+                    >
+                      <a href="#">Առաքելությունը և նպատակները</a>
+                    </li>
+                    <li
+                      onClick={this.onClickTab3}
+                      className={this.state.activeClass === 3 ? "active " : ""}
+                    >
+                      <a href="#">Կազմակերպական կառուցվածքը</a>
+                    </li>
+                    <li
+                      onClick={this.onClickTab4}
+                      className={this.state.activeClass === 4 ? "active " : ""}
+                    >
+                      <a href="#">Հիմնադիր փաստաթղթեր</a>
+                    </li>
+                    <li
+                      onClick={this.onClickTab5}
+                      className={this.state.activeClass === 5 ? "active " : ""}
+                    >
+                      <a href="#">Նշանակալից մասնակիցներ</a>
+                    </li>
+                    <li
+                      onClick={this.onClickTab6}
+                      className={this.state.activeClass === 6 ? "active " : ""}
+                    >
+                      <a href="#">Ղեկավարներ և անձնակազմ</a>
+                    </li>
+                  </ul>
+                </nav>
+              </aside>
+              <section className="col-sm-8 text-inside">
+                <div
+                  className="about-1"
+                  ref={section => {
+                    this.component1 = section;
+                  }}
+                >
+                  <h2 className="h2">Ընդհանուր տեղեկություններ</h2>
+
+                  <p>
+                    &lt;&lt;Բրիդջ Կապիտալ &gt;&gt; ՓԲԸ-ն որպես ներդրումային
+                    ընկերություն գրանցվել և լիցենզավորվել է Հայաստանի
+                    Հանրապետության Կենտրոնական բանկի կողմից 2018թ. դեկտեմբերի
+                    24-ին:
+                  </p>
+
+                  <p>
+                    &lt;&lt;Բրիդջ Կապիտալ&gt;&gt; ՓԲԸ-ն հանդիսանում է
+                    ներդրումային ընկերություն, որն իր հաճախորդներին տրամադրում է
+                    մի շարք ֆինանսական ծառայություններ ինչպիսիք են՝ միջնորդական
+                    ծառայությունների մատուցումը աշխարի մեծագույն բորսաներում
+                    ցուցակված արժեթղթերի գծով, արժեթղթերում ներդրումների հետ
+                    կապված խորհրդատվության տրամադրում հաճախորդներին, արտարժույթի
+                    դիլերային առք ու վաճառքի գործառնությունների իրականացումը,
+                    ֆինանսական ածանցյալ գործիքների տրամադրումը և այլն:
+                  </p>
+                  <p>
+                    Մենք աշխատում ենք ամեն աշխատանքային օր՝ ժամը 09:00ից
+                    18:00-ն:
+                  </p>
+                </div>
+                <div
+                  className="about-2"
+                  ref={section => {
+                    this.component2 = section;
+                  }}
+                >
+                  <h2 className="h2">Առաքելությունը և նպատակները</h2>
+                  <p>
+                    Մեր առաքելությունն է մատուցել մեր հաճախորդներին որակյալ և
+                    մշտապես հասանելի ներդրումային ծառայություններ, ապահովել
+                    կայուն, զարգացող և երկարաժամկետ գործընկերային
+                    հարաբերություններ:
+                  </p>
+
+                  <p>Մեր նպատակներն են՝</p>
+
+                  <ul className="ul">
+                    <li>
+                      Տրամադրել ներդրումային ծառայություններ լայն շրջանակ
+                      ընկերության հաճախորդներ համար:
+                    </li>
+                    <li>
+                      Ապահովել հասանելիություն միջազգայնորեն ճանաչված բազմազան
+                      ներդումային հարթակներին:
+                    </li>
+                    <li>
+                      Ապահովել ներդրումային ծառայությունների այնպիսի պայմաններ,
+                      որոնք մրցունակ են ինչպես տեղական այնպես էլ օտարերկրյա
+                      պոտենցիալ ներդնողների և հաճախորդների համար:
+                    </li>
+                    <li>Ավելացնել ընկերության շուկայական արժեքը:</li>
+                  </ul>
+                </div>
+                <div
+                  className="about-3"
+                  ref={section => {
+                    this.component3 = section;
+                  }}
+                >
+                  <h2 className="h2">Կազմակերպական կառուցվածքը</h2>
+                  <p className="pb-5">
+                    Ստորև ներկայացված է ընկերության կազմակերպչական կառուցվածքը.
+                  </p>
+                  <img className="scheme" src={scheme} alt="scheme" />
+                </div>
+                <div
+                  className="about-4"
+                  ref={section => {
+                    this.component4 = section;
+                  }}
+                >
+                  <h2 className="h2">Հիմնադիր փաստաթղթեր</h2>
+                  <p className="pb-7">
+                    Այստեղ կարող եք ծանոթանալ Բրիջ Կապիտալի մասնագիտական
+                    գործունեությունն ապահովող և կարգավորող հիմնական
+                    փաստաթղթերին․
+                  </p>
+                  <div className="cols-sm-3 justify-between">
+                    <div className="col-sm-4">
+                      <a href="#" className="files">
+                        <img src={pdf} alt="" />
+                        <span>Լիցենզիա</span>
+                      </a>
+                    </div>
+                    <div className="col-sm-4">
+                      <a href="#" className="files">
+                        <img src={pdf} alt="" />
+                        <span>Գրանցման վկայական</span>
+                      </a>
+                    </div>
+                    <div className="col-sm-4">
+                      <a href="#" className="files">
+                        <img src={pdf} alt="" />
+                        <span>Կանոնադրություն</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="about-5"
+                  ref={section => {
+                    this.component5 = section;
+                  }}
+                >
+                  <h2 className="h2">Նշանակալից մասնակիցներ</h2>
+                  <p>
+                    Նշանակալից մասնակցի անվանումը – Նարգիզյան Նարեկ Վարդանի
+                    <br />
+                    Նշանակալից մասնակցի մասնակցության չափը – 100%
+                  </p>
+                </div>
+                <div
+                  className="about-6"
+                  ref={section => {
+                    this.component6 = section;
+                  }}
+                >
+                  <h2 className="h2">Ղեկավարներ և անձնակազմ</h2>
+                  <div className="cols-sm-3 justify-center">
+                    <div className="col-sm-4">
+                      <a
+                        className="staff-card"
+                        onClick={() => this.onOpenModal("Stepan")}
+                      >
+                        <div className="staff-card-img">
+                          <img src={staffImg} alt="" />
+                        </div>
+                        <div className="staff-card-text">
+                          <strong>Ստեփան Վիրաբյան</strong>
+                          <p>Գործադիր տնօրեն</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div className="col-sm-4">
+                      <a className="staff-card">
+                        <div className="staff-card-img">
+                          <img src={staffImg} alt="" />
+                        </div>
+                        <div className="staff-card-text">
+                          <strong>Անուն Ազգանուն</strong>
+                          <p>Գործադիր տնօրեն</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div className="col-sm-4">
+                      <a className="staff-card">
+                        <div className="staff-card-img">
+                          <img src={staffImg} alt="" />
+                        </div>
+                        <div className="staff-card-text">
+                          <strong>Անուն Ազգանուն</strong>
+                          <p>Գործադիր տնօրեն</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div className="col-sm-4">
+                      <a className="staff-card">
+                        <div className="staff-card-img">
+                          <img src={staffImg} alt="" />
+                        </div>
+                        <div className="staff-card-text">
+                          <strong>Անուն Ազգանուն</strong>
+                          <p>Գործադիր տնօրեն</p>
+                        </div>
+                      </a>
+                    </div>
+                    <div className="col-sm-4">
+                      <a className="staff-card">
+                        <div className="staff-card-img">
+                          <img src={staffImg} alt="" />
+                        </div>
+                        <div className="staff-card-text">
+                          <strong>Անուն Ազգանուն</strong>
+                          <p>Գործադիր տնօրեն</p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+
+        <FooterComponent />
+
+        {/*modal*/}
+        <Modal open={this.state.Stepan} onClose={this.onCloseModal} center>
+          <h2>Ստեփան Վիրաբյան</h2>
+        </Modal>
+      </div>
+    );
+  }
 }
 
 export default AboutComponent;
