@@ -10,6 +10,16 @@ import staffImg from "../assets/img/section-img/about-us.png";
 import scrollToComponent from "react-scroll-to-component";
 import Modal from "react-responsive-modal";
 
+
+const SIDE_LABELS = [
+    'Ընդհանուր տեղեկություններ',
+    'Առաքելությունը և նպատակները',
+    'Կազմակերպական կառուցվածքը',
+    'Հիմնադիր փաստաթղթեր',
+    'Նշանակալից մասնակիցներ',
+    'Ղեկավարներ և անձնակազմ'
+];
+
 class AboutComponent extends Component {
   state = {
     activeClass: 1,
@@ -29,58 +39,13 @@ class AboutComponent extends Component {
     this.setState({ Stepan: false, Ani: false, Vardan: false });
   };
 
-  onClickTab1 = () => {
-    scrollToComponent(this.component1, {
+  onClickTab = (index) => {
+    scrollToComponent(this['component' + index], {
       offset: -20,
       align: "top",
       duration: 1000
     });
-    this.setState({ activeClass: 1 });
-  };
-
-  onClickTab2 = () => {
-    scrollToComponent(this.component2, {
-      offset: -20,
-      align: "top",
-      duration: 1000
-    });
-    this.setState({ activeClass: 2 });
-  };
-
-  onClickTab3 = () => {
-    scrollToComponent(this.component3, {
-      offset: -20,
-      align: "top",
-      duration: 1000
-    });
-    this.setState({ activeClass: 3 });
-  };
-
-  onClickTab4 = () => {
-    scrollToComponent(this.component4, {
-      offset: -20,
-      align: "top",
-      duration: 1000
-    });
-    this.setState({ activeClass: 4 });
-  };
-
-  onClickTab5 = () => {
-    scrollToComponent(this.component5, {
-      offset: -20,
-      align: "top",
-      duration: 1000
-    });
-    this.setState({ activeClass: 5 });
-  };
-
-  onClickTab6 = () => {
-    scrollToComponent(this.component6, {
-      offset: -20,
-      align: "top",
-      duration: 1000
-    });
-    this.setState({ activeClass: 6 });
+    this.setState({ activeClass: index });
   };
 
   render() {
@@ -164,42 +129,19 @@ class AboutComponent extends Component {
               <aside className="col-sm-4">
                 <nav className="tab-nav">
                   <ul>
-                    <li
-                      onClick={this.onClickTab1}
-                      className={this.state.activeClass === 1 ? "active " : ""}
-                    >
-                      <a href="#">Ընդհանուր տեղեկություններ</a>
-                    </li>
-                    <li
-                      onClick={this.onClickTab2}
-                      className={this.state.activeClass === 2 ? "active " : ""}
-                    >
-                      <a href="#">Առաքելությունը և նպատակները</a>
-                    </li>
-                    <li
-                      onClick={this.onClickTab3}
-                      className={this.state.activeClass === 3 ? "active " : ""}
-                    >
-                      <a href="#">Կազմակերպական կառուցվածքը</a>
-                    </li>
-                    <li
-                      onClick={this.onClickTab4}
-                      className={this.state.activeClass === 4 ? "active " : ""}
-                    >
-                      <a href="#">Հիմնադիր փաստաթղթեր</a>
-                    </li>
-                    <li
-                      onClick={this.onClickTab5}
-                      className={this.state.activeClass === 5 ? "active " : ""}
-                    >
-                      <a href="#">Նշանակալից մասնակիցներ</a>
-                    </li>
-                    <li
-                      onClick={this.onClickTab6}
-                      className={this.state.activeClass === 6 ? "active " : ""}
-                    >
-                      <a href="#">Ղեկավարներ և անձնակազմ</a>
-                    </li>
+                      {
+                          SIDE_LABELS.map((label, i) => {
+                            return (
+                                <li
+                                    key={i}
+                                    onClick={() => this.onClickTab(i + 1)}
+                                    className={this.state.activeClass === i + 1 ? "active " : ""}
+                                >
+                                    <a href="#">{ label }</a>
+                                </li>
+                            );
+                          })
+                      }
                   </ul>
                 </nav>
               </aside>
