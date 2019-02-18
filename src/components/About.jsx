@@ -14,7 +14,9 @@ class AboutComponent extends Component {
   state = {
     activeClass: 1,
     open: false,
-    Stepan: false
+    Stepan: false,
+    Ani: false,
+    Vardan: false
   };
 
   onOpenModal = anun => {
@@ -24,7 +26,7 @@ class AboutComponent extends Component {
   };
 
   onCloseModal = () => {
-    this.setState({ Stepan: false });
+    this.setState({ Stepan: false, Ani: false, Vardan: false });
   };
 
   onClickTab1 = () => {
@@ -346,24 +348,30 @@ class AboutComponent extends Component {
                       </a>
                     </div>
                     <div className="col-sm-4">
-                      <a className="staff-card">
+                      <a
+                        className="staff-card"
+                        onClick={() => this.onOpenModal("Ani")}
+                      >
                         <div className="staff-card-img">
                           <img src={staffImg} alt="" />
                         </div>
                         <div className="staff-card-text">
-                          <strong>Անուն Ազգանուն</strong>
-                          <p>Գործադիր տնօրեն</p>
+                          <strong>Անի Մելոյան</strong>
+                          <p>Գլխավոր հաշվապահ</p>
                         </div>
                       </a>
                     </div>
                     <div className="col-sm-4">
-                      <a className="staff-card">
+                      <a
+                        className="staff-card"
+                        onClick={() => this.onOpenModal("Vardan")}
+                      >
                         <div className="staff-card-img">
                           <img src={staffImg} alt="" />
                         </div>
                         <div className="staff-card-text">
-                          <strong>Անուն Ազգանուն</strong>
-                          <p>Գործադիր տնօրեն</p>
+                          <strong>Վարդան Եսայան</strong>
+                          <p>Բրոքեր</p>
                         </div>
                       </a>
                     </div>
@@ -401,6 +409,12 @@ class AboutComponent extends Component {
         {/*modal*/}
         <Modal open={this.state.Stepan} onClose={this.onCloseModal} center>
           <h2>Ստեփան Վիրաբյան</h2>
+        </Modal>
+        <Modal open={this.state.Ani} onClose={this.onCloseModal} center>
+          <h2>Անի Մելոյան</h2>
+        </Modal>
+        <Modal open={this.state.Vardan} onClose={this.onCloseModal} center>
+          <h2>Վարդան Եսայան</h2>
         </Modal>
       </div>
     );
