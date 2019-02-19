@@ -126,7 +126,7 @@ class AboutComponent extends Component {
         <div className="main">
           <div className="container">
             <div className="cols-sm-2 cols-mb justify-between ">
-              <aside className="col-sm-4">
+              <aside className="col-sm-4 hidden-sm">
                 <nav className="tab-nav">
                   <ul>
                       {
@@ -145,7 +145,7 @@ class AboutComponent extends Component {
                   </ul>
                 </nav>
               </aside>
-              <section className="col-sm-8 text-inside">
+              <section className="col-md-7 col-sm-8 text-inside">
                 <div
                   className="about-1"
                   ref={section => {
@@ -233,7 +233,7 @@ class AboutComponent extends Component {
                     գործունեությունն ապահովող և կարգավորող հիմնական
                     փաստաթղթերին․
                   </p>
-                  <div className="cols-sm-3 justify-between">
+                  <div className="cols-xs-3 cols-mb justify-between">
                     <div className="col-sm-4">
                       <a href="#" className="files">
                         <img src={pdf} alt="" />
@@ -274,8 +274,8 @@ class AboutComponent extends Component {
                   }}
                 >
                   <h2 className="h2">Ղեկավարներ և անձնակազմ</h2>
-                  <div className="cols-sm-3 justify-center">
-                    <div className="col-sm-4">
+                  <div className="cols-sm-3 cols-xs-2 cols-mb">
+                    <div className="col-md-4">
                       <a
                         className="staff-card"
                         onClick={() => this.onOpenModal("Stepan")}
@@ -289,7 +289,7 @@ class AboutComponent extends Component {
                         </div>
                       </a>
                     </div>
-                    <div className="col-sm-4">
+                    <div className="col-sm-4 col-xs-6">
                       <a
                         className="staff-card"
                         onClick={() => this.onOpenModal("Ani")}
@@ -303,7 +303,7 @@ class AboutComponent extends Component {
                         </div>
                       </a>
                     </div>
-                    <div className="col-sm-4">
+                    <div className="col-sm-4 col-xs-6">
                       <a
                         className="staff-card"
                         onClick={() => this.onOpenModal("Vardan")}
@@ -317,7 +317,7 @@ class AboutComponent extends Component {
                         </div>
                       </a>
                     </div>
-                    <div className="col-sm-4">
+                    <div className="col-sm-4 col-xs-6">
                       <a className="staff-card">
                         <div className="staff-card-img">
                           <img src={staffImg} alt="" />
@@ -328,7 +328,7 @@ class AboutComponent extends Component {
                         </div>
                       </a>
                     </div>
-                    <div className="col-sm-4">
+                    <div className="col-sm-4 col-xs-6">
                       <a className="staff-card">
                         <div className="staff-card-img">
                           <img src={staffImg} alt="" />

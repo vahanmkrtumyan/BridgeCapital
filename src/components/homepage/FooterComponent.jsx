@@ -121,7 +121,7 @@ const FooterComponent = props => {
                 Բոլոր իրավունքները պաշտպանված են:
               </p>
             </div>
-            <div className="col-sm-3">
+            <div className="col-sm-4">
               <p className="text-sm-right text-xs-center">
                 Էջը թարմացվել է` {date}
               </p>

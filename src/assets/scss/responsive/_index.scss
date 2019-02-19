@@ -1,4 +1,10 @@
-@media (max-width: $screen-lg) {
+@media (max-width: $screen-lg - 1) {
+    //global
+    .hidden-lg {
+        display: none;
+    }
+
+
 
     .menu {
         li {
@@ -11,7 +17,15 @@
     }
 }
 
-@media (max-width: $screen-md) {
+@media (max-width: $screen-md - 1) {
+
+    //global
+    .hidden-md {
+        display: none;
+    }
+
+
+
 
     h1.h1 {
         font-size: 55px;
@@ -171,9 +185,56 @@
     }
 
 
+    /*about us page*/
+
+    .about-page {
+        [class^="about-"] {
+            padding-bottom: 35px;
+        }
+    }
+
+    .narrow-banner {
+        height: 200px;
+
+        .inner {
+            padding-top: 100px;
+        }
+    }
+
+    .tab-nav {
+        ul  {
+            li {
+                a {
+                    padding: 15px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .header-abs {
+        padding-top: 20px;
+    }
+    /*about us page*/
+
+
 }
 
-@media (max-width: $screen-sm) {
+@media (max-width: $screen-sm - 1) {
+    //global
+    .hidden-sm {
+        display: none;
+    }
+
+
+    /*about us page*/
+
+    .about-page {
+        h2.h2 {
+            text-align: center;
+        }
+    }
+    /*about us page*/
     h1.h1 {
         font-size: 35px;
     }
@@ -293,6 +354,13 @@
 }
 
 @media (max-width: 480px) {
+    //global
+
+    .hidden-xs {
+        display: none;
+    }
+
+
     .banner {
         p {
             font-size: 14px;
@@ -377,6 +445,16 @@
             }
         }
     }
+
+    /*about us*/
+
+    .about-page {
+        .staff-card {
+            width: 190px;
+            margin: 0 auto;
+        }
+    }
+    /*about us*/
 
 
 
