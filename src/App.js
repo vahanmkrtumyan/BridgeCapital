@@ -5,12 +5,17 @@ import "./assets/scss/main.scss";
 import PropTypes from "prop-types";
 import Homepage from "./components/Homepage";
 import CurrencyInput from "./CurrencyInput";
-import About from './components/About'
+//import About from './components/About';
 import NotFound from "./components/notFound";
 import { connectTranslations } from "./context/TranslationContext";
 import Loading from "./assets/img/loading.svg";
 import FinInput from './components/fininput';
 import FinStatements from './components/FinStatements';
+import asyncComponent from './components/asyncComponent/asyncComponent';
+
+const asyncAbout = asyncComponent(() => {
+  return import('./components/About')
+})
 
 class App extends Component {
   render() {
@@ -25,7 +30,7 @@ class App extends Component {
               <Route path="/FinInput" component={FinInput} />
               <Route path="/FinStatements" component={FinStatements} />
               <Route path="/" exact component={Homepage} />
-              <Route path="/about" exact component={About} />
+              <Route path="/about" exact component={asyncAbout} />
               <Route path="/not-found" component={NotFound} />
               <Redirect to="/not-found" />
             </Switch>
