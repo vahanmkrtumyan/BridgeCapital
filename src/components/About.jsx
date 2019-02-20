@@ -6,18 +6,20 @@ import InlineSVG from "svg-inline-react";
 import aboutBanner from "../assets/img/banner/about-banner.jpg";
 import scheme from "../assets/img/scheme.png";
 import pdf from "../assets/img/icons/pdf.svg";
+import lits from "../assets/pdf/lits.pdf";
+import kanon from "../assets/pdf/kanon.pdf";
+import grants from "../assets/pdf/grants.pdf";
 import staffImg from "../assets/img/section-img/about-us.png";
 import scrollToComponent from "react-scroll-to-component";
 import Modal from "react-responsive-modal";
 
-
 const SIDE_LABELS = [
-    'Ընդհանուր տեղեկություններ',
-    'Առաքելությունը և նպատակները',
-    'Կազմակերպական կառուցվածքը',
-    'Հիմնադիր փաստաթղթեր',
-    'Նշանակալից մասնակիցներ',
-    'Ղեկավարներ և անձնակազմ'
+  "Ընդհանուր տեղեկություններ",
+  "Առաքելությունը և նպատակները",
+  "Կազմակերպական կառուցվածքը",
+  "Հիմնադիր փաստաթղթեր",
+  "Նշանակալից մասնակիցներ",
+  "Ղեկավարներ և անձնակազմ"
 ];
 
 class AboutComponent extends Component {
@@ -39,8 +41,8 @@ class AboutComponent extends Component {
     this.setState({ Stepan: false, Ani: false, Vardan: false });
   };
 
-  onClickTab = (index) => {
-    scrollToComponent(this['component' + index], {
+  onClickTab = index => {
+    scrollToComponent(this["component" + index], {
       offset: -20,
       align: "top",
       duration: 1000
@@ -129,19 +131,19 @@ class AboutComponent extends Component {
               <aside className="col-sm-4 hidden-sm">
                 <nav className="tab-nav">
                   <ul>
-                      {
-                          SIDE_LABELS.map((label, i) => {
-                            return (
-                                <li
-                                    key={i}
-                                    onClick={() => this.onClickTab(i + 1)}
-                                    className={this.state.activeClass === i + 1 ? "active " : ""}
-                                >
-                                    <a href="#">{ label }</a>
-                                </li>
-                            );
-                          })
-                      }
+                    {SIDE_LABELS.map((label, i) => {
+                      return (
+                        <li
+                          key={i}
+                          onClick={() => this.onClickTab(i + 1)}
+                          className={
+                            this.state.activeClass === i + 1 ? "active " : ""
+                          }
+                        >
+                          <a href="#">{label}</a>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </nav>
               </aside>
@@ -235,19 +237,19 @@ class AboutComponent extends Component {
                   </p>
                   <div className="cols-xs-3 cols-mb justify-between">
                     <div className="col-sm-4">
-                      <a href="#" className="files">
+                      <a href={lits} target="_blank" className="files">
                         <img src={pdf} alt="" />
                         <span>Լիցենզիա</span>
                       </a>
                     </div>
                     <div className="col-sm-4">
-                      <a href="#" className="files">
+                      <a href={grants} target="_blank" className="files">
                         <img src={pdf} alt="" />
                         <span>Գրանցման վկայական</span>
                       </a>
                     </div>
                     <div className="col-sm-4">
-                      <a href="#" className="files">
+                      <a href={kanon} target="_blank" className="files">
                         <img src={pdf} alt="" />
                         <span>Կանոնադրություն</span>
                       </a>
