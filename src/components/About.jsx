@@ -10,6 +10,11 @@ import lits from "../assets/pdf/lits.pdf";
 import kanon from "../assets/pdf/kanon.pdf";
 import grants from "../assets/pdf/grants.pdf";
 import staffImg from "../assets/img/section-img/about-us.png";
+import Vardan from "../assets/img/section-img/Vardan.jpg";
+import Ani from "../assets/img/section-img/Ani.jpg";
+import Anna from "../assets/img/section-img/Anna.jpeg";
+import Marine from "../assets/img/section-img/Marine.jpeg";
+import Stepan from "../assets/img/section-img/Stepan.jpeg";
 import scrollToComponent from "react-scroll-to-component";
 import Modal from "react-responsive-modal";
 
@@ -283,7 +288,7 @@ class AboutComponent extends Component {
                         onClick={() => this.onOpenModal("Stepan")}
                       >
                         <div className="staff-card-img">
-                          <img src={staffImg} alt="" />
+                          <img src={Stepan} alt="" />
                         </div>
                         <div className="staff-card-text">
                           <strong>Ստեփան Վիրաբյան</strong>
@@ -297,7 +302,7 @@ class AboutComponent extends Component {
                         onClick={() => this.onOpenModal("Ani")}
                       >
                         <div className="staff-card-img">
-                          <img src={staffImg} alt="" />
+                          <img src={Ani} alt="" />
                         </div>
                         <div className="staff-card-text">
                           <strong>Անի Մելոյան</strong>
@@ -311,33 +316,33 @@ class AboutComponent extends Component {
                         onClick={() => this.onOpenModal("Vardan")}
                       >
                         <div className="staff-card-img">
-                          <img src={staffImg} alt="" />
+                          <img src={Vardan} alt="" />
                         </div>
                         <div className="staff-card-text">
                           <strong>Վարդան Եսայան</strong>
-                          <p>Բրոքեր</p>
+                          <p>Առը հա՜։ Բախտիդ մեղրով փախլավա</p>
                         </div>
                       </a>
                     </div>
                     <div className="col-sm-4 col-xs-6">
                       <a className="staff-card">
                         <div className="staff-card-img">
-                          <img src={staffImg} alt="" />
+                          <img src={Marine} alt="" />
                         </div>
                         <div className="staff-card-text">
-                          <strong>Անուն Ազգանուն</strong>
-                          <p>Գործադիր տնօրեն</p>
+                          <strong>Մարինե Պետրոսյանան</strong>
+                          <p>Ներքին աուդիտի ղեկավար</p>
                         </div>
                       </a>
                     </div>
                     <div className="col-sm-4 col-xs-6">
                       <a className="staff-card">
                         <div className="staff-card-img">
-                          <img src={staffImg} alt="" />
+                          <img src={Anna} alt="" />
                         </div>
                         <div className="staff-card-text">
-                          <strong>Անուն Ազգանուն</strong>
-                          <p>Գործադիր տնօրեն</p>
+                          <strong>Աննա Հարությունյան</strong>
+                          <p>Խորհրդատու</p>
                         </div>
                       </a>
                     </div>
@@ -352,9 +357,11 @@ class AboutComponent extends Component {
 
         {/*modal*/}
         <Modal open={this.state.Stepan} onClose={this.onCloseModal} center>
+          <img src={Stepan} alt="" />
           <h2>Ստեփան Վիրաբյան</h2>
         </Modal>
         <Modal open={this.state.Ani} onClose={this.onCloseModal} center>
+        <img src={Ani} alt="" />
           <h2>Անի Մելոյան</h2>
         </Modal>
         <Modal open={this.state.Vardan} onClose={this.onCloseModal} center>
