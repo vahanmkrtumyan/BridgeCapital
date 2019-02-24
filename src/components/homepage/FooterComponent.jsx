@@ -59,8 +59,7 @@ const FooterComponent = props => {
                 </li>
                 <li>
                   <a
-                    href="https://www.fsm.am/"
-                    target="_blank"
+                    href="/finOmbudsman"
                     rel="noopener noreferrer"
                     className="primary-link"
                   >

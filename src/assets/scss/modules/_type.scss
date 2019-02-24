@@ -7,6 +7,10 @@ h1.h1 {
     span {
         color: $color-primary;
     }
+
+    &.size-48 {
+        font-size: 48px;
+    }
 }
 
 h2.h2 {
@@ -24,6 +28,10 @@ h3.h3 {
     &.lg {
         font-size: 18px;
         font-weight: 400;
+    }
+
+    &.grey {
+        color: rgba($color-text, 0.5);
     }
 }
 

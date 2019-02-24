@@ -118,6 +118,7 @@
                 line-height: 30px;
                 transition: all $trns-duration;
                 position: relative;
+                cursor: pointer;
 
                 &:after {
                     content: '';

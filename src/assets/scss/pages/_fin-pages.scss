@@ -1,0 +1,25 @@
+.statement {
+
+    h3 {
+        color: $color-primary;
+        margin-bottom: 15px;
+    }
+    .statement-list {
+
+        a {
+            font-size: 16px;
+            line-height: 28px;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        img {
+            width: 12px;
+            height: auto;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+    }
+}
+

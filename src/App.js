@@ -10,6 +10,7 @@ import NotFound from "./components/notFound";
 import { connectTranslations } from "./context/TranslationContext";
 import Loading from "./assets/img/loading.svg";
 import FinInput from './components/fininput';
+import finOmb from './components/FinOmb';
 import FinStatements from './components/FinStatements';
 import asyncComponent from './components/asyncComponent/asyncComponent';
 
@@ -29,6 +30,7 @@ class App extends Component {
               <Route path="/Kurs" component={CurrencyInput} />
               <Route path="/FinInput" component={FinInput} />
               <Route path="/FinStatements" component={FinStatements} />
+              <Route path="/FinOmbudsman" component={finOmb} />
               <Route path="/" exact component={Homepage} />
               <Route path="/about" exact component={asyncAbout} />
               <Route path="/not-found" component={NotFound} />

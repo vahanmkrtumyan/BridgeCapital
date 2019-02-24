@@ -1,28 +1,12 @@
-import React, { Component } from "react";
-import { database } from "./firebase";
-import FooterComponent from "./homepage/FooterComponent";
-import {Link} from "react-router-dom";
+import React, {Component} from 'react';
+import { Link } from "react-router-dom";
 import InlineSVG from "svg-inline-react";
-import reportBanner from "../assets/img/banner/report-banner.jpg";
-import Download from "../assets/img/icons/download.svg";
+import aboutBanner from "../assets/img/banner/ombudsman-banner.jpg";
+import FooterComponent from "./homepage/FooterComponent";
 
-class FinStatements extends Component {
-  state = {
-    statements: null
-  };
-
-  componentDidMount() {
-    database.ref("Statements").on("value", snapshot => {
-      if (snapshot.val() !== null) {
-        this.setState({ statements: snapshot.val() });
-      }
-    });
-  }
-
-
-
-  render() {
-      const svgSource = `<svg width="100%" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+class FinOmb extends Component {
+    render() {
+        const svgSource = `<svg width="100%" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 618.5 96.5" style="enable-background:new 0 0 618.5 96.5; fill:#282828" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#FFFFFF;}
@@ -77,77 +61,46 @@ class FinStatements extends Component {
 	<path class="st0" d="M603.3,63.8H618v5.1h-19.9v-36h5.2V63.8z"/>
 </g>
 </svg>`;
+        return (
+                <div className="about-page">
+                    <div
+                        className="narrow-banner"
+                        style={{ backgroundImage: "url(" + aboutBanner + ")" }}
+                    >
+                        <div className="container">
+                            <header className="header-abs">
+                                <Link to={`/`} className="logo">
+                                    <InlineSVG src={svgSource} />
+                                </Link>
+                            </header>
+                            <div className="inner">
+                                <h1 className="h1 size-48">Ֆինանսական <br/> հաշտարար</h1>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="container">
+                        <div className="text-inside pt-10 pb-10">
+                            <p>Ֆինանսական համակարգի հաշտարարի գրասենյակը կոչված է լուծելու ֆիզիկական անձանց և ֆինանսական կազմակերպությունների միջև ծագած վեճերը` անվճար հիմունքներով և սեղմ ժամկետներում:</p>
+                            <p>ՖՀՀ-ն գործում է 2009թ.-ի հունվարի 24-ից, ստեղծվել Է «Ֆինանսական համակարգի հաշտարարի մասին» ՀՀ օրենքի համաձայն, հիմնադիրն է ՀՀ կենտրոնական բանկը:</p>
+                            <p>Հաշտարարի գործունեության նպատակներն են ֆինանսական ոլորտում սպառողների իրավունքների ու շահերի պաշտպանությունը, սպառողների պահանջների արագ, արդյունավետ և անվճար քննությունը, ֆինանսական համակարգի նկատմամբ հանրության վստահության բարձրացումը:</p>
+                            <p>ՖՀՀ-ն աշխատում է ամեն օր ժամը 09:00 - 18:00, բացի հանգստյան և տոն օրերից: Այցելությունների համար նախապես պայմանավորվելը պարտադիր չէ, իսկ կոնկրետ պահանջը քննող մասնագետի հետ հանդիպելու համար կարող եք նախապես պայմանավորվել` ուղղակիորեն զանգահարելով նրանց:</p>
+                            <p>Ընդմիջման ժամն է` 13:00 - 14:00</p>
+                            <p> Հաշտարար՝ Փիրուզ Սարգսյան</p>
+                            <p>Հասցե` ՀՀ, 0010, ք. Երեւան, Մ. Խորենացի cփողոց 15</p>
+                            <p>«Էլիտ Պլազա» բիզնես կենտրոն, 7-րդ հարկ</p>
+                            <p>Հեռախոս` (+374 60) 70-11-11</p>
+                            <p>Ֆաքս` (+374 10) 58-24-21</p>
+                            <p>Էլ. փոստ` info@fsm.am</p>
+                        </div>
 
 
-    let arr;
-    this.state.statements !== null
-      ? (arr = Object.keys(this.state.statements).reverse())
-      : (arr = "");
 
-    return this.state.statements !== null ? (
-      <div>
-          <div className="about-page">
-              <div
-                  className="narrow-banner"
-                  style={{ backgroundImage: "url(" + reportBanner + ")" }}
-              >
-                  <div className="container">
-                      <header className="header-abs">
-                          <Link to={`/`} className="logo">
-                              <InlineSVG src={svgSource} />
-                          </Link>
-                      </header>
-                      <div className="inner">
-                          <h1 className="h1 size-48">Ֆինանսական <br/> հաշվետվություն</h1>
-                      </div>
-                  </div>
-              </div>
-              <div className="container">
-                  <div className="text-inside pt-10 pb-10">
-                      <p>Քանի որ &lt;&lt;Բրիջ կապիտալ&gt;&gt; ընկերությունը, համաձայն իր կանոնադրության, հրապարակային օֆերտաների միջոցով փոխառություններ չի ներգրավում, այդ իսկ պատճառով, համաձայն ՀՀ Կենտրոնական բանկի Կանոնակարգ 14-ի 121 կետի, ընկերության վրա չեն տարածվում &lt;&lt;Ընդհանուր կապիտալի համարժեքության&gt;&gt; և &lt;&lt;Մեկ փոխառուի գծով ռիսկի առավելագույն չափի&gt;&gt; նորմատիվները:</p>
-
-
-                  </div>
-                  <div className="statement cols-xs-3 cols-mb pb-10">
-                      {arr.map(item => (
-                          <div className="col-sm-4 col-xs-6">
-                              <h3 className="h3 lg" key={item}>
-                                  {item} թվականի հաշվետվություններ
-                              </h3>
-                              <ul className="statement-list">
-                                  {Object.values(this.state.statements[item]).map(n => (
-                                      <li>
-                                          <a
-                                              target="_blank"
-                                              rel="noopener noreferrer"
-                                              href={
-                                                  Object.values(this.state.statements[item])[
-                                                      Object.values(this.state.statements[item]).indexOf(n)
-                                                      ]["downloadURL"]
-                                              }
-                                          >
-                                              <img src={ Download } alt=""/>
-                                              {
-                                                  Object.values(this.state.statements[item])[
-                                                      Object.values(this.state.statements[item]).indexOf(n)
-                                                      ]["name"]
-                                              }
-                                          </a>
-                                      </li>
-                                  ))}
-                              </ul>
-
-                          </div>
-
-                      ))}
-                  </div>
-              </div>
-          </div>
-      <FooterComponent/>
-      </div>) : (
-      <FooterComponent/>
-    );
-  }
+                    </div>
+                    <FooterComponent />
+                </div>
+        );
+    }
 }
 
-export default FinStatements;
+export default FinOmb;

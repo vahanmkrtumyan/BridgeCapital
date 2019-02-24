@@ -30,6 +30,10 @@
     h1.h1 {
         font-size: 55px;
         padding-bottom: 20px;
+
+        &.size-48 {
+            font-size: 32px;
+        }
     }
 
     .container {
@@ -194,7 +198,7 @@
     }
 
     .narrow-banner {
-        height: 200px;
+        min-height: 200px;
 
         .inner {
             padding-top: 100px;
@@ -360,6 +364,12 @@
         display: none;
     }
 
+
+    h1.h1 {
+        &.size-48 {
+            font-size: 28px;
+        }
+    }
 
     .banner {
         p {
