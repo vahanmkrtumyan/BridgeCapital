@@ -1,0 +1,64 @@
+.sign-in-page {
+    height: 100vh;
+    background: linear-gradient(130deg, rgba(0, 98, 255, 0.4) 0%, rgba(0, 98, 255, 0.4) 2%, rgba(0, 98, 255, 0) 100%);
+    display: flex;
+    align-items: center;
+
+    .box {
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 40px;
+        margin-bottom: 50px;
+        max-width: 500px;
+        border: 1px solid #e6e6e6;
+        opacity: 1;
+    }
+
+    .input-field {
+        text-align: left;
+        padding-bottom: 25px;
+    }
+    label {
+        font-weight: 700;
+        text-align: left;
+        padding-bottom: 5px;
+        display: inline-block;
+    }
+
+    input[type='text'] {
+        color: $color-text;
+        border: 1px solid #e6e6e6;
+    }
+
+    .upload-btn {
+        position: relative;
+        cursor: pointer;
+
+        img {
+            width: 20px;
+            vertical-align: middle;
+        }
+        span {
+            vertical-align: bottom;
+            margin-left: 15px;
+        }
+        input {
+            font-size: 1px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+        }
+    }
+
+    .avatar {
+        margin-bottom: 15px;
+        img {
+            vertical-align: middle;
+        }
+        span {
+            margin-left: 10px;
+        }
+
+    }
+}

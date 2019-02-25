@@ -5,8 +5,8 @@ import { auth, googleAuthProvider } from "./firebase";
 class SignIn extends Component {
   render() {
     return (
-      <div >
-        <button className="btn btn-primary" onClick={() => auth.signInWithPopup(googleAuthProvider)}>SignIn</button>
+      <div className="text-center">
+        <button className="btn primary" onClick={() => auth.signInWithPopup(googleAuthProvider)}>Մուտք</button>
       </div>
     );
   }

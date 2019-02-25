@@ -32,4 +32,11 @@
         }
 
     }
+
+    &.small {
+        height: 30px;
+        line-height: 30px;
+        padding: 0 15px;
+        font-size: 13px;
+    }
 }
