@@ -222,6 +222,27 @@
     /*about us page*/
 
 
+    /*modal*/
+    .styles_modal__gNwvD {
+        padding: 30px 30px 60px;
+
+
+        &:after {
+            height: 80px;
+        }
+
+
+
+        .about-modal {
+
+            .about-modal-img {
+                min-width: 250px;
+            }
+        }
+
+    }
+
+
 }
 
 @media (max-width: $screen-sm - 1) {
@@ -354,6 +375,33 @@
         p {
             padding-bottom: 15px;
         }
+    }
+
+
+    /*modal*/
+
+    .styles_modal__gNwvD {
+        padding: 15px 15px 30px;
+
+
+
+        .about-modal {
+            flex-wrap: wrap;
+
+            .about-modal-img {
+                max-width: 300px;
+                width: 100%;
+                min-width: 0;
+                margin: 0 auto;
+                height: 250px;
+            }
+
+            .about-modal-info {
+                padding-left: 0;
+                padding-top: 30px;
+            }
+        }
+
     }
 }
 
