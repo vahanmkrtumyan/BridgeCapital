@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { database } from "./firebase";
 import FooterComponent from "./homepage/FooterComponent";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import InlineSVG from "svg-inline-react";
 import reportBanner from "../assets/img/banner/report-banner.jpg";
 import Download from "../assets/img/icons/download.svg";
@@ -19,10 +19,8 @@ class FinStatements extends Component {
     });
   }
 
-
-
   render() {
-      const svgSource = `<svg width="100%" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+    const svgSource = `<svg width="100%" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 618.5 96.5" style="enable-background:new 0 0 618.5 96.5; fill:#282828" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#FFFFFF;}
@@ -78,7 +76,6 @@ class FinStatements extends Component {
 </g>
 </svg>`;
 
-
     let arr;
     this.state.statements !== null
       ? (arr = Object.keys(this.state.statements).reverse())
@@ -86,66 +83,82 @@ class FinStatements extends Component {
 
     return this.state.statements !== null ? (
       <div>
-          <div className="about-page">
-              <div
-                  className="narrow-banner"
-                  style={{ backgroundImage: "url(" + reportBanner + ")" }}
-              >
-                  <div className="container">
-                      <header className="header-abs">
-                          <Link to={`/`} className="logo">
-                              <InlineSVG src={svgSource} />
-                          </Link>
-                      </header>
-                      <div className="inner">
-                          <h1 className="h1 size-48">Ֆինանսական <br/> հաշվետվություն</h1>
-                      </div>
-                  </div>
+        <div className="about-page">
+          <div
+            className="narrow-banner"
+            style={{ backgroundImage: "url(" + reportBanner + ")" }}
+          >
+            <div className="container">
+              <header className="header-abs">
+                <Link to={`/`} className="logo">
+                  <InlineSVG src={svgSource} />
+                </Link>
+              </header>
+              <div className="inner">
+                <h1 className="h1 size-48">
+                  Ֆինանսական <br /> հաշվետվություն
+                </h1>
               </div>
-              <div className="container">
-                  <div className="text-inside pt-10 pb-10">
-                      <p>Քանի որ &lt;&lt;Բրիջ կապիտալ&gt;&gt; ընկերությունը, համաձայն իր կանոնադրության, հրապարակային օֆերտաների միջոցով փոխառություններ չի ներգրավում, այդ իսկ պատճառով, համաձայն ՀՀ Կենտրոնական բանկի Կանոնակարգ 14-ի 121 կետի, ընկերության վրա չեն տարածվում &lt;&lt;Ընդհանուր կապիտալի համարժեքության&gt;&gt; և &lt;&lt;Մեկ փոխառուի գծով ռիսկի առավելագույն չափի&gt;&gt; նորմատիվները:</p>
-
-
-                  </div>
-                  <div className="statement cols-xs-3 cols-mb pb-10">
-                      {arr.map(item => (
-                          <div className="col-sm-4 col-xs-6">
-                              <h3 className="h3 lg" key={item}>
-                                  {item} թվականի հաշվետվություններ
-                              </h3>
-                              <ul className="statement-list">
-                                  {Object.values(this.state.statements[item]).map(n => (
-                                      <li>
-                                          <a
-                                              target="_blank"
-                                              rel="noopener noreferrer"
-                                              href={
-                                                  Object.values(this.state.statements[item])[
-                                                      Object.values(this.state.statements[item]).indexOf(n)
-                                                      ]["downloadURL"]
-                                              }
-                                          >
-                                              <img src={ Download } alt=""/>
-                                              {
-                                                  Object.values(this.state.statements[item])[
-                                                      Object.values(this.state.statements[item]).indexOf(n)
-                                                      ]["name"]
-                                              }
-                                          </a>
-                                      </li>
-                                  ))}
-                              </ul>
-
-                          </div>
-
-                      ))}
-                  </div>
-              </div>
+            </div>
           </div>
-      <FooterComponent/>
-      </div>) : (
-      <FooterComponent/>
+          <div className="container">
+            <div className="text-inside pt-10 pb-10">
+              <p>
+                Քանի որ &lt;&lt;Բրիջ կապիտալ&gt;&gt; ընկերությունը, համաձայն իր
+                կանոնադրության, հրապարակային օֆերտաների միջոցով փոխառություններ
+                չի ներգրավում, այդ իսկ պատճառով, համաձայն ՀՀ Կենտրոնական բանկի
+                Կանոնակարգ 14-ի 121 կետի, ընկերության վրա չեն տարածվում
+                &lt;&lt;Ընդհանուր կապիտալի համարժեքության&gt;&gt; և &lt;&lt;Մեկ
+                փոխառուի գծով ռիսկի առավելագույն չափի&gt;&gt; նորմատիվները:
+              </p>
+            </div>
+            <div className="statement cols-xs-3 cols-mb pb-10">
+              {arr.map(item => (
+                <div className="col-sm-4 col-xs-6" key={item}>
+                  <h3 className="h3 lg">{item} թվականի հաշվետվություններ</h3>
+                  <ul className="statement-list">
+                    {Object.values(this.state.statements[item]).map(n => (
+                      <li
+                        key={
+                          Object.values(this.state.statements[item])[
+                            Object.values(this.state.statements[item]).indexOf(
+                              n
+                            )
+                          ]["downloadURL"]
+                        }
+                      >
+                        <a
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          href={
+                            Object.values(this.state.statements[item])[
+                              Object.values(
+                                this.state.statements[item]
+                              ).indexOf(n)
+                            ]["downloadURL"]
+                          }
+                        >
+                          <img src={Download} alt="" />
+                          {
+                            Object.values(this.state.statements[item])[
+                              Object.values(
+                                this.state.statements[item]
+                              ).indexOf(n)
+                            ]["name"]
+                          }
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <FooterComponent />
+      </div>
+    ) : (
+      <FooterComponent />
     );
   }
 }
