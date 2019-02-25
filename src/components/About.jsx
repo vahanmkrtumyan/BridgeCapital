@@ -336,12 +336,15 @@ class AboutComponent extends Component {
                       </a>
                     </div>
                     <div className="col-sm-4 col-xs-6">
-                      <a className="staff-card">
+                      <a
+                        className="staff-card"
+                        onClick={() => this.onOpenModal("Marine")}
+                      >
                         <div className="staff-card-img">
                           <img src={Marine} alt="" />
                         </div>
                         <div className="staff-card-text">
-                          <strong>Մարինե Պետրոսյանան</strong>
+                          <strong>Մարինե Պետրոսյան</strong>
                           <p>Ներքին աուդիտի ղեկավար</p>
                         </div>
                       </a>
@@ -441,7 +444,16 @@ class AboutComponent extends Component {
               style={{ backgroundImage: "url(" + Vardan + ")" }}
               className="about-modal-img"
             />
-            <h2>Վարդան Եսայան</h2>
+            <h2 className="h2">Վարդան Եսայան</h2>
+          </div>
+        </Modal>
+        <Modal open={this.state.Marine} onClose={this.onCloseModal} center>
+          <div className="about-modal">
+            <div
+              style={{ backgroundImage: "url(" + Marine + ")" }}
+              className="about-modal-img"
+            />
+            <h2 className="h2">Մարինե Պետրոսյան</h2>
           </div>
         </Modal>
       </div>
