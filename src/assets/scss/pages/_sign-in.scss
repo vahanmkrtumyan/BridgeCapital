@@ -28,6 +28,11 @@
     input[type='text'] {
         color: $color-text;
         border: 1px solid #e6e6e6;
+        transition: all $trns-duration;
+
+        &:focus {
+           border-color: #282828;
+        }
     }
 
     .upload-btn {
