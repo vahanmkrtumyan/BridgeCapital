@@ -69,13 +69,13 @@ class Homepage extends Component {
         changeClass(2);
       }
 
-      
-
       if (scrollpos > contacts && scrollpos < contactsBot) {
         changeClass(3);
       }
     });
   }
+
+  componentWillMount() {}
 
   onTab = () => {
     scrollToComponent(this.TabComponent, {
