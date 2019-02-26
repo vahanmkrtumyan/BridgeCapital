@@ -66,12 +66,14 @@ class CurrencyInput extends Component {
 
 
         const { currentUser } = this.state;
+        console.log(currentUser)
         return (
             <div className="sign-in-page">
                 <div className="box">
                     <h2 className="h2 text-center pb-6">Փոխարժեքի մուտքագրում</h2>
 
                     {currentUser && <CurrentUser user={currentUser} />}
+                    
                     {!this.state.loading && !currentUser && <SignIn />}
                     {currentUser && (<div className="row">
                         <form >
