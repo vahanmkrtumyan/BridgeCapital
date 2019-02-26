@@ -120,12 +120,16 @@ class Currency extends Component {
       ? (flag1 = Russia)
       : this.state.selected1 === "USDBid"
       ? (flag1 = USA)
+      : this.state.selected1 === "GBPBid"
+      ? (flag1 = UK)
       : (flag1 = Armenia);
     let flag2;
     this.state.selected2 === "EURAsk"
       ? (flag2 = Euro)
       : this.state.selected2 === "RUBAsk"
       ? (flag2 = Russia)
+      : this.state.selected2 === "GBPAsk"
+      ? (flag2 = UK)
       : this.state.selected2 === "USDAsk"
       ? (flag2 = USA)
       : (flag2 = Armenia);
@@ -156,6 +160,7 @@ class Currency extends Component {
                           <option value="USDBid">USD</option>
                           <option value="EURBid">EUR</option>
                           <option value="RUBBid">RUB</option>
+                          <option value="GBPBid">GBP</option>
                         </select>
                         <img src={Arrow} className="arrow" alt="" />
                       </div>
@@ -191,6 +196,7 @@ class Currency extends Component {
                           <option value="USDAsk">USD</option>
                           <option value="EURAsk">EUR</option>
                           <option value="RUBAsk">RUB</option>
+                          <option value="GBPAsk">GBP</option>
                         </select>
                         <img src={Arrow} className="arrow" alt="" />
                       </div>
@@ -261,8 +267,8 @@ class Currency extends Component {
                           <img src={UK} className="flag" alt="Ֆունտստերլինգ" />
                           GBP
                         </td>
-                        <td>{this.state.kurs.RUBBid}</td>
-                        <td>{this.state.kurs.RUBAsk}</td>
+                        <td>{this.state.kurs.GBPBid}</td>
+                        <td>{this.state.kurs.GBPAsk}</td>
                       </tr>
                     </tbody>
                   </table>
