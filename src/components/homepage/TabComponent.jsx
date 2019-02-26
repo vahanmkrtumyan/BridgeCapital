@@ -185,31 +185,9 @@ class TabComponent extends Component {
                                   ref={setCollapsibleElement}
                                 >
                                   <div className="my-collapsible__content-inner">
-                                    <p>
-                                      Lorem ipsum dolor sit amet, consectetur
-                                      adipisicing elit. Amet aperiam asperiores
-                                      aspernatur consectetur cumque, deleniti,
-                                      dolor dolores eligendi ex exercitationem
-                                      itaque iure molestiae neque perferendis
-                                      quis veritatis voluptatum! A autem beatae
-                                      cum distinctio eius harum id incidunt
-                                      inventore itaque magnam magni molestiae
-                                      natus necessitatibus nihil qui, quos
-                                      repellat, sequi temporibus. Ab, aliquid at
-                                      consequuntur deleniti dignissimos
-                                      eligendi, eum eveniet fuga illo, incidunt
-                                      ipsum laborum nam neque non nostrum quod
-                                      suscipit voluptatem. Aperiam enim iure
-                                      perspiciatis porro praesentium.
-                                      Laboriosam, magni nobis. Aliquam animi aut
-                                      consequatur deserunt excepturi, fuga id
-                                      nam non nostrum, numquam quas quis quos
-                                      repellat reprehenderit repudiandae tempore
-                                      ullam!
-                                    </p>
                                   </div>
                                 </div>
-                                <button
+                                {/* <button
                                   className="my-collapsible__toggle btn secondary mt-5"
                                   onClick={() => {
                                     this.handleXorOpen();
@@ -217,7 +195,7 @@ class TabComponent extends Component {
                                   }}
                                 >
                                   {this.state.Xor}
-                                </button>
+                                </button> */}
                               </div>
                             </Fade>
                           )}
@@ -278,7 +256,7 @@ class TabComponent extends Component {
                                   իրավիճակից: Բոլոր ֆորվարդային գործարքները
                                   կրում են պայմանագրային բնույթ:
                                 </p>
-                                <div
+                                {/* <div
                                   className="my-collapsible__content"
                                   ref={setCollapsibleElement}
                                 >
@@ -315,7 +293,7 @@ class TabComponent extends Component {
                                   }}
                                 >
                                   {this.state.Art}
-                                </button>
+                                </button> */}
                               </div>
                             </Fade>
                           )}
