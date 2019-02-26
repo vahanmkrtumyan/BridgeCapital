@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import {storage, database, auth } from "../components/firebase";
 import SignIn from "../components/signIn";
 import CurrentUser from "../components/currentUser";
+import Upload from "../assets/img/icons/upload.svg"
 
 class FinInput extends Component {
   state = {
@@ -119,48 +120,68 @@ class FinInput extends Component {
   render() {
     const { currentUser } = this.state;
     return (
-      <div className="col-sm-8 flex justify-end">
-        {currentUser && <CurrentUser user={currentUser} />}
-        {!this.state.loading && !currentUser && <SignIn />}
-        {currentUser && (
-          <div className="row">
-            <form className="col s6">
-              <div className="input-field col s6">
-                <input
-                  id="year"
-                  name="year"
-                  type="text"
-                  className="validate"
-                  placeholder="Տարի"
-                  onChange={this.handleInputChange}
-                  value={this.state.year}
-                />
-                <label htmlFor="Անուն">Տարի</label>
+
+
+          <div className="sign-in-page">
+              <div className="box">
+                  <h2 className="h2 text-center pb-6">Ֆին․ հաշվետվությունների ներբեռնում</h2>
+
+                  {currentUser && <CurrentUser user={currentUser} />}
+                  {!this.state.loading && !currentUser && <SignIn />}
+                  {currentUser && (
+                      <div>
+                          <form>
+                              <div className="input-field">
+                                  <label htmlFor="Անուն">Տարի</label>
+                                  <input
+                                      id="year"
+                                      name="year"
+                                      type="text"
+                                      className="validate"
+                                      placeholder="Տարի"
+                                      onChange={this.handleInputChange}
+                                      value={this.state.year}
+                                  />
+
+                              </div>
+                              <div className="input-field">
+                                  <label htmlFor="Անուն">Հաշվետվության անվանում</label>
+                                  <input
+                                      id="name"
+                                      name="name"
+                                      type="text"
+                                      className="validate"
+                                      placeholder="Անվանում"
+                                      onChange={this.handleInputChange}
+                                      value={this.state.name}
+                                  />
+                              </div>
+                              <div className="text-left">
+                                  <label htmlFor="upload" className="upload-btn">
+                                      <input
+                                          type="file"
+                                          id="upload"
+                                          name={this.state.name}
+                                          onChange={this.handleSelect}
+                                      />
+                                      <img src={ Upload } alt=""/>
+                                      <span>Ներբեռնել</span>
+                                  </label>
+
+                              </div>
+                              <div className="text-center pt-6">
+                                  <button className="btn primary" onClick={this.handleSubmit} type="button" name="submit">
+                                      Ուղարկել
+                                  </button>
+                              </div>
+
+
+                          </form>
+                      </div>
+                  )}
               </div>
-              <div className="input-field col s6">
-                <input
-                  id="name"
-                  name="name"
-                  type="text"
-                  className="validate"
-                  placeholder="Անվանում"
-                  onChange={this.handleInputChange}
-                  value={this.state.name}
-                />
-                <label htmlFor="Անուն">Հաշվետվության անվանում</label>
-              </div>
-              <input
-                type="file"
-                name={this.state.name}
-                onChange={this.handleSelect}
-              />
-              <button onClick={this.handleSubmit} type="button" name="submit">
-                Ուղարկել
-              </button>
-            </form>
           </div>
-        )}
-      </div>
+
     );
   }
 }

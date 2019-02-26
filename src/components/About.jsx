@@ -393,14 +393,14 @@ class AboutComponent extends Component {
               className="about-modal-img"
             />
             <div className="about-modal-info text-inside">
-              <div className="text-xs-center mb-8">
+              <div className="text-center mb-8">
                 <h2 className="h2 mb-2">Ստեփան Վիրաբյան</h2>
                 <h3 className="h3 grey">
                   §Բրիդջ Կապիտալ¦ ՓԲԸ-ի գործադիր տնօրեն
                 </h3>
               </div>
               <div className="pb-10">
-                <p>
+                <p className="text-center text-sm-left">
                   Ծնվել է 1991թ.-ին Հայաստանի Հանրապետությունում, Երևան
                   քաղաքում:
                   <br />
@@ -421,7 +421,7 @@ class AboutComponent extends Component {
                   2017-2018թթ. աշխատել է §Աշկելոն Կապիտալ¦ ՓԲԸ ներդրումային
                   ֆոնդում որպես պորտֆելի կառավարիչ:
                   <br />
-                  02018թ. հունիսից զբաղեցրել է §Աշկելոն Կապիտալ¦ ՓԲԸ
+                  2018թ. հունիսից զբաղեցրել է §Աշկելոն Կապիտալ¦ ՓԲԸ
                   ներդրումային ֆոնդի գլխավոր տնօրենի պաշտոնը:
                   <br />
                   2018թ. դեկտեմբերի 24-ից հանդիսանում է §ԲՐԻԴՋ ԿԱՊԻՏԱԼ¦ ՓԲԸ
@@ -441,7 +441,7 @@ class AboutComponent extends Component {
               className="about-modal-img"
             />
             <div className="about-modal-info text-inside">
-              <div className="text-xs-center mb-8">
+              <div className="text-center mb-8">
                 <h2 className="h2 mb-2">Անի Մելոյան</h2>
                 <h3 className="h3 grey">
                   §Բրիդջ Կապիտալ¦ ՓԲԸ-ի գլխավոր հաշվապահ
@@ -487,7 +487,7 @@ class AboutComponent extends Component {
               className="about-modal-img"
             />
             <div className="about-modal-info text-inside">
-              <div className="text-xs-center mb-8">
+              <div className="text-center mb-8">
                 <h2 className="h2 mb-2">Վարդան Եսայան</h2>
                 <h3 className="h3 grey">§Բրիդջ Կապիտալ¦ ՓԲԸ-ի խորհրդատու</h3>
               </div>
@@ -535,7 +535,7 @@ class AboutComponent extends Component {
               className="about-modal-img"
             />
             <div className="about-modal-info text-inside">
-              <div className="text-xs-center mb-8">
+              <div className="text-center mb-8">
                 <h2 className="h2 mb-2">Մարինե Պետրոսյան</h2>
                 <h3 className="h3 grey">
                   §Բրիդջ Կապիտալ¦ ՓԲԸ-ի ներքին աուդիտի ղեկավար
@@ -581,7 +581,7 @@ class AboutComponent extends Component {
               className="about-modal-img"
             />
             <div className="about-modal-info text-inside">
-              <div className="text-xs-center mb-8">
+              <div className="text-center mb-8">
                 <h2 className="h2 mb-2">Աննա Հարությունյան</h2>
                 <h3 className="h3 grey">§Բրիդջ Կապիտալ¦ ՓԲԸ-ի խորհրդատու</h3>
               </div>
@@ -625,7 +625,7 @@ class AboutComponent extends Component {
               className="about-modal-img"
             />
             <div className="about-modal-info text-inside">
-              <div className="text-xs-center mb-8">
+              <div className="text-center mb-8">
                 <h2 className="h2 mb-2">Միքայել Վարդգեսյան</h2>
                 <h3 className="h3 grey">
                   §Բրիդջ Կապիտալ¦ ՓԲԸ-ի Գլխավոր իրավաբան

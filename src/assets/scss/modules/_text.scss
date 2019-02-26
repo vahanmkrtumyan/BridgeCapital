@@ -1,3 +1,7 @@
+.text-center {
+    text-align: center;
+}
+
 @each $key,$val in $resolutions {
   @media (min-width: $val) {
     // Alignment
@@ -15,6 +19,8 @@
     }
   }
 }
+
+
 
 // Transformation
 .text-lowercase {
