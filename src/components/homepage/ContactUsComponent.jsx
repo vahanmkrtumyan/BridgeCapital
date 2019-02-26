@@ -17,20 +17,19 @@ class ContactUsComponent extends Component {
               <h2 className="h2">Հետադարձ կապ</h2>
               <div className="contact-content">
                 <p>
-                  Որևէ խնդրի կամ հարցերի դեպքում կարող եք կապվել մեր սպասարկման
-                  կենտրոնի հետ` զանգահարելով , այցելելով Բրիդջ Կապիտալի
-                  գրասենյակ, գրելով մեր ֆեյսբուքյան էջում կամ գրելով
-                  էլեկտրոնային նամակ
+                  Որևէ խնդրի կամ հարցերի դեպքում կարող եք կապվել մեզ հետ`
+                  զանգահարելով, այցելելով Բրիդջ Կապիտալի գրասենյակ կամ գրելով
+                  էլեկտրոնային նամակ&nbsp;
                   <a
                     className="primary-link"
                     href="mailto:info@bridgecapital.am"
                   >
-                    info@bridgecapital.am
+                    info@bridgecapital.am&nbsp;
                   </a>
                   հասցեով:
                 </p>
                 <p>
-                  Մենք կարձագանքենք Ձեզ, առավելագունը` 7 աշխատանքային օրվա
+                  Մենք կարձագանքենք Ձեզ առավելագույնը 7 աշխատանքային օրվա
                   ընթացքում: Մեր մասնագետները սիրով կաջակցեն Ձեզ:
                 </p>
               </div>
@@ -54,7 +53,7 @@ class ContactUsComponent extends Component {
                   <div>
                     <p>Էլ. փոստ</p>
                     <a href="#" className="primary-link">
-                      info@bridgebcapital.am
+                      info@bridgecapital.am
                     </a>
                   </div>
                 </li>
@@ -65,7 +64,7 @@ class ContactUsComponent extends Component {
                   <div>
                     <p>Հասցե</p>
                     <a href="#" className="primary-link">
-                      ք. Երևան, Տերյան 61
+                      ք. Երևան, Գր․ Լուսավորիչ 9
                     </a>
                   </div>
                 </li>

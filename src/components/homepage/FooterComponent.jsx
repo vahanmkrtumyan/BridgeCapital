@@ -76,7 +76,7 @@ const FooterComponent = props => {
                 </li>
                 <li>
                   <img src={Home} alt="հասցե" />
-                  <span>ՀՀ, ք. Երևան, Տերյան 61</span>
+                  <span>ՀՀ, ք. Երևան, Գր․ Լուսավորիչ 9</span>
                 </li>
                 <li>
                   <img src={Envelope} alt="էլ. փոստ" />
@@ -110,7 +110,7 @@ const FooterComponent = props => {
         <div className="container">
           <div className="cols-sm-3 align-center">
             <div className="col-sm-3">
-              <Link to={`/`} className="footer-logo" >
+              <Link to={`/`} className="footer-logo">
                 <img src={logo} alt="Բրիդջ կապիտալ" />
               </Link>
             </div>
