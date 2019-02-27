@@ -3,6 +3,7 @@ import { storage, database, auth } from "../components/firebase";
 import SignIn from "../components/signIn";
 import CurrentUser from "../components/currentUser";
 import Upload from "../assets/img/icons/upload.svg";
+import swal from "sweetalert";
 
 class FinInput extends Component {
   state = {
@@ -107,7 +108,7 @@ class FinInput extends Component {
         // Upload completed successfully, now we can get the download URL
         uploadTask.snapshot.ref.getDownloadURL().then(downloadURL => {
           this.setState({ downloadURL }, () =>
-            console.log(this.state.downloadURL)
+            swal({ icon: "success", text: "Բեռնված է։" })
           );
           this.setState({ disabled: false });
         });
