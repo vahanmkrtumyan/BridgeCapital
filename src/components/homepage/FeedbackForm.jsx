@@ -1,6 +1,7 @@
 // import PropTypes from "prop-types";
 import React, { Component } from "react";
 import * as emailjs from "emailjs-com";
+import swal from "sweetalert";
 
 class FeedbackForm extends Component {
   state = {
@@ -43,10 +44,10 @@ class FeedbackForm extends Component {
       )
       .then(
         response => {
-          alert("success");
+          swal({ icon: "success", text: "Նամակն ուղարկված է։" });
         },
         err => {
-          console.log("err");
+          swal({ icon: "error", text: "Նամակն չի ուղարկվել։" });
         }
       );
 
