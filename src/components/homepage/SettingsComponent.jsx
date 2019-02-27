@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Settings from "../../assets/img/section-img/settings.png";
-import Arrow from "../../assets/img/icons/mouse-pointer-pointing-left.svg";
+// import Arrow from "../../assets/img/icons/mouse-pointer-pointing-left.svg";
 import ArrowFill from "../../assets/img/icons/arrow-pointing-left.svg";
 import { SlideToggle } from "react-slide-toggle";
 import Fade from "react-reveal/Fade";

@@ -149,7 +149,7 @@ class Currency extends Component {
                 <Pulse count={3}>
                   <div className="currency-calc-item">
                     <div className="calc-header">
-                      <img src={flag1} className="flag" />
+                      <img src={flag1} alt="" className="flag" />
                       <div className="select">
                         <select
                           name="selected1"
@@ -185,7 +185,7 @@ class Currency extends Component {
                 <Pulse count={3}>
                   <div className="currency-calc-item">
                     <div className="calc-header">
-                      <img src={flag2} className="flag" />
+                      <img src={flag2} alt="" className="flag" />
                       <div className="select">
                         <select
                           name="selected2"

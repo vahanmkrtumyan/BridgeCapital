@@ -1,9 +1,9 @@
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import React, { Component } from "react";
 import { database, auth } from "./components/firebase";
 import SignIn from "./components/signIn";
 import CurrentUser from "./components/currentUser";
-import styles from "./button.scss";
+// import styles from "./button.scss";
 
 class CurrencyInput extends Component {
   state = {

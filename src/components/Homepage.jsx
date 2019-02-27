@@ -75,7 +75,9 @@ class Homepage extends Component {
     });
   }
 
-  componentWillMount() {}
+  componentWillMount() {
+    this.setState({ activeClass: 1 });
+  }
 
   onTab = () => {
     scrollToComponent(this.TabComponent, {

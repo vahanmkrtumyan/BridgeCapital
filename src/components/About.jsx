@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import FooterComponent from "./homepage/FooterComponent";
-import { SlideToggle } from "react-slide-toggle";
+// import { SlideToggle } from "react-slide-toggle";
 import { Link } from "react-router-dom";
 import InlineSVG from "svg-inline-react";
 import aboutBanner from "../assets/img/banner/about-banner.jpg";
@@ -9,7 +9,6 @@ import pdf from "../assets/img/icons/pdf.svg";
 import lits from "../assets/pdf/lits.pdf";
 import kanon from "../assets/pdf/kanon.pdf";
 import grants from "../assets/pdf/grants.pdf";
-import staffImg from "../assets/img/section-img/about-us.png";
 import Vardan from "../assets/img/section-img/Vardan.jpg";
 import Ani from "../assets/img/section-img/Ani.jpg";
 import Anna from "../assets/img/section-img/Anna.jpg";
@@ -122,7 +121,6 @@ class AboutComponent extends Component {
 	<path class="st0" d="M603.3,63.8H618v5.1h-19.9v-36h5.2V63.8z"/>
 </g>
 </svg>`;
-    const { open } = this.state;
     return (
       <div className="about-page">
         <div
@@ -253,19 +251,34 @@ class AboutComponent extends Component {
                   </p>
                   <div className="cols-xs-3 cols-mb justify-between">
                     <div className="col-sm-4">
-                      <a href={lits} target="_blank" className="files">
+                      <a
+                        href={lits}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="files"
+                      >
                         <img src={pdf} alt="" />
                         <span>Լիցենզիա</span>
                       </a>
                     </div>
                     <div className="col-sm-4">
-                      <a href={grants} target="_blank" className="files">
+                      <a
+                        href={grants}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="files"
+                      >
                         <img src={pdf} alt="" />
                         <span>Գրանցման վկայական</span>
                       </a>
                     </div>
                     <div className="col-sm-4">
-                      <a href={kanon} target="_blank" className="files">
+                      <a
+                        href={kanon}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="files"
+                      >
                         <img src={pdf} alt="" />
                         <span>Կանոնադրություն</span>
                       </a>
