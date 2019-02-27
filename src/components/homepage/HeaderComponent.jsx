@@ -102,11 +102,9 @@ class HeaderComponent extends Component {
     return (
       <header className="header">
         <div className="container cols-sm-2 align-center">
-          <Fade cascade delay={300}>
-            <a href="#" className="logo">
-              <InlineSVG src={svgSource} />
-            </a>
-          </Fade>
+            <Link to={`/`} className="logo">
+                <InlineSVG src={svgSource} />
+            </Link>
           <div className="header-nav">
             <div
               onClick={this.onToggleClassHandler}
