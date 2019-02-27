@@ -13,7 +13,7 @@ class ContactUsComponent extends Component {
       <React.Fragment>
         <section className="section section-contact">
           <div className="container">
-            <Fade right delay={500} duration={1500} fraction={1}>
+            <Fade right delay={500} duration={1000} fraction={1}>
               <h2 className="h2">Հետադարձ կապ</h2>
               <div className="contact-content">
                 <p>

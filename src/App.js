@@ -9,14 +9,14 @@ import CurrencyInput from "./CurrencyInput";
 import NotFound from "./components/notFound";
 import { connectTranslations } from "./context/TranslationContext";
 import Loading from "./assets/img/loading.svg";
-import FinInput from './components/fininput';
-import finOmb from './components/FinOmb';
-import FinStatements from './components/FinStatements';
-import asyncComponent from './components/asyncComponent/asyncComponent';
+import FinInput from "./components/fininput";
+import finOmb from "./components/FinOmb";
+import FinStatements from "./components/FinStatements";
+import asyncComponent from "./components/asyncComponent/asyncComponent";
 
 const asyncAbout = asyncComponent(() => {
-  return import('./components/About')
-})
+  return import("./components/About");
+});
 
 class App extends Component {
   render() {
@@ -25,18 +25,16 @@ class App extends Component {
         {/*<FeedbackForm env={this.props.env} />*/}
 
         <div>
-
-            <Switch>
-              <Route path="/Kurs" component={CurrencyInput} />
-              <Route path="/FinInput" component={FinInput} />
-              <Route path="/FinStatements" component={FinStatements} />
-              <Route path="/FinOmbudsman" component={finOmb} />
-              <Route path="/" exact component={Homepage} />
-              <Route path="/about" exact component={asyncAbout} />
-              <Route path="/not-found" component={NotFound} />
-              <Redirect to="/not-found" />
-            </Switch>
-
+          <Switch>
+            <Route path="/Kurs" component={CurrencyInput} />
+            <Route path="/FinInput" component={FinInput} />
+            <Route path="/FinStatements" component={FinStatements} />
+            <Route path="/FinOmbudsman" component={finOmb} />
+            <Route path="/" exact component={Homepage} />
+            <Route path="/about" exact component={asyncAbout} />
+            <Route path="/not-found" component={NotFound} />
+            <Redirect to="/" />
+          </Switch>
         </div>
         {this.props.textLoaded ? null : (
           <img
@@ -46,7 +44,7 @@ class App extends Component {
           />
         )}
       </>
-    ) : null
+    ) : null;
   }
 }
 
