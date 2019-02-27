@@ -9,6 +9,7 @@ class BannerComponent extends Component {
           <div className="container">
             <Fade delay={300} cascade>
               <div className="banner-inner">
+              <h2>Կայքը գտնվում է մշակման փուլում։</h2>
                 <h1 className="h1">
                   ՈՂՋՈՒՅՆ <span>ՆԵՐԴՐՈՂ</span>
                 </h1>
