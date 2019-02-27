@@ -8,7 +8,7 @@ import Download from "../assets/img/icons/download.svg";
 
 class FinStatements extends Component {
   state = {
-    statements: null
+    statements: []
   };
 
   componentDidMount() {
@@ -104,12 +104,12 @@ class FinStatements extends Component {
           <div className="container">
             <div className="text-inside pt-10 pb-10">
               <p>
-                Քանի որ &lt;&lt;Բրիջ կապիտալ&gt;&gt; ընկերությունը, համաձայն իր
+                Քանի որ §Բրիջ կապիտալ¦ ընկերությունը, համաձայն իր
                 կանոնադրության, հրապարակային օֆերտաների միջոցով փոխառություններ
                 չի ներգրավում, այդ իսկ պատճառով, համաձայն ՀՀ Կենտրոնական բանկի
                 Կանոնակարգ 14-ի 121 կետի, ընկերության վրա չեն տարածվում
-                &lt;&lt;Ընդհանուր կապիտալի համարժեքության&gt;&gt; և &lt;&lt;Մեկ
-                փոխառուի գծով ռիսկի առավելագույն չափի&gt;&gt; նորմատիվները:
+                §Ընդհանուր կապիտալի համարժեքության¦ և §Մեկ փոխառուի գծով ռիսկի
+                առավելագույն չափի¦ նորմատիվները:
               </p>
             </div>
             <div className="statement cols-xs-3 cols-mb pb-10">
