@@ -25,6 +25,11 @@ const FooterComponent = props => {
 
   date = dd + "/" + mm + "/" + yyyy;
 
+  const pStyle = {
+    fontSize: "12px",
+    textAlign: "center"
+  };
+
   return (
     <footer>
       <div className="footer-top">
@@ -127,6 +132,13 @@ const FooterComponent = props => {
             </div>
           </div>
         </div>
+        <p style={pStyle}>
+          Բրիդջ Կապիտալ ՓԲԸ-ն պատասխանատվություն չի կրում իր ինտերնետային
+          կայքում հղված այլ անձանց ինտերնետային կայքերի բովանդակության
+          ստույգության և արժանահավատության,այնտեղ տեղադրված գովազդների, այդ
+          կայքերում տեղադրված տեղեկատվության օգտագործման հնարավոր հետևանքների
+          համար:
+        </p>
       </div>
     </footer>
   );

@@ -43,7 +43,7 @@ class FeedbackForm extends Component {
       )
       .then(
         response => {
-          console.log("success");
+          alert("success");
         },
         err => {
           console.log("err");

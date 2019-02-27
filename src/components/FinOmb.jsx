@@ -75,7 +75,7 @@ class FinOmb extends Component {
             </header>
             <div className="inner">
               <h1 className="h1 size-48">
-                Ֆինանսական <br /> հաշտարար
+                Ֆինանսական <br /> համակարգի <br /> հաշտարար
               </h1>
             </div>
           </div>
