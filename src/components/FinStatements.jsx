@@ -96,22 +96,13 @@ class FinStatements extends Component {
               </header>
               <div className="inner">
                 <h1 className="h1 size-48">
-                  Ֆինանսական <br /> հաշվետվություն
+                  Ֆինանսական <br /> հաշվետվություններ
                 </h1>
               </div>
             </div>
           </div>
           <div className="container">
-            <div className="text-inside pt-10 pb-10">
-              <p>
-                Քանի որ §Բրիջ կապիտալ¦ ընկերությունը, համաձայն իր
-                կանոնադրության, հրապարակային օֆերտաների միջոցով փոխառություններ
-                չի ներգրավում, այդ իսկ պատճառով, համաձայն ՀՀ Կենտրոնական բանկի
-                Կանոնակարգ 14-ի 121 կետի, ընկերության վրա չեն տարածվում
-                §Ընդհանուր կապիտալի համարժեքության¦ և §Մեկ փոխառուի գծով ռիսկի
-                առավելագույն չափի¦ նորմատիվները:
-              </p>
-            </div>
+            <div className="text-inside pt-10 pb-10" />
             <div className="statement cols-xs-3 cols-mb pb-10">
               {arr.map(item => (
                 <div className="col-sm-4 col-xs-6" key={item}>
