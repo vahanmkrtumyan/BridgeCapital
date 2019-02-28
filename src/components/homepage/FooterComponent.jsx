@@ -8,6 +8,10 @@ import Twitter from "../../assets/img/icons/twitter.svg";
 import Linkedin from "../../assets/img/icons/linkedin.svg";
 import FbSm from "../../assets/img/icons/facebook-small.svg";
 import Copyright from "../../assets/img/icons/copyright.svg";
+import AMX from "../../assets/img/icons/amx.jpg";
+import FHH from "../../assets/img/icons/FHH.jpg";
+import CBA from "../../assets/img/icons/CBA.jpg";
+import book from "../../assets/img/icons/book.png";
 
 const FooterComponent = props => {
   let date = new Date();
@@ -36,9 +40,10 @@ const FooterComponent = props => {
         <div className="container">
           <div className="cols-xs-3">
             <div className="col-xs-6">
-              <ul className="footer-links">
+              <ul className="footer-contact">
                 <li>
                   <Link to={"/FinStatements"} className="primary-link">
+                    <img src={book} alt="զանգերի սպասարկում" />
                     Ֆինանսական հաշվետվություններ
                   </Link>
                 </li>
@@ -49,6 +54,7 @@ const FooterComponent = props => {
                     rel="noopener noreferrer"
                     className="primary-link"
                   >
+                    <img src={CBA} alt="զանգերի սպասարկում" />
                     Կենտրոնական բանկ
                   </a>
                 </li>
@@ -59,6 +65,7 @@ const FooterComponent = props => {
                     rel="noopener noreferrer"
                     className="primary-link"
                   >
+                    <img src={AMX} alt="զանգերի սպասարկում" />
                     Հայաստանի կենտրոնական դեպոզիտարիա
                   </a>
                 </li>
@@ -68,6 +75,7 @@ const FooterComponent = props => {
                     rel="noopener noreferrer"
                     className="primary-link"
                   >
+                    <img src={FHH} alt="զանգերի սպասարկում" />
                     Ֆինանսական համակարգի հաշտարար
                   </a>
                 </li>
