@@ -6,6 +6,9 @@ import Consultation from "../../assets/img/section-img/xohrdatvakanNkar.png";
 import { SlideToggle } from "react-slide-toggle";
 import Fade from "react-reveal/Fade";
 import Zoom from "react-reveal/Zoom";
+import Sak from "../../assets/pdf/Sak.pdf";
+import Brok from "../../assets/pdf/Brok.pdf";
+import Hashiv from "../../assets/pdf/Hashiv.PDF";
 
 class TabComponent extends Component {
   state = {
@@ -129,15 +132,39 @@ class TabComponent extends Component {
                                   <p>
                                     Բրոքերային ծառայությունների մասին առավել
                                     մանրամասն կարող եք ծանոթանալ
-                                    ծառայությունների տեղեկատվական ամփոփագրում։
+                                    ծառայությունների տեղեկատվական{" "}
+                                    <a
+                                      href={Sak}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="files"
+                                    >
+                                      ամփոփագրում։{" "}
+                                    </a>
                                   </p>
                                   <p>
                                     Բրոքերային ծառայությունների սակագներին կարող
-                                    եք ծանոթանալ այստեղ։
+                                    եք ծանոթանալ{" "}
+                                    <a
+                                      href={Sak}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="files"
+                                    >
+                                      այստեղ։{" "}
+                                    </a>
                                   </p>
                                   <p>
                                     Բրոքերային հաշվի բացման հայտի ձևերին կարող
-                                    եք ծանոթանալ այստեղ։
+                                    եք ծանոթանալ{" "}
+                                    <a
+                                      href={Hashiv}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="files"
+                                    >
+                                      այստեղ։
+                                    </a>
                                   </p>
                                 </div>
                               </div>
@@ -210,11 +237,27 @@ class TabComponent extends Component {
                                 <p>
                                   Խորհրդատվական ծառայությունների մասին առավել
                                   մանրամասն կարող եք ծանոթանալ ծառայությունների
-                                  տեղեկատվական ամփոփագրում։
+                                  տեղեկատվական{" "}
+                                  <a
+                                    href={Sak}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="files"
+                                  >
+                                    ամփոփագրում։{" "}
+                                  </a>
                                 </p>
                                 <p>
                                   Խորհրդատվական ծառայությունների սակագներին
-                                  կարող եք ծանոթանալ այստեղ։
+                                  կարող եք ծանոթանալ{" "}
+                                  <a
+                                    href={Sak}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="files"
+                                  >
+                                    այստեղ։{" "}
+                                  </a>
                                 </p>
                                 <div
                                   className="my-collapsible__content"
@@ -285,7 +328,15 @@ class TabComponent extends Component {
                                 <p>
                                   Արտարժութային ծառայությունների մասին առավել
                                   մանրամասն կարող եք ծանոթանալ ծառայությունների
-                                  տեղեկատվական ամփոփագրում։
+                                  տեղեկատվական{" "}
+                                  <a
+                                    href={Sak}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="files"
+                                  >
+                                    ամփոփագրում։{" "}
+                                  </a>
                                 </p>
 
                                 {/* <div
