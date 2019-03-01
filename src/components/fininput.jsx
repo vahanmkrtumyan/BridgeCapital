@@ -12,7 +12,8 @@ class FinInput extends Component {
     currentUser: null,
     loading: true,
     downloadURL: "",
-    fileName: ""
+    fileName: "",
+    disabled: true
   };
 
   componentDidMount() {
@@ -172,6 +173,7 @@ class FinInput extends Component {
                     onClick={this.handleSubmit}
                     type="button"
                     name="submit"
+                    disabled={this.state.disabled}
                   >
                     Ուղարկել
                   </button>
