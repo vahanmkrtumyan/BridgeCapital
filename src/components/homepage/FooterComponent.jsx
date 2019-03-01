@@ -43,7 +43,6 @@ const FooterComponent = props => {
               <ul className="footer-contact">
                 <li>
                   <Link to={"/FinStatements"} className="primary-link">
-                    <img src={book} alt="զանգերի սպասարկում" />
                     Ֆինանսական հաշվետվություններ
                   </Link>
                 </li>
@@ -54,7 +53,6 @@ const FooterComponent = props => {
                     rel="noopener noreferrer"
                     className="primary-link"
                   >
-                    <img src={CBA} alt="զանգերի սպասարկում" />
                     Կենտրոնական բանկ
                   </a>
                 </li>
@@ -65,7 +63,6 @@ const FooterComponent = props => {
                     rel="noopener noreferrer"
                     className="primary-link"
                   >
-                    <img src={AMX} alt="զանգերի սպասարկում" />
                     Հայաստանի կենտրոնական դեպոզիտարիա
                   </a>
                 </li>
@@ -75,7 +72,6 @@ const FooterComponent = props => {
                     rel="noopener noreferrer"
                     className="primary-link"
                   >
-                    <img src={FHH} alt="զանգերի սպասարկում" />
                     Ֆինանսական համակարգի հաշտարար
                   </a>
                 </li>

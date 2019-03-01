@@ -134,7 +134,7 @@ class TabComponent extends Component {
                                     մանրամասն կարող եք ծանոթանալ
                                     ծառայությունների տեղեկատվական{" "}
                                     <a
-                                      href={Sak}
+                                      href={Brok}
                                       target="_blank"
                                       rel="noopener noreferrer"
                                       className="files"
@@ -149,7 +149,7 @@ class TabComponent extends Component {
                                       href={Sak}
                                       target="_blank"
                                       rel="noopener noreferrer"
-                                      className="files"
+                                      className="primary-link"
                                     >
                                       այստեղ։{" "}
                                     </a>
@@ -161,7 +161,7 @@ class TabComponent extends Component {
                                       href={Hashiv}
                                       target="_blank"
                                       rel="noopener noreferrer"
-                                      className="files"
+                                      className="primary-link"
                                     >
                                       այստեղ։
                                     </a>
@@ -197,7 +197,7 @@ class TabComponent extends Component {
                 </div>
               </TabPanel>
               <TabPanel>
-                <Fade fraction={1}>
+                <Fade fraction={0.3}>
                   <div className="tab-body">
                     <div className="cols-sm-2 cols-mb justify-between section-with-img img-to-right">
                       <div className="col-md-5">
@@ -239,10 +239,10 @@ class TabComponent extends Component {
                                   մանրամասն կարող եք ծանոթանալ ծառայությունների
                                   տեղեկատվական{" "}
                                   <a
-                                    href={Sak}
+                                    href={Brok}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="files"
+                                    className="primary-link"
                                   >
                                     ամփոփագրում։{" "}
                                   </a>
@@ -297,7 +297,7 @@ class TabComponent extends Component {
                 </Fade>
               </TabPanel>
               <TabPanel>
-                <Fade fraction={1}>
+                <Fade fraction={0.3}>
                   <div className="tab-body">
                     <div className="cols-sm-2 cols-mb justify-between section-with-img img-to-right">
                       <div className="col-md-5">
@@ -330,10 +330,10 @@ class TabComponent extends Component {
                                   մանրամասն կարող եք ծանոթանալ ծառայությունների
                                   տեղեկատվական{" "}
                                   <a
-                                    href={Sak}
+                                    href={Brok}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="files"
+                                    className="primary-link"
                                   >
                                     ամփոփագրում։{" "}
                                   </a>
