@@ -98,17 +98,15 @@ class FinStatements extends Component {
                 <h1 className="h1 size-48">
                   Ֆինանսական <br /> հաշվետվություններ
                 </h1>
-                
+
               </div>
             </div>
           </div>
           <div className="container">
-          
-            <div className="text-inside pt-10 pb-10" />
-            <div className="statement cols-xs-3 cols-mb pb-10">
+            <div className="statement cols-xs-3 cols-mb">
               {arr.map(item => (
                 <div className="col-sm-4 col-xs-6" key={item}>
-               
+
                   <h3 className="h3 lg">{item} թվականի հաշվետվություններ</h3>
                   <ul className="statement-list">
                     {Object.values(this.state.statements[item]).map(n => (
