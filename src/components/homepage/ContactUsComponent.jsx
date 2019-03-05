@@ -64,7 +64,7 @@ class ContactUsComponent extends Component {
                   <div>
                     <p>Հասցե</p>
                     <a href="#" className="primary-link">
-                      ք. Երևան, Գր․ Լուսավորիչ 9
+                      ք. Երևան, Գր. Լուսավորիչ 9
                     </a>
                   </div>
                 </li>
