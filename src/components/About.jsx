@@ -319,7 +319,7 @@ class AboutComponent extends Component {
                         </div>
                       </a>
                     </div>
-                    <div className="col-sm-4 col-xs-6">
+                    {/* <div className="col-sm-4 col-xs-6">
                       <a
                         className="staff-card"
                         onClick={() => this.onOpenModal("Mika")}
@@ -332,7 +332,7 @@ class AboutComponent extends Component {
                           <p>Գլխավոր իրավաբան</p>
                         </div>
                       </a>
-                    </div>
+                    </div> */}
                     <div className="col-sm-4 col-xs-6">
                       <a
                         className="staff-card"

@@ -117,7 +117,7 @@ class TabComponent extends Component {
                                     </li>
                                     <li>
                                       արժեթղթերով կատարվելիք գործարքների պատվերի
-                                      ընդունման և խաղորդման կարգը,
+                                      ընդունման և հաղորդման կարգը,
                                     </li>
                                     <li>
                                       կապի այն միջոցները որոնցով հաճախորդը կարող
@@ -137,7 +137,7 @@ class TabComponent extends Component {
                                       href={Brok}
                                       target="_blank"
                                       rel="noopener noreferrer"
-                                      className="files"
+                                      className="primary-link"
                                     >
                                       ամփոփագրում։{" "}
                                     </a>
@@ -254,7 +254,7 @@ class TabComponent extends Component {
                                     href={Sak}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="files"
+                                    className="primary-link"
                                   >
                                     այստեղ։{" "}
                                   </a>
@@ -318,9 +318,9 @@ class TabComponent extends Component {
                                   հանգամանքից:
                                 </strong>
                                 <p>
-                                  Ընկերությունունը այդ նպատակով մշտապես
-                                  ապահովվում է երկկողմանի գնանշումներ ՀՀ դրամ,
-                                  ԱՄՆ դոլար, ԵՎՐՈ, ՌԴ ռուբլի, ՄԲ ֆունտ ստեռլինգ
+                                  Ընկերությունը այդ նպատակով մշտապես ապահովվում
+                                  է երկկողմանի գնանշումներ ՀՀ դրամ, ԱՄՆ դոլար,
+                                  ԵՎՐՈ, ՌԴ ռուբլի, ՄԲ ֆունտ ստեռլինգ
                                   արժույթներով բոլոր հնարավոր կոմբինացիաների
                                   համար:
                                 </p>

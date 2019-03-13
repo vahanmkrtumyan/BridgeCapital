@@ -107,7 +107,7 @@ class FinStatements extends Component {
               {arr.map(item => (
                 <div className="col-sm-4 col-xs-6" key={item}>
 
-                  <h3 className="h3 lg">{item} թվականի հաշվետվություններ</h3>
+                  <h3 className="h3 lg">{item} հաշվետվություններ</h3>
                   <ul className="statement-list">
                     {Object.values(this.state.statements[item]).map(n => (
                       <li
