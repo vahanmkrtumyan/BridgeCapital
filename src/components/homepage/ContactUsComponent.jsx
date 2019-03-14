@@ -26,7 +26,7 @@ class ContactUsComponent extends Component {
                   >
                     info@bridgecapital.am&nbsp;
                   </a>
-                  հասցեով:
+                  հասցեին:
                 </p>
                 <p>
                   Մենք կարձագանքենք Ձեզ առավելագույնը 7 աշխատանքային օրվա
