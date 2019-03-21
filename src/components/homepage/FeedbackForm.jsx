@@ -35,6 +35,7 @@ class FeedbackForm extends Component {
       message_html: this.state.message
     };
 
+    if (this.state.message === "") return;
     emailjs
       .send(
         "gmail",

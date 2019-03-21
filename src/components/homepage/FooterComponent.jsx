@@ -8,10 +8,6 @@ import Twitter from "../../assets/img/icons/twitter.svg";
 import Linkedin from "../../assets/img/icons/linkedin.svg";
 import FbSm from "../../assets/img/icons/facebook-small.svg";
 import Copyright from "../../assets/img/icons/copyright.svg";
-import AMX from "../../assets/img/icons/amx.jpg";
-import FHH from "../../assets/img/icons/FHH.jpg";
-import CBA from "../../assets/img/icons/CBA.jpg";
-import book from "../../assets/img/icons/book.png";
 
 const FooterComponent = props => {
   let date = new Date();
@@ -96,19 +92,19 @@ const FooterComponent = props => {
             <div className="col-sm-2">
               <ul className="footer-social">
                 <li>
-                  <a href="#">
+                  
                     <img src={Twitter} alt="twitter" />
-                  </a>
+                  
                 </li>
                 <li>
-                  <a href="#">
+                  
                     <img src={Linkedin} alt="linkedin" />
-                  </a>
+                  
                 </li>
                 <li>
-                  <a href="#">
+                  
                     <img src={FbSm} alt="facebook" />
-                  </a>
+                 
                 </li>
               </ul>
             </div>
