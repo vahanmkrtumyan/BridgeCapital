@@ -8,13 +8,19 @@ import Download from "../assets/img/icons/download.svg";
 
 class FinStatements extends Component {
   state = {
-    statements: []
+    statements: [],
+    annual: []
   };
 
   componentDidMount() {
     database.ref("Statements").on("value", snapshot => {
       if (snapshot.val() !== null) {
         this.setState({ statements: snapshot.val() });
+      }
+    });
+    database.ref("Annaual").on("value", snapshot => {
+      if (snapshot.val() !== null) {
+        this.setState({ annual: snapshot.val() });
       }
     });
   }
@@ -81,6 +87,14 @@ class FinStatements extends Component {
       ? (arr = Object.keys(this.state.statements).reverse())
       : (arr = "");
 
+    let annual = [];
+    this.state.annual !== null
+      ? (annual = Object.keys(this.state.annual).reverse())
+      : (annual = "");
+
+    console.log(this.state.annual[2019]);
+    //console.log(this.state.annual ? Object.values(this.state.annual[2019]) : '')
+
     return this.state.statements !== null ? (
       <div>
         <div className="about-page">
@@ -101,26 +115,62 @@ class FinStatements extends Component {
               </div>
             </div>
           </div>
-          <div className="container">
-            <div className="statement cols-xs-3 cols-mb">
-              {arr.map(item => (
-                <div className="col-sm-4 col-xs-6" key={item}>
-                  <h3 className="h3 lg">{item}</h3>
-                  <ul className="statement-list">
-                    {Object.values(this.state.statements[item]).map(n => (
-                      <li
-                        key={
-                          Object.values(this.state.statements[item])[
-                            Object.values(this.state.statements[item]).indexOf(
-                              n
-                            )
-                          ]["downloadURL"]
-                        }
-                      >
+          <div className="fin">
+            <div className="container" style={{ width: "25%" }}>
+              {" "}
+              <h2
+                className="h2"
+                style={{
+                  justifyContent: "center",
+                  display: "flex",
+                  marginTop: "20px"
+                }}
+              >
+                Տարեկան հաշվետվություններ
+              </h2>
+              <div className="statements cols-xs-3 cols-mb">
+              <div className="col-sm-4 col-xs-6" style={{margin: '10px auto', justifyContent: 'center'}}>
+                {annual.map(item => (
+                  
+                    <ul className="statement-list" key={item}>
+                      <li style={{ width: "12rem"}}>
                         <a
                           target="_blank"
                           rel="noopener noreferrer"
-                          href={
+                          href={this.state.annual[item]["downloadURL"]}
+                        >
+                          <img src={Download} alt="" />
+                          {item} թվական
+                        </a>
+                      </li>
+                    </ul>
+                  
+                ))}
+                </div>
+              </div>
+            </div>
+            <div className="container">
+              <div className="container" style={{ width: "50%" }}>
+                {" "}
+                <h2
+                  className="h2"
+                  style={{
+                    justifyContent: "center",
+                    display: "flex",
+                    marginTop: "20px"
+                  }}
+                >
+                  Եռամսյակային հաշվետվություններ
+                </h2>
+              </div>
+              <div className="statement cols-xs-3 cols-mb">
+                {arr.map(item => (
+                  <div className="col-sm-4 col-xs-6" key={item} >
+                    <h3 className="h3 lg" >{item}</h3>
+                    <ul className="statement-list">
+                      {Object.values(this.state.statements[item]).map(n => (
+                        <li
+                          key={
                             Object.values(this.state.statements[item])[
                               Object.values(
                                 this.state.statements[item]
@@ -128,20 +178,32 @@ class FinStatements extends Component {
                             ]["downloadURL"]
                           }
                         >
-                          <img src={Download} alt="" />
-                          {
-                            Object.values(this.state.statements[item])[
-                              Object.values(
-                                this.state.statements[item]
-                              ).indexOf(n)
-                            ]["name"]
-                          }
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+                          <a
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={
+                              Object.values(this.state.statements[item])[
+                                Object.values(
+                                  this.state.statements[item]
+                                ).indexOf(n)
+                              ]["downloadURL"]
+                            }
+                          >
+                            <img src={Download} alt="" />
+                            {
+                              Object.values(this.state.statements[item])[
+                                Object.values(
+                                  this.state.statements[item]
+                                ).indexOf(n)
+                              ]["name"]
+                            }
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

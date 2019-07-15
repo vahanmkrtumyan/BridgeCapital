@@ -48,6 +48,23 @@ class FinInput extends Component {
     this.props.history.push("/");
   };
 
+  handleSubmitannual = e => {
+    e.preventDefault();
+
+    const data = {
+      year: this.state.year,
+      downloadURL: this.state.downloadURL
+    };
+    database
+      .ref()
+      .child("Annaual")
+      .child(this.state.year)
+      .set(data);
+
+    this.props.history.push("/");
+  };
+
+
   handleSelect = e => {
     const file = e.target.files[0];
 
@@ -179,7 +196,45 @@ class FinInput extends Component {
                   </button>
                 </div>
               </form>
+              <form>
+                <div className="input-field">
+                  <label htmlFor="Անուն">Տարի</label>
+                  <input
+                    id="year"
+                    name="year"
+                    type="text"
+                    className="validate"
+                    placeholder="Տարի"
+                    onChange={this.handleInputChange}
+                    value={this.state.year}
+                  />
+                </div>
+                <div className="text-left">
+                  <label htmlFor="upload" className="upload-btn">
+                    <input
+                      type="file"
+                      id="upload"
+                      name={this.state.name}
+                      onChange={this.handleSelect}
+                    />
+                    <img src={Upload} alt="" />
+                    <span>Ներբեռնել</span>
+                  </label>
+                </div>
+                <div className="text-center pt-6">
+                  <button
+                    className="btn primary"
+                    onClick={this.handleSubmitannual}
+                    type="button"
+                    name="submit"
+                    disabled={this.state.disabled}
+                  >
+                    Ուղարկել
+                  </button>
+                </div>
+              </form>
             </div>
+            
           )}
         </div>
       </div>
