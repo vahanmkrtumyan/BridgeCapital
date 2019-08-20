@@ -1,11 +1,3 @@
 @import "variables/variables";
-@import "functions";
-@import "config";
 @import "mixins";
 @import "fonts";
-
-.text {
-    color: red;
-    font-family: 'ArialArmST';
-    font-weight: 700;
-}

@@ -1,33 +1,51 @@
-@each $key-spaces,$val-spaces in $spaces {
-  .m-#{$key-spaces} {
-    margin: #{$val-spaces};
-  }
-  .mt-#{$key-spaces} {
-    margin-top: #{$val-spaces};
-  }
-  .mr-#{$key-spaces} {
-    margin-right: #{$val-spaces};
-  }
-  .mb-#{$key-spaces} {
-    margin-bottom: #{$val-spaces};
-  }
-  .ml-#{$key-spaces} {
-    margin-left: #{$val-spaces};
-  }
+$step: 0;
+@while $step <= 100 {
+    .mt-#{$step} {
+        margin-top: #{$step}px;
+    }
+    .mr-#{$step} {
+        margin-right: #{$step}px;
+    }
+    .mb-#{$step} {
+        margin-bottom: #{$step}px;
+    }
+    .ml-#{$step} {
+        margin-left: #{$step}px;
+    }
+    .my-#{$step} {
+        margin-top: #{$step}px;
+        margin-bottom: #{$step}px;
+    }
+    .mx-#{$step} {
+        margin-left: #{$step}px;
+        margin-right: #{$step}px;
+    }
+    .m-#{$step} {
+        margin: #{$step}px;
+    }
 
-  .p-#{$key-spaces} {
-    padding: #{$val-spaces};
-  }
-  .pt-#{$key-spaces} {
-    padding-top: #{$val-spaces};
-  }
-  .pr-#{$key-spaces} {
-    padding-right: #{$val-spaces};
-  }
-  .pb-#{$key-spaces} {
-    padding-bottom: #{$val-spaces};
-  }
-  .pl-#{$key-spaces} {
-    padding-left: #{$val-spaces};
-  }
+    .pt-#{$step} {
+        padding-top: #{$step}px;
+    }
+    .pr-#{$step} {
+        padding-right: #{$step}px;
+    }
+    .pb-#{$step} {
+        padding-bottom: #{$step}px;
+    }
+    .pl-#{$step} {
+        padding-left: #{$step}px;
+    }
+    .py-#{$step} {
+        padding-top: #{$step}px;
+        padding-bottom: #{$step}px;
+    }
+    .px-#{$step} {
+        padding-left: #{$step}px;
+        padding-right: #{$step}px;
+    }
+    .p-#{$step} {
+        padding: #{$step}px;
+    }
+    $step: $step + 5;
 }

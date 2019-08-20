@@ -3,46 +3,21 @@ $fonts-folder: "../fonts";
 $images-folder: '../img/';
 
 //fonts
-$font-primary: "ArialArmST", serif;
-$font-secondary: "Times New Roman", serif;
-$font-icons: "Icomoon Project Name";
+$font-secondary: "FuturaPTLight", serif;
+$font-primary: "FuturaPTBook", serif;
+$font-tertiary: "FuturaPTDemi", serif;
 
 //color usage
-$color-primary: #0062ff;
-//$color-secondary: #fff;
-$color-bg: #0e1725;
-$color-bg-2: #15233e;
-$color-grey: #dddedf;
-$color-warning: #e44c23;
-$color-border: rgba(255, 255, 255, 0.3);
+$color-primary: #2a1552;
+$color-secondary: #805193;
+$gradient-primary: linear-gradient(#291b44, #18142a);
 
 //Descriptive Base Colors
-$color-text: #2b2e31;
-$color-text-70: rgba(255, 255, 255, 0.7);
-$color-text-50: rgba(255, 255, 255, 0.5);
+$color-text: #191919;
 
-//Text
-$base-font-size: 14px;
 
-//Border Radiuses
-$br-default: 4px;
-$br-md: 10px;
-$br-lg: 30px;
-$br-rounded: 50%;
-$br-none: 0;
 
-// Transitions
-$trns-duration: .5s;
-$trns-duration-lg: 1s;
-$trns-delay: 50ms;
 
 //container
-$cont-width: 1170px;
-$cont-padding: 30px;
-
-//Resolutions
-$screen-lg: 1280px;
-$screen-md: 1024px;
-$screen-sm: 768px;
-$screen-xs: 480px;
-$screen-xxs: 360px;
+$cont-width: 1440px;
+$cont-padding: 60px;

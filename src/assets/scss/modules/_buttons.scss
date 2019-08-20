@@ -1,42 +1,95 @@
 .btn {
-    line-height: 40px;
-    height: 40px;
-    padding: 0 40px;
-    font-size: $base-font-size;
-    font-family: 'ArialArmST';
-    font-weight: 700;
+    border: 1px solid $color-secondary;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all .3s;
     cursor: pointer;
-    transition: all $trns-duration;
+
+
+
+    &.with-img {
+        img {
+            width: 16px;
+            margin-left: 10px;
+            margin-bottom: 3px;
+
+        }
+    }
+
+    &.btn-lg {
+        font-size: 34px;
+        font-family: $font-primary;
+        padding: 10px;
+        width: 300px;
+        border-radius: 50px;
+    }
+
+    &.btn-sm {
+        font-size: 16px;
+        font-family: $font-primary;
+        padding: 10px;
+        width: 130px;
+        border-radius: 25px;
+    }
 
     &.primary {
-        background-color: $color-primary;
+        background-color: $color-secondary;
         color: #fff;
-        border: 2px solid transparent;
-        font-size: 16px;
-        border-radius: 5px;
 
         &:hover {
-            background-color: darken($color-primary, 6);
+            background-color: darken($color-secondary, 10%);
         }
     }
 
-    &.secondary {
+    &.outline {
         background-color: transparent;
-        color: $color-primary;
-        border: 2px solid $color-primary;
-        border-radius: 7px;
-
+        color: $color-secondary;
 
         &:hover {
-            box-shadow: 1px 3px 8px 1px rgba(0, 0, 0, 0.2);
+            color: darken($color-secondary, 10%);
+            border-color: darken($color-secondary, 10%);
         }
+    }
+}
+.no-style {
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+    outline: none;
 
+    &:focus {
+        border: none;
+    }
+}
+
+.scroll-to-top {
+
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    font-size: 24px;
+    right: 30px;
+    bottom: 40px;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0px 7px 20px 0px rgba(0,0,0,0.2);
+    transition: all .3s;
+    border: none;
+    background: #fff;
+    color: $color-primary;
+    text-align: center;
+
+    &:hover {
+        color: #fff;
+        background: $color-primary;
     }
 
-    &.small {
-        height: 30px;
-        line-height: 30px;
-        padding: 0 15px;
-        font-size: 13px;
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
     }
 }

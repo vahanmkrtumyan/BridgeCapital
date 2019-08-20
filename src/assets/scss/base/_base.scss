@@ -5,9 +5,10 @@ html {
 }
 
 body {
-    color: $color-text;
-    font-size: $base-font-size;
+    color: $color-primary;
+    font-size: 16px;
     font-family: $font-primary;
+    line-height: 1.5;
     outline: none;
     word-wrap: break-word;
     font-weight: 400;
@@ -19,23 +20,11 @@ body {
     box-sizing: inherit;
 }
 
-a {
-    transition: all $trns-duration;
-
-    &.primary-link {
-        color: $color-primary;
-
-        &:hover {
-            border-bottom: 1px solid $color-primary;
-        }
-    }
-}
-
 .container {
     max-width: ($cont-width + $cont-padding);
     width: 100%;
-    padding-left: ($cont-padding);
-    padding-right: ($cont-padding);
+    padding-left: ($cont-padding / 2);
+    padding-right: ($cont-padding / 2);
     margin-left: auto;
     margin-right: auto;
 }

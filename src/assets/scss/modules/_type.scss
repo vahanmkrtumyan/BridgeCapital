@@ -1,111 +1,13 @@
-h1.h1 {
-    text-transform: uppercase;
+h1 {
     font-size: 72px;
-    padding-bottom: 50px;
-    font-family: 'Bokonique-Bold';
-
-    span {
-        color: $color-primary;
-    }
-
-    &.size-48 {
-        font-size: 48px;
-    }
+    font-family: $font-tertiary;
 }
 
-h2.h2 {
-    font-weight: 700;
-    color: $color-primary;
-    font-size: 24px;
+h2 {
+    font-size: 52px;
 }
 
-h3.h3 {
-    font-size: 16px;
-    font-weight: 700;
-    color: #fff;
-
-    &.lg {
-        font-size: 18px;
-        font-weight: 400;
-    }
-
-    &.grey {
-        color: rgba($color-text, 0.5);
-    }
-}
-
-.text-inside {
-    p {
-        line-height: 24px;
-        margin-bottom: 10px;
-    }
-
-    h3 {
-        font-size: 16px;
-        margin-bottom: 12px;
-    }
-
-    .link-list {
-        margin-bottom: 20px;
-
-
-        li {
-
-            a {
-                padding-left: 30px;
-                line-height: 24px;
-                font-weight: 700;
-                font-size: 13px;
-                color: #3c3c3c;
-                position: relative;
-                display: inline-block;
-
-                &::before {
-                    content: "";
-                    position: absolute;
-                    top: 3px;
-                    left: 8px;
-                    @include bg-img('icons/arrow-pointing-left.svg', no-repeat, contain, top);
-                    width: 12px;
-                    height: 14px;
-                    transform: rotate(180deg);
-                    color: $color-primary;
-                }
-
-                &:hover {
-                    text-decoration: underline;
-                }
-
-                img {
-                    width: 12px;
-                    height: auto;
-                    vertical-align: middle;
-                    margin-left: 10px;
-                }
-            }
-        }
-
-    }
-
-    .ul {
-        margin-left: 20px;
-        font-size: 13px;
-
-        li {
-            list-style-type: none;
-            line-height: 25px;
-            position: relative;
-
-            &::before {
-                position: absolute;
-                content: "\2022";
-                color: $color-primary;
-                font-weight: bold;
-                display: inline-block;
-                width: 1em;
-                margin-left: -1em;
-            }
-        }
-    }
+h3 {
+    font-size: 30px;
 }
 
